@@ -1,0 +1,130 @@
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 5vmin;
+    margin-bottom: 5vmin;
+}
+
+.text, .inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs {
+    margin-left: 20vmin;
+    align-items: flex-end;
+}
+
+.text {
+    margin-top: 2vmin;
+    align-items: flex-start;
+}
+
+.small-container {
+    display: flex;
+    align-items: center;
+}
+
+.small-container > img {
+    margin-right: 3vmin;
+    height: 3vmin;
+}
+
+.submit {
+    margin-top: 2vmin;
+    border-radius: 2vmin;
+    background-color: grey;
+    color: white;
+    border: solid grey;
+    font-size: 2vmin;
+    height: 4vmin;
+    transition: .2s ease-out;
+}
+
+.submit:hover {
+    color: grey;
+    background-color: white;
+    border: solid grey;
+    transition: .2s ease-out;
+}
+
+/*Fancy inputs*/
+
+.input {
+    position: relative;
+    margin: auto;
+    width: 60vmin;
+}
+
+.input > .label {
+    position: absolute;
+    top: 4vmin;
+    left: 0;
+    font-size: 16px;
+    color: #9098A9;
+    font-weight: 500;
+    transform-origin: 0 0;
+    transition: all .2s ease;
+}
+
+.input > .border {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background: #0077FF;
+    transform: scaleX(0);
+    transform-origin: 0 0;
+    transition: all .15s ease
+}
+
+
+
+.input > .inp {
+    -webkit-appearance: none;
+    width: 100%;
+    border: 0;
+    font-family: inherit;
+    padding: 12px 0;
+    margin-top: 2vmin;
+    height: 2vmin;
+    font-size: 16px;
+    font-weight: 500;
+    border-bottom: 2px solid #C8CCD4;
+    background: none;
+    border-radius: 0;
+    color: #223254;
+    transition: all .15s ease
+}
+
+.input > .ta {
+    height: 20vmin;
+    resize: none;
+
+}
+
+.input > .inp:hover {
+    background: rgba(34, 50, 84, .03);
+}
+
+.input > .inp:not(:placeholder-shown) + span {
+    color: #5A667F;
+    transform: translateY(-26px) scale(.75)
+}
+
+.input > .inp:focus {
+    background: none;
+    outline: none
+}
+
+.input > .inp:focus + span {
+    color: #0077FF;
+    transform: translateY(-26px) scale(.75)
+}
+
+.input > .inp:focus + span + .border {
+    transform: scaleX(1)
+}
+
+

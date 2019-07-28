@@ -13,7 +13,7 @@ import logo from '../../images/picto-logo.jpg'
 class Portfolio extends React.Component {
     render() {
         return(
-            <div className="container">
+            <div className="picto-container">
                 <div className="row">
                     <Link to="/visual-identities" className="picto-link">
                         <div className="img">

@@ -1,19 +1,20 @@
 import React from 'react';
 import './App.css';
 
-import About from './components/about/about'
+import Footer from './components/footer/footer'
 import Home from './components/home/home'
-import Footer from "./components/footer/footer";
-import Portfolio from "./components/portfolio/portfolio";
-import Identity from "./components/identity/identity"
-import Music from "./components/music/music"
-import Posters from "./components/posters/posters"
-import Editions from "./components/editions/editions"
-import Teasers from "./components/teasers/teasers"
-import Logos from "./components/logos/logos"
+import About from './components/about/about'
+import Contact from './components/contact/contact'
+import Portfolio from './components/portfolio/portfolio'
+import Identity from './components/identity/identity'
+import Music from './components/music/music'
+import Posters from './components/posters/posters'
+import Editions from './components/editions/editions'
+import Teasers from './components/teasers/teasers'
+import Logos from './components/logos/logos'
 
-import {Router, Route, Link} from "react-router-dom";
-import { history } from "./helpers/history";
+import {Router, Route, Link} from 'react-router-dom';
+import { history } from './helpers/history';
 
 import logo from './images/logo.svg';
 
@@ -37,6 +38,7 @@ function App() {
 
                 <Route path="/" exact component={Home}/>
                 <Route path="/about" component={About}/>
+                <Route path="/contact" component={Contact}/>
                 <Route path="/portfolio" component={Portfolio}/>
                 <Route path="/visual-identities" component={Identity}/>
                 <Route path="/music" component={Music}/>
