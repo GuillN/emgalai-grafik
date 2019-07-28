@@ -1,0 +1,7 @@
+.carousel-pane {
+    height: 77vmin;
+}
+
+.carousel-pane>div {
+    display: inline !important;
+}

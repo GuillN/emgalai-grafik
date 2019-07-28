@@ -1,0 +1,35 @@
+.App {
+  text-align: center;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-content: space-between;
+}
+
+.nav-link {
+  font-size: 1.5vmin;
+  padding: 3vmin;
+  text-decoration: none;
+  color: black;
+  transition: .2s;
+}
+
+.nav-link:focus {
+    outline: 0
+}
+
+.nav-link:hover {
+  transition: .2s;
+  color: gray;
+}
+
+.logo {
+  height: 15vmin;
+  padding-top: .5vmin;
+}
+
+.logo-link:focus {
+    outline: 0;
+}
