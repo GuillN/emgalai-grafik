@@ -9,13 +9,25 @@ class Home extends React.Component {
         return(
             <div className="">
                 <Carousel showThumbs={false} showStatus={false} stopOnHover={false} className="carousel"
-                          autoPlay infiniteLoop interval={6000}>
+                          autoPlay infiniteLoop interval={12000}>
                     <div className="carousel-pane">
-                        <ReactPlayer url='https://www.youtube.com/embed/yBLdQ1a4-JI?rel=0&modestbranding=1&autohide=1&showinfo=0'
+                        <ReactPlayer url='https://www.facebook.com/emgalai/videos/262610617954917/'
+                                     playing volume={0} muted loop/>
+                    </div>
+                    <div className="carousel-pane">
+                        <ReactPlayer url='https://www.facebook.com/emgalai/videos/1072535196279459/'
                                      playing={true} volume={0} muted={true} loop/>
                     </div>
                     <div className="carousel-pane">
-                        <ReactPlayer url='https://www.youtube.com/watch?v=GDflVhOpS4E'
+                        <ReactPlayer url='https://www.facebook.com/emgalai/videos/978901818938041/'
+                                     playing={true} volume={0} muted={true} loop/>
+                    </div>
+                    <div className="carousel-pane">
+                        <ReactPlayer url='https://www.facebook.com/emgalai/videos/876609339167290/'
+                                     playing={true} volume={0} muted={true} loop/>
+                    </div>
+                    <div className="carousel-pane">
+                        <ReactPlayer url='https://www.facebook.com/emgalai/videos/752027961625429/'
                                      playing={true} volume={0} muted={true} loop/>
                     </div>
                 </Carousel>
