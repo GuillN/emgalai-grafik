@@ -1,5 +1,6 @@
 .carousel-pane {
     height: 77vmin;
+    pointer-events: none;
 }
 
 .carousel-pane>div {
