@@ -1,5 +1,11 @@
+.carousel {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
 .carousel-pane {
-    height: 79vh;
+    height: 100vh;
     pointer-events: none;
 }
 

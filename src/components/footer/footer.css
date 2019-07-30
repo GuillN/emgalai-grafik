@@ -5,7 +5,8 @@
     width: 30vmin;
     margin-left: -15vmin;
     margin-bottom: 2vmin;
-    position: relative;
+    position: absolute;
+    bottom: 2vmin;
 }
 
 .footer a {

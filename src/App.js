@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 
+import Nav from './components/nav/nav'
 import Footer from './components/footer/footer'
 import Home from './components/home/home'
 import About from './components/about/about'
@@ -13,28 +14,16 @@ import Editions from './components/editions/editions'
 import Teasers from './components/teasers/teasers'
 import Logos from './components/logos/logos'
 
-import {Router, Route, Link} from 'react-router-dom';
+import {Router, Route} from 'react-router-dom';
 import { history } from './helpers/history';
-
-import logo from './images/logo.svg';
 
 function App() {
     return (
         <div className="App">
 
             <Router history={history}>
-                <header className="header">
-                    <Link to="/" className="logo-link">
-                        <img src={logo} className="logo" alt="logo" />
-                    </Link>
-                </header>
 
-                <section className="nav">
-                    <Link to="/about" className="nav-link">ABOUT</Link>
-                    <Link to="/contact" className="nav-link">CONTACT</Link>
-                    <Link to="/portfolio" className="nav-link">PORTFOLIO</Link>
-                    <a target="_blank" rel="noopener noreferrer" href="https://emgalaishop.bigcartel.com/" className="nav-link">SHOP</a>
-                </section>
+                <Nav/>
 
                 <Route path="/" exact component={Home}/>
                 <Route path="/about" component={About}/>
