@@ -4,6 +4,7 @@ import './nav.css'
 import {history} from "../../helpers/history";
 import logo from "../../images/logo.svg";
 import logoWhite from "../../images/logo-whito.svg";
+import Footer from "../footer/footer";
 
 class Nav extends React.Component {
 
@@ -34,7 +35,8 @@ class Nav extends React.Component {
             navStyle: {
                 color: 'white'
             }
-        })
+        });
+        Footer.toWhite()
     }
 
     navStyleBlack() {
@@ -43,7 +45,8 @@ class Nav extends React.Component {
             navStyle: {
                 color: 'black'
             }
-        })
+        });
+        Footer.toBlack()
     }
 
     render() {
