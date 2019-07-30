@@ -1,10 +1,31 @@
 import React from "react"
 import ReactPlayer from "react-player";
+import FacebookPlayer from 'react-fb-player'
 import { Carousel } from "react-responsive-carousel"
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./home.css"
 
 class Home extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            player: null
+        }
+    }
+
+    onReady = (id, player) => {
+        this.setState({
+            player: player,
+        });
+    };
+
+    playVideo = () => {
+        console.log('play video');
+        const { player } = this.state;
+        if (player) player.play();
+    };
+
     render() {
         return(
             <div className="">
@@ -27,8 +48,10 @@ class Home extends React.Component {
                                      playing={true} volume={0} muted={true} loop/>
                     </div>
                     <div className="carousel-pane">
-                        <ReactPlayer url='https://www.facebook.com/emgalai/videos/752027961625429/'
-                                     playing={true} volume={0} muted={true} loop/>
+                        {/*<ReactPlayer url='https://www.facebook.com/emgalai/videos/752027961625429/'*/}
+                        {/*             playing={true} volume={0} muted={true} loop/>*/}
+                        <FacebookPlayer appId={723499361416854} videoId={752027961625429} autoplay={true}
+                                        onReady={this.onReady} onFinishedPlaying={this.playVideo}/>
                     </div>
                 </Carousel>
             </div>

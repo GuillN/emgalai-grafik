@@ -1,8 +1,10 @@
-.App {
+.header {
   text-align: center;
+  height: 14vh;
 }
 
 .nav {
+  height: 7vh;
   display: flex;
   justify-content: center;
   align-content: space-between;

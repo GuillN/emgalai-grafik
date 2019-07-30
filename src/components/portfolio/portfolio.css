@@ -36,19 +36,22 @@
 
 .img > p, .img > p > p {
     opacity: 0;
-    position: absolute;
     transition: .2s ease-out;
-    padding-left: 2vmin;
-    text-decoration: none;
     color: black;
+    font-size: 2vmin;
+    text-align: center;
 }
 
 .img > p {
-    padding-top: 2vmin;
+    margin-top: -8vmin;
 }
 
 .img > p + p {
-    padding-top: 4vmin;
+    margin-top: -2vmin;
+}
+
+.picto-link {
+    text-decoration: none;
 }
 
 .picto-link:focus {
