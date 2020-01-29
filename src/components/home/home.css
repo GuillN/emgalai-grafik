@@ -1,5 +1,5 @@
 .carousel {
-    position: absolute;
+    position: absolute !important;
     top: 0;
     z-index: -1;
 }
@@ -11,4 +11,12 @@
 
 .carousel-pane>div {
     display: inline !important;
+}
+
+.carousel-pane>div>div>span>iframe{
+    margin: 0 !important;
+}
+
+.control-dots {
+    padding-left: 0;
 }

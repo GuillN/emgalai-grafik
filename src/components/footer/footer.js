@@ -8,6 +8,7 @@ import behance from '../../images/behance.svg'
 import twitterWhite from '../../images/twitter-whito.svg'
 import facebookWhite from '../../images/facebook-whito.svg'
 import instagramWhite from '../../images/instagram-whito.svg'
+// import test from '../../images/behance-whito.svg'
 import behanceWhite from '../../images/behance-whito.svg'
 
 class Footer extends React.Component {
@@ -52,6 +53,7 @@ class Footer extends React.Component {
                 <a><img src={facebook} alt="facebook" className="img"/></a>
                 <a><img src={instagram} alt="instagram" className="img"/></a>
                 <a><img src={behance} alt="behance" className="img"/></a>
+                {/*<a><img src={test} alt="behance" className="img"/></a>*/}
             </div>
         )
     }
