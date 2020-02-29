@@ -1,5 +1,6 @@
 .contact-content {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
@@ -32,13 +33,13 @@
 /*Fancy inputs*/
 
 .submit {
-    margin-top: 2vmin;
-    border-radius: 2vmin;
+    margin-top: 2vh;
+    border-radius: 2vh;
     background-color: grey;
     color: white;
     border: solid grey;
-    font-size: 2vmin;
-    height: 4vmin;
+    font-size: 2vh;
+    height: 4vh;
     transition: .2s ease-out;
 }
 
@@ -52,12 +53,12 @@
 .input {
     position: relative;
     margin: auto;
-    width: 60vmin;
+    width: 60vw;
 }
 
 .input > .label {
     position: absolute;
-    top: 4vmin;
+    top: 4vh;
     left: 0;
     font-size: 16px;
     color: #9098A9;

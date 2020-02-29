@@ -1,19 +1,21 @@
 .footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     /*align-items: center;*/
-    left: 50%;
-    width: 20vmin;
-    margin-left: -10vmin;
-    margin-bottom: 4vmin;
+    /*left: 50%;*/
+    width: 10vw;
+    margin-left: 45.5vw;
+    /*margin-bottom: 4vmin;*/
+    /*margin-top: 35vh;*/
     position: fixed;
-    bottom: 0;
+    bottom: 4vh;
 }
 
 .footer a {
+    margin-right: 1vw;
     padding-top: 5vmin;
 }
 
 .img {
-    height: 4vmin;
+    height: 4vh;
 }

@@ -3,14 +3,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 25vmin;
-    padding-bottom: 10vmin;
-    padding-top: 5vmin;
+    height: 25vh;
+    padding-bottom: 10vh;
+    padding-top: 5vh;
 }
 
 .row {
     display: flex;
-    width: 60%;
+    width: 60vw;
     justify-content: space-evenly;
 }
 
@@ -30,7 +30,7 @@
 }
 
 .img > img {
-    height: 10vmin;
+    height: 10vh;
     transition: ease-out .5s;
 }
 
@@ -38,16 +38,16 @@
     opacity: 0;
     transition: .2s ease-out;
     color: black;
-    font-size: 2vmin;
+    font-size: 2vh;
     text-align: center;
 }
 
 .img > p {
-    margin-top: -8vmin;
+    margin-top: -8vh;
 }
 
 .img > p + p {
-    margin-top: -2vmin;
+    margin-top: -2vh;
 }
 
 .picto-link {
