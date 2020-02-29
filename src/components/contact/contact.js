@@ -3,12 +3,15 @@ import './contact.css'
 
 import phone from '../../images/phone-icon.png'
 import email from '../../images/email-icon.png'
+import Nav from "../nav/nav";
+import Footer from "../footer/footer";
 
 class Contact extends React.Component {
     render() {
         return(
-            <div className="flex">
-                <div className="container">
+            <div>
+                <Nav print={false}/>
+                <div className="contact-content">
                     <div className="text">
                         <h1>CONTACT ME</h1>
                         <hr className="line"/>
@@ -51,6 +54,7 @@ class Contact extends React.Component {
                         <input type="submit" value="Send" className="submit"/>
                     </form>
                 </div>
+                <Footer/>
             </div>
         )
     }

@@ -1,62 +1,52 @@
-import React from "react"
+import React, {useEffect, useState} from "react"
+import {useSpring, animated} from "react-spring"
+import {history} from "../../helpers/history"
 import "./footer.css"
 
-import twitter from '../../images/twitter.svg'
-import facebook from '../../images/facebook.svg'
-import instagram from '../../images/instagram.svg'
-import behance from '../../images/behance.svg'
+import twitterBlack from '../../images/twitter.svg'
+import facebookBlack from '../../images/facebook.svg'
+import instagramBlack from '../../images/instagram.svg'
+import behanceBlack from '../../images/behance.svg'
 import twitterWhite from '../../images/twitter-whito.svg'
 import facebookWhite from '../../images/facebook-whito.svg'
 import instagramWhite from '../../images/instagram-whito.svg'
-// import test from '../../images/behance-whito.svg'
 import behanceWhite from '../../images/behance-whito.svg'
 
-class Footer extends React.Component {
+const Footer = () => {
+    const [isWhite, setWhite] = useState(true);
+    let twitter = isWhite ? twitterWhite : twitterBlack;
+    let facebook = isWhite ? facebookWhite : facebookBlack;
+    let instagram = isWhite ? instagramWhite : instagramBlack;
+    let behance = isWhite ? behanceWhite : behanceBlack;
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            twitter: twitterWhite,
-            facebook: facebookWhite,
-            instagram: instagramWhite,
-            behance: behanceWhite
-        };
-        Footer.toBlack = Footer.toBlack.bind(this);
-        Footer.toWhite = Footer.toWhite.bind(this)
-    }
+    useEffect(() => {
+        const path = history.location.pathname;
+        setWhite(path === '/emgalai' || path === '/print');
+    }, []);
 
-    static toWhite() {
-        this.setState({
-            twitter: twitterWhite,
-            facebook: facebookWhite,
-            instagram: instagramWhite,
-            behance: behanceWhite
-        })
-    }
+    const fade = useSpring({
+        from: {
+            opacity: 0
+        },
+        opacity: 1
+    });
 
-    static toBlack() {
-        this.setState({
-            twitter: twitter,
-            facebook: facebook,
-            instagram: instagram,
-            behance: behance
-        })
-    }
-
-
-    render() {
-        const {twitter, facebook, instagram, behance} = this.state;
-
-        return(
-            <div className="footer">
-                <a><img src={twitter} alt="twitter" className="img"/></a>
-                <a><img src={facebook} alt="facebook" className="img"/></a>
-                <a><img src={instagram} alt="instagram" className="img"/></a>
-                <a><img src={behance} alt="behance" className="img"/></a>
-                {/*<a><img src={test} alt="behance" className="img"/></a>*/}
-            </div>
-        )
-    }
-}
+    return(
+        <div className="footer">
+            <animated.a style={fade} href="https://twitter.com">
+                <img src={twitter} alt="twitter" className="img"/>
+            </animated.a>
+            <animated.a style={fade} href="https://facebook.com">
+                <img src={facebook} alt="facebook" className="img"/>
+            </animated.a>
+            <animated.a style={fade} href="https://instagram.com">
+                <img src={instagram} alt="instagram" className="img"/>
+            </animated.a>
+            <animated.a style={fade} href="https://behance.com">
+                <img src={behance} alt="behance" className="img"/>
+            </animated.a>
+        </div>
+    )
+};
 
 export default Footer;

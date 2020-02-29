@@ -1,24 +1,18 @@
-.flex {
-    width: 75%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 20%;
-}
-
-.content {
+.about-content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin-left: 20vw;
+    /*background-color: beige;*/
 }
-.content>img {
+.about-content>img {
     height: 25vmin
 }
 
-.content>h1 {
+.about-content>h1 {
     font-size: 5vmin;
 }
 
-.content>p {
+.about-content>p {
     font-size: 2vmin;
 }

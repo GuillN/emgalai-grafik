@@ -1,74 +1,64 @@
-import React from "react"
+import React, {useEffect, useState} from "react"
 import {Link} from "react-router-dom";
+import {useSpring, animated} from 'react-spring';
 import './nav.css'
 import {history} from "../../helpers/history";
-import logo from "../../images/logo.svg";
-import logoWhite from "../../images/logo-whito.svg";
-import Footer from "../footer/footer";
+import logo1Black from "../../images/logo.svg";
+import logo1White from "../../images/logo-whito.svg";
+import logo2Black from "../../images/emgalaiprint SIMPLE logo.png";
+import logo2White from "../../images/emgalaiprint SIMPLE logoBLANC.png";
 
-class Nav extends React.Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            logo: logoWhite,
-            navStyle: {
-                color: 'white'
-            }
-        };
-        this.navStyleBlack = this.navStyleBlack.bind(this);
-        this.navStyleWhite = this.navStyleWhite.bind(this)
-    }
+const Nav = props => {
+    const [isWhite, setWhite] = useState(true);
+    const [isPrint, setPrint] = useState(false);
 
-    componentDidMount() {
+    useEffect(() => {
         const path = history.location.pathname;
-        if (path === '/') {
-            this.navStyleWhite()
-        } else {
-            this.navStyleBlack()
-        }
-    }
+        setWhite(path === '/emgalai' || path === '/print');
+        console.log(`white ? ${isWhite}`);
+        setPrint(props.print)
+    }, [isWhite, props.print]);
 
-    navStyleWhite() {
-        this.setState({
-            logo: logoWhite,
-            navStyle: {
-                color: 'white'
-            }
-        });
-        Footer.toWhite()
-    }
+    let logo = isPrint ? isWhite ? logo2White : logo2Black : isWhite ? logo1White : logo1Black;
 
-    navStyleBlack() {
-        this.setState({
-            logo: logo,
-            navStyle: {
-                color: 'black'
-            }
-        });
-        Footer.toBlack()
-    }
+    const fade = useSpring({
+        from: {
+            opacity: 0,
+        },
+        opacity: 1
+    });
 
-    render() {
-        const {logo, navStyle} = this.state;
+    const color = {
+        color: isWhite ? 'white' : 'black'
+    };
 
-        return(
-            <div>
-                <header className="header">
-                    <Link to="/" className="logo-link" onClick={this.navStyleWhite}>
-                        <img src={logo} className="logo" alt="logo" />
-                    </Link>
-                </header>
-                <section className="nav">
-                    <Link to="/about" className="nav-link" style={navStyle} onClick={this.navStyleBlack}>ABOUT</Link>
-                    <Link to="/contact" className="nav-link" style={navStyle} onClick={this.navStyleBlack}>CONTACT</Link>
-                    <Link to="/portfolio" className="nav-link" style={navStyle} onClick={this.navStyleBlack}>PORTFOLIO</Link>
+    return(
+        <div>
+            <header className="header">
+                <Link to="/" className="logo-link">
+                    <img src={logo} className="logo" alt="logo" />
+                </Link>
+            </header>
+            <section className="nav">
+                <animated.div style={fade}>
+                    <Link to="/about" style={color} className="nav-link">ABOUT</Link>
+                </animated.div>
+
+                <animated.div style={fade}>
+                    <Link to="/contact" className="nav-link" style={color}>CONTACT</Link>
+                </animated.div>
+                <animated.div style={fade}>
+                    <Link to="/portfolio" className="nav-link" style={color}>PORTFOLIO</Link>
+                </animated.div>
+                <animated.div style={fade}>
+                    {/*<Link to="/shop" className="nav-link" style={color}>SHOP</Link>*/}
                     <a target="_blank" rel="noopener noreferrer" href="https://emgalaishop.bigcartel.com/"
-                       className="nav-link" style={navStyle}>SHOP</a>
-                </section>
-            </div>
-        )
-    }
-}
+                       className="nav-link" style={color}>SHOP</a>
+                </animated.div>
+            </section>
+        </div>
+    )
+};
 
 export default Nav;

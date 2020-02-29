@@ -1,6 +1,7 @@
 .footer {
     display: flex;
     justify-content: space-between;
+    /*align-items: center;*/
     left: 50%;
     width: 20vmin;
     margin-left: -10vmin;
