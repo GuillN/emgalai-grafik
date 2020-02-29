@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react"
+import React, {useState} from "react"
 import {Link} from "react-router-dom";
 import {useSpring, animated} from 'react-spring';
 import './nav.css'
@@ -10,23 +10,12 @@ import logo2White from "../../images/emgalaiprint SIMPLE logoBLANC.png";
 
 
 const Nav = props => {
-    const [isWhite, setWhite] = useState(true);
-    const [isPrint, setPrint] = useState(false);
-
-    useEffect(() => {
-        const path = history.location.pathname;
-        setWhite(path === '/emgalai' || path === '/print');
-        console.log(`white ? ${isWhite}`);
-        setPrint(props.print)
-    }, [isWhite, props.print]);
-
-    let logo = isPrint ? isWhite ? logo2White : logo2Black : isWhite ? logo1White : logo1Black;
+    const [isWhite, setWhite] = useState(history.location.pathname === '/emgalai' || history.location.pathname === '/print');
+    const [isPrint, setPrint] = useState(props.print);
+    const [logo, setLogo] = useState(isPrint ? isWhite ? logo2White : logo2Black : isWhite ? logo1White : logo1Black);
 
     const fade = useSpring({
-        from: {
-            opacity: 0,
-        },
-        opacity: 1
+        from: {opacity: 0,}, opacity: 1
     });
 
     const color = {
