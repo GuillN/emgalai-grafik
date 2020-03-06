@@ -28,8 +28,8 @@ const About = () => {
             <div className="about-content">
                 <animated.img style={fade1} src={logo} alt="logo"/> {/*todo change logo*/}
                 <animated.h1 style={fade2}>Ëmgalaï Grafik</animated.h1>
-                <animated.p style={fade3}>Ëmgalaï is a graphic designer & illustrator based in Paris</animated.p>
-                <animated.p style={fade3}>Ëmgalaï started in 2015, after joining Glazart & the Stoned Gatherings crew in Paris to work on flyers and gig posters</animated.p>
+                <animated.p style={fade3}>Ëmgalaï is a graphic designer and illustrator based in Paris</animated.p>
+                <animated.p style={fade3}>Ëmgalaï started in 2015, after joining Glazart and the Stoned Gatherings crew in Paris to work on flyers and gig posters</animated.p>
                 <animated.p style={fade3}>So far he worked with many stoner/doom/drone/metal bands like : Ulver, Venom, Godflesh, King Dude, Magma,</animated.p>
                 <animated.p style={fade3}>Boris, Kvelertak, My Sleeping Karma, Elder, Cough, Acid King...</animated.p>
             </div>

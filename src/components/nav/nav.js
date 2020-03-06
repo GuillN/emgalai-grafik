@@ -10,9 +10,9 @@ import logo2White from "../../images/emgalaiprint SIMPLE logoBLANC.png";
 
 
 const Nav = props => {
-    const [isWhite, setWhite] = useState(history.location.pathname === '/emgalai' || history.location.pathname === '/print');
-    const [isPrint, setPrint] = useState(props.print);
-    const [logo, setLogo] = useState(isPrint ? isWhite ? logo2White : logo2Black : isWhite ? logo1White : logo1Black);
+    const [isWhite] = useState(history.location.pathname === '/emgalai' || history.location.pathname === '/print');
+    const [isPrint] = useState(props.print);
+    const [logo] = useState(isPrint ? isWhite ? logo2White : logo2Black : isWhite ? logo1White : logo1Black);
 
     const fade = useSpring({
         from: {opacity: 0,}, opacity: 1

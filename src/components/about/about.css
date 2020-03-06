@@ -3,16 +3,20 @@
     flex-direction: column;
     align-items: flex-start;
     margin-left: 20vw;
-    /*background-color: beige;*/
+    margin-right: 10vw;
+    margin-bottom: 10vh;
 }
+
 .about-content>img {
-    height: 25vmin
+    height: 25vh
 }
 
 .about-content>h1 {
-    font-size: 5vmin;
+    font-family: 'Gondola', sans-serif;
+    font-size: 5vh;
 }
 
 .about-content>p {
-    font-size: 2vmin;
+    font-family: 'Gondola', sans-serif;
+    font-size: 2vh;
 }

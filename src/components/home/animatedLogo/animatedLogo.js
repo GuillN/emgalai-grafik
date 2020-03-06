@@ -16,10 +16,10 @@ const AnimatedLogo = props => {
     });
 
     const move = useSpring({
-        height: isToggled ? '15vh' : '80vh',
-        marginLeft: isToggled ? '50.5vw' : '0vw',
+        width: isToggled ? '5vw' : '20vw',
+        marginLeft: isToggled ? '50vw' : '0vw',
         marginRight: isToggled ? '50vw' : '0vw',
-        marginTop: isToggled ? '0.5vh' : '10vh',
+        marginTop: isToggled ? '0.5vh' : '20vh',
         filter: isToggled ? 'invert(100%)' : 'invert(0%)'
     });
 
