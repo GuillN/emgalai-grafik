@@ -7,6 +7,7 @@ import Print from "./components/print/print";
 import About from './components/about/about'
 import Contact from './components/contact/contact'
 import Portfolio from './components/portfolio/portfolio'
+import PortfolioDetails from "./components/portfolio/portfolioDetails";
 import Identity from './components/identity/identity'
 import Music from './components/music/music'
 import Posters from './components/posters/posters'
@@ -30,12 +31,13 @@ const App = () => {
                 <Route path="/about" component={About}/>
                 <Route path="/contact" component={Contact}/>
                 <Route path="/portfolio" component={Portfolio}/>
-                <Route path="/visual-identities" component={Identity}/>
-                <Route path="/music" component={Music}/>
-                <Route path="/posters" component={Posters}/>
-                <Route path="/editions" component={Editions}/>
-                <Route path="/teasers" component={Teasers}/>
-                <Route path="/logos" component={Logos}/>
+                <Route path="/portfolio/:name" component={matchProps => <PortfolioDetails {...matchProps}/>}/>
+                {/*<Route path="/visual-identities" component={Identity}/>*/}
+                {/*<Route path="/music" component={Music}/>*/}
+                {/*<Route path="/posters" component={Posters}/>*/}
+                {/*<Route path="/editions" component={Editions}/>*/}
+                {/*<Route path="/teasers" component={Teasers}/>*/}
+                {/*<Route path="/logos" component={Logos}/>*/}
                 <Route path="/shop" component={Shop}/>
 
             </Router>

@@ -4,6 +4,7 @@
     justify-content: center;
     height: 100vh;
     background-color: black;
+    overflow: hidden;
 }
 
 .home-logo-container {
@@ -23,7 +24,8 @@
     opacity: 0;
     position: absolute;
     top: 40%;
-    left: 30%
+    left: 30%;
+    pointer-events: none;
 }
 
 .big-logo {

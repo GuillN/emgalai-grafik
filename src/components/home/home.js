@@ -19,10 +19,6 @@ const Home = () => {
         display: isToggledLeft ? 'none' : 'inline'
     });
 
-    // const backColor = useSpring({
-    //     backgroundColor: isToggledLeft || isToggledRight ? 'black' : 'white'
-    // });
-
     return (
         <animated.div className="home-container"/* style={backColor}*/>
             <animated.div onClick={() => setToggleLeft(!isToggledLeft)} style={disappearLeft} className="home-logo-container">
