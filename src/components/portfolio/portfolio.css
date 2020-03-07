@@ -1,59 +1,84 @@
 .picto-container {
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+    /*flex-direction: column;*/
+    /*align-items: center;*/
+    /*height: 25vh;*/
+    /*padding-bottom: 10vh;*/
+    /*padding-top: 5vh;*/
+
+/*.row {*/
+/*    display: flex;*/
+/*    width: 60vw;*/
+/*    justify-content: space-evenly;*/
+/*}*/
+
+/*.img {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*}*/
+
+/*.img:hover > img{*/
+/*    filter: blur(2px) opacity(20%);*/
+/*    transition: .5s ease;*/
+/*}*/
+
+/*.img:hover > p {*/
+/*    opacity: 1;*/
+/*    transition: .2s ease;*/
+/*}*/
+
+/*.img > img {*/
+/*    height: 10vh;*/
+/*    transition: ease-out .5s;*/
+/*}*/
+
+/*.img > p, .img > p > p {*/
+/*    opacity: 0;*/
+/*    transition: .2s ease-out;*/
+/*    color: black;*/
+/*    font-size: 2vh;*/
+/*    text-align: center;*/
+/*}*/
+
+/*.img > p {*/
+/*    margin-top: -8vh;*/
+/*}*/
+
+/*.img > p + p {*/
+/*    margin-top: -2vh;*/
+/*}*/
+
+/*.picto-link {*/
+/*    text-decoration: none;*/
+/*}*/
+
+/*.picto-link:focus {*/
+/*    outline: 0;*/
+/*}*/
+
+.portfolio-item{
+    flex: 0 0 21%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    height: 25vh;
-    padding-bottom: 10vh;
-    padding-top: 5vh;
+    height: 50vh;
+    width: 20vw;
+    overflow: hidden;
+    /*margin-right: 3vw;*/
+
 }
 
-.row {
-    display: flex;
-    width: 60vw;
-    justify-content: space-evenly;
+.portfolio-item>img {
+    width: auto;
+    height: 100%;
+    min-height: 40vh;
+    min-width: 20vw;
 }
 
-.img {
-    display: flex;
-    flex-direction: column;
-}
-
-.img:hover > img{
-    filter: blur(2px) opacity(20%);
-    transition: .5s ease;
-}
-
-.img:hover > p {
-    opacity: 1;
-    transition: .2s ease;
-}
-
-.img > img {
-    height: 10vh;
-    transition: ease-out .5s;
-}
-
-.img > p, .img > p > p {
-    opacity: 0;
-    transition: .2s ease-out;
-    color: black;
-    font-size: 2vh;
-    text-align: center;
-}
-
-.img > p {
-    margin-top: -8vh;
-}
-
-.img > p + p {
-    margin-top: -2vh;
-}
-
-.picto-link {
-    text-decoration: none;
-}
-
-.picto-link:focus {
-    outline: 0;
+.portfolio-item>p{
 }

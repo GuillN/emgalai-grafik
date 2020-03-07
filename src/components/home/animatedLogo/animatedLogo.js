@@ -16,11 +16,11 @@ const AnimatedLogo = props => {
     });
 
     const move = useSpring({
-        width: isToggled ? '5vw' : '20vw',
+        width: isToggled ? props.toWidth : props.width,
         marginLeft: isToggled ? '50vw' : '0vw',
         marginRight: isToggled ? '50vw' : '0vw',
-        marginTop: isToggled ? '0.5vh' : '20vh',
-        filter: isToggled ? 'invert(100%)' : 'invert(0%)'
+        marginTop: isToggled ? props.margin : '30vh'
+
     });
 
     return (

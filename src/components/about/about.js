@@ -1,6 +1,6 @@
 import React from "react"
 import './about.css';
-import logo from '../../images/logo.svg'
+import logo from '../../images/emgalai-logo-NOIR.png'
 import Footer from "../footer/footer";
 import Nav from "../nav/nav";
 import {useSpring, animated} from "react-spring";
@@ -26,8 +26,8 @@ const About = () => {
         <div>
             <Nav print={false}/>
             <div className="about-content">
-                <animated.img style={fade1} src={logo} alt="logo"/> {/*todo change logo*/}
-                <animated.h1 style={fade2}>Ëmgalaï Grafik</animated.h1>
+                <animated.img style={fade1} src={logo} alt="logo"/>
+                <animated.h1 style={fade2}>ëmgalaï grafik</animated.h1>
                 <animated.p style={fade3}>Ëmgalaï is a graphic designer and illustrator based in Paris</animated.p>
                 <animated.p style={fade3}>Ëmgalaï started in 2015, after joining Glazart and the Stoned Gatherings crew in Paris to work on flyers and gig posters</animated.p>
                 <animated.p style={fade3}>So far he worked with many stoner/doom/drone/metal bands like : Ulver, Venom, Godflesh, King Dude, Magma,</animated.p>

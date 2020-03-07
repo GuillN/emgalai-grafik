@@ -12,11 +12,11 @@
 }
 
 .about-content>h1 {
-    font-family: 'Gondola', sans-serif;
+    font-family: 'KAISG', sans-serif;
     font-size: 5vh;
 }
 
 .about-content>p {
-    font-family: 'Gondola', sans-serif;
     font-size: 2vh;
+    margin-bottom: -.1vh;
 }
