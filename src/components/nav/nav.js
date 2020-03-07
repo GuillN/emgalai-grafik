@@ -42,7 +42,7 @@ const Nav = props => {
                     <Link to="/contact" className="nav-link" style={color}>CONTACT</Link>
                 </animated.div>
                 <animated.div style={fade}>
-                    <Link to="/portfolio" className="nav-link" style={color}>PORTFOLIO</Link>
+                    <Link to="/portfolio" className="nav-link" style={color}>WORKS</Link>
                 </animated.div>
                 <animated.div style={fade}>
                     {/*<Link to="/shop" className="nav-link" style={color}>SHOP</Link>*/}

@@ -24,27 +24,24 @@ import PortfolioDetails from "./portfolioDetails";
 
 const Portfolio = () => {
 
-    const fade1 = useSpring({
+    const fade = useSpring({
         from: {opacity: 0},opacity: 1,
-        config: {duration: 500}
-    });
-
-    const fade2 = useSpring({
-        from: {opacity: 0}, opacity: 1, delay: 500,
         config: {duration: 500}
     });
 
     return(
         <div>
             <Nav/>
-            <animated.div style={fade1} className="picto-container">
-                <PortfolioItem img={goblin} alt={'goblin_img'} text={'Goblin'}/>
-                <PortfolioItem img={conan} alt={'conan_img'} text={'Conan'}/>
+            <animated.div style={fade} className="picto-container">
+                <Link to="/portfolio/0">
+                    <PortfolioItem img={conan} alt={'conan_img'} text={'Conan'}/>
+                </Link>
+                <Link to="/portfolio/1">
+                    <PortfolioItem img={goblin} alt={'goblin_img'} text={'Goblin'}/>
+                </Link>
                 <PortfolioItem img={darkspace} alt={'darkspace_img'} text={'Darkspace'}/>
                 <PortfolioItem img={ulver} alt={'ulver_img'} text={'Ulver'}/>
                 <PortfolioItem img={sunn} alt={'sunn_img'} text={'Sunn O)))'}/>
-                <PortfolioDetails/>
-
             </animated.div>
         </div>
     )

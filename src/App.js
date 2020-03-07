@@ -30,8 +30,8 @@ const App = () => {
                 <Route path="/print" exact component={Print}/>
                 <Route path="/about" component={About}/>
                 <Route path="/contact" component={Contact}/>
-                <Route path="/portfolio" component={Portfolio}/>
-                <Route path="/portfolio/:name" component={matchProps => <PortfolioDetails {...matchProps}/>}/>
+                <Route path="/portfolio" exact component={Portfolio}/>
+                <Route path="/portfolio/:id" component={PortfolioDetails}/>
                 {/*<Route path="/visual-identities" component={Identity}/>*/}
                 {/*<Route path="/music" component={Music}/>*/}
                 {/*<Route path="/posters" component={Posters}/>*/}
