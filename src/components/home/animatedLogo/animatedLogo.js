@@ -20,7 +20,6 @@ const AnimatedLogo = props => {
         marginLeft: isToggled ? '50vw' : '0vw',
         marginRight: isToggled ? '50vw' : '0vw',
         marginTop: isToggled ? props.margin : '30vh'
-
     });
 
     return (
