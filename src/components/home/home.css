@@ -17,17 +17,6 @@
     transition: .3s ease-in;
 }
 
-.home-text {
-    font-family: 'KAISG', sans-serif;
-    font-size: 4vh;
-    color: white;
-    opacity: 0;
-    position: absolute;
-    top: 40%;
-    left: 30%;
-    pointer-events: none;
-}
-
 .big-logo {
     cursor: pointer;
 }
@@ -37,7 +26,18 @@
     transition: .3s ease-in;
 }
 
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 1025px) { /*For desktop*/
+    .home-text {
+        font-family: 'KAISG', sans-serif;
+        font-size: 4vh;
+        color: white;
+        opacity: 0;
+        position: absolute;
+        top: 40%;
+        left: 30%;
+        pointer-events: none;
+    }
+
     .barre {
         height: 50vh;
         margin-top: 25vh;
@@ -46,9 +46,20 @@
     }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1024px) { /*For mobile*/
+    .home-text {
+        font-family: 'KAISG', sans-serif;
+        font-size: 6vw;
+        color: white;
+        /*opacity: 0;*/
+        position: absolute;
+        top: 40%;
+        left: -15%;
+        pointer-events: none;
+    }
+
     .barre {
-        height: 20vh;
+        height: 25vh;
         margin-top: 25vh;
         margin-right: 5vw;
         margin-left: 5vw;
