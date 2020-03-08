@@ -5,7 +5,6 @@ import logo2 from '../../images/emgalaiprint SIMPLE BLANClogo.svg'
 import barre from '../../images/barre centrale(1).png'
 import {useSpring, animated} from 'react-spring'
 import AnimatedLogo from "./animatedLogo/animatedLogo";
-import Logo from "../mainLogos/logo";
 
 const Home = () => {
     const [isToggledLeft, setToggleLeft] = useState(false);
@@ -20,9 +19,8 @@ const Home = () => {
     });
 
     return (
-        <animated.div className="home-container"/* style={backColor}*/>
+        <animated.div className="home-container">
             <animated.div onClick={() => setToggleLeft(!isToggledLeft)} style={disappearLeft} className="home-logo-container">
-                {/*<Logo size={'40vw'} to={"/emgalai"}/>*/}
                 <AnimatedLogo className="animated-logo" logo={logo1} to={"/emgalai"} width={'15vw'} toWidth={'5vw'} margin={'0.5vh'}/>
                 <animated.p className="home-text" style={disappearRight}>
                     portfolio

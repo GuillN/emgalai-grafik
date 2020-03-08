@@ -1,27 +1,35 @@
 import React, {useEffect, useState} from 'react'
-import {conan, goblin} from '../../helpers/images'
+import {logos, tshirts, posters, aluk, conan, darkspace, escarion, glazart, goblin, hifi, king, metalorgie, mysticum,
+    rio, sunn, ulver} from '../../helpers/images'
+import Nav from "../nav/nav";
 
 const PortfolioDetails = props => {
 
-    const [images, setImages] = useState([]);
     const [id, setId] = useState(0);
-    const imports = [conan, goblin];
-    const names = ['Conan', 'Goblin'];
-    
+    const [images, setImages] = useState([]);
+    const imports = [logos, tshirts, posters, aluk, conan, darkspace, escarion, glazart, goblin, hifi, king, metalorgie,
+        mysticum, rio, sunn, ulver];
+    const names = ['Logos', 'T-Shirts', 'Posters', 'Aluk Todolo', 'Conan', 'Darkspace', "Escarion", "Glazart", 'Goblin',
+        "Hifi Store", "King Dude", "Metalorgie Fest", "Mysticum", "RIO", "Sunn O)))", "Ulver"];
+
     useEffect(() => {
-        setImages(imports[props.match.params.id])
-    }, [imports, props.match.params.id]);
+        setId(props.match.params.id);
+        setImages(imports[id]);
+    }, [id, imports, props.match.params.id]);
 
     let img = images.map((item, index) => (
-        <div key={index}>
-            <img alt={index} src={item}/>
+        <div key={index} className="portfolio-details-frame">
+            <img alt={index} src={item} className="portfolio-details-image"/>
         </div>
     ));
 
     return(
-        <div className="portfolio-details">
-            <h1>{names[props]}</h1>
-            {img}
+        <div>
+            <Nav/>
+            <div className="portfolio-details">
+                <h1>{names[id]}</h1>
+                {img}
+            </div>
         </div>
     )
 };
