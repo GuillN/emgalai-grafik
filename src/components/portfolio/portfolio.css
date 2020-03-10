@@ -38,6 +38,10 @@
     align-items: center;
 }
 
+.portfolio-details > h1 {
+    font-size: 5vh;
+}
+
 .portfolio-details-grid {
     display: flex;
     flex-wrap: wrap;
@@ -63,4 +67,8 @@
 .portfolio-details-image {
     margin-bottom: 1vh;
     width: 100%;
+}
+
+.portfolio-details-video {
+    width: 50vw !important
 }

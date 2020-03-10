@@ -1,10 +1,14 @@
 import React from "react"
 import Nav from "../nav/nav";
+import Footer from "../footer/footer";
 
 const Openings = () => {
 
     return (
-        <Nav print/>
+        <div>
+            <Nav print/>
+            <Footer/>
+        </div>
     )
 };
 

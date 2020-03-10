@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react'
 import {logos, posters, aluk, conan, darkspace, escarion, glazart, goblin, hifi, king, metalorgie, mysticum,
     rio, sunn, ulver} from '../../helpers/images'
 import Nav from "../nav/nav";
+import ReactPlayer from "react-player";
 
 const PortfolioDetails = props => {
 
@@ -28,6 +29,16 @@ const PortfolioDetails = props => {
         [], //sunnO)))
         [] //ulver
     ];
+    const videos = [
+        null, null, null, null,
+        978901818938041, // darkspace
+        null, null,
+        262610617954917, // goblin
+        null,
+        752027961625429, // king dude
+        null, null, null, null,
+        876609339167290 // ulver
+    ];
 
     useEffect(() => {
         setId(props.match.params.id);
@@ -51,14 +62,18 @@ const PortfolioDetails = props => {
     };
 
     let img = images.map(mapper);
+    const videoId = videos[id];
+    const url = `https://www.facebook.com/emgalai/videos/${videoId}/`;
 
     return(
+
         <div>
             <Nav/>
             <div className="portfolio-details">
                 <h1>{names[id]}</h1>
                 <div className="portfolio-details-grid">
                     {img}
+                    <ReactPlayer className="portfolio-details-video" url={url} controls/>
                 </div>
             </div>
         </div>
