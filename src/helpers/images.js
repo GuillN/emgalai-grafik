@@ -27,26 +27,24 @@ import glazart3 from '../images/glazart/78106798_1421968387964713_65819230619754
 import glazart4 from '../images/glazart/76260142_1393723147455904_1154860291498967040_o.jpg'
 import glazart5 from '../images/glazart/71005537_1360286200799599_6365964096218595328_o.jpg'
 
-import goblin0 from '../images/goblin/carré-goblin.jpg'
-import goblin1 from '../images/goblin/1.jpg'
-import goblin2 from '../images/goblin/2.jpg'
-import goblin3 from '../images/goblin/3.jpg'
-import goblin4 from '../images/goblin/4.jpg'
-import goblin5 from '../images/goblin/5.jpg'
-import goblin6 from '../images/goblin/6.jpg'
-import goblin7 from '../images/goblin/7.jpg'
+import goblin0 from '../images/goblin/1.jpg'
+import goblin1 from '../images/goblin/2.jpg'
+import goblin2 from '../images/goblin/3.jpg'
+import goblin3 from '../images/goblin/4.jpg'
+import goblin4 from '../images/goblin/5.jpg'
+import goblin5 from '../images/goblin/6.jpg'
+import goblin6 from '../images/goblin/7.jpg'
 
 import hifi0 from '../images/hifi/hifi-store-opening-bag.jpg'
 import hifi1 from '../images/hifi/couv-event-hifistore.jpg'
 import hifi2 from '../images/hifi/70037928_3011456418867739_7986905747529138176_o.jpg'
 import hifi3 from '../images/hifi/logo hifistore.png'
 
-import king0 from '../images/king_dude/carré-king-dude.jpg'
-import king1 from '../images/king_dude/1.jpg'
-import king2 from '../images/king_dude/2.jpg'
-import king3 from '../images/king_dude/3.jpg'
-import king4 from '../images/king_dude/4.jpg'
-import king5 from '../images/king_dude/5.jpg'
+import king0 from '../images/king_dude/1.jpg'
+import king1 from '../images/king_dude/2.jpg'
+import king2 from '../images/king_dude/3.jpg'
+import king3 from '../images/king_dude/4.jpg'
+import king4 from '../images/king_dude/5.jpg'
 
 import metalorgie0 from '../images/metalorgie/18402139_776506359177589_7360995729966066875_o.jpg'
 import metalorgie1 from '../images/metalorgie/18404012_776506432510915_5317633184242945183_o.jpg'
@@ -109,8 +107,7 @@ import poster4 from '../images/posters/posterconaninsta.jpg'
 import poster5 from '../images/posters/bongripper carré.jpg'
 import poster6 from '../images/posters/carré-aluk-poster.jpg'
 import poster7 from '../images/posters/carréinsta.jpg'
-import poster8 from '../images/posters/Copie de carré-goblin.jpg'
-import poster9 from '../images/posters/Untitled-1.jpg'
+import poster8 from '../images/posters/Untitled-1.jpg'
 
 export let aluk;
 aluk = [aluk0, aluk1, aluk2, aluk3];
@@ -128,13 +125,13 @@ export let glazart;
 glazart = [glazart0, glazart1, glazart2, glazart3, glazart4, glazart5];
 
 export let goblin;
-goblin = [goblin0, goblin1, goblin2, goblin3, goblin4, goblin5, goblin6, goblin7];
+goblin = [goblin0, goblin1, goblin2, goblin3, goblin4, goblin5, goblin6];
 
 export let hifi;
 hifi = [hifi0, hifi1, hifi2, hifi3];
 
 export let king;
-king = [king0, king1, king2, king3, king4, king5];
+king = [king0, king1, king2, king3, king4];
 
 export let metalorgie;
 metalorgie = [metalorgie0, metalorgie1, metalorgie2, metalorgie3, metalorgie4, metalorgie5, metalorgie6, metalorgie7, metalorgie8];
@@ -158,4 +155,4 @@ export let tshirts;
 tshirts = [tshirt0, tshirt1, tshirt2, tshirt3, tshirt4, tshirt5];
 
 export let posters;
-posters = [poster0, poster1, poster2, poster3, poster4, poster5, poster6, poster7, poster8, poster9];
+posters = [poster0, poster1, poster2, poster3, poster4, poster5, poster6, poster7, poster8];

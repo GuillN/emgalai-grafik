@@ -39,20 +39,28 @@
 }
 
 .portfolio-details-grid {
-    margin-top: 5vh;
-    margin-bottom: 5vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
 }
 
 .portfolio-details-frame {
-    max-width: 40vw;
-    /*max-height: 40vw;*/
+    max-width: 21vw; /*4 per row*/
+}
+
+.portfolio-details-frame-med {
+    max-width: 34vw; /*2 per row*/
+}
+
+.portfolio-details-frame-big {
+    max-width: 50vw; /*1 per row*/
+    margin-left: 20vw;
+    margin-right: 20vw;
 }
 
 .portfolio-details-image {
     margin-bottom: 1vh;
     width: 100%;
-    /*height: 100%;*/
 }
