@@ -28,7 +28,9 @@ const PortfolioDetails = props => {
             <Nav/>
             <div className="portfolio-details">
                 <h1>{names[id]}</h1>
-                {img}
+                <div className={id === '2' || id === '7' ? "portfolio-details-grid" : ""}>
+                    {img}
+                </div>
             </div>
         </div>
     )

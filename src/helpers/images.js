@@ -1,15 +1,14 @@
-import aluk0 from '../images/aluk_todolo/facebook.jpg'
-import aluk1 from '../images/aluk_todolo/carrré-instaNoirALUK-toteBag.jpg'
-import aluk2 from '../images/aluk_todolo/aluk-todolo.jpg'
-import aluk3 from '../images/aluk_todolo/69848804_1341548999339986_9053722679793680384_o.jpg'
+import aluk0 from '../images/aluk_todolo/1.jpg'
+import aluk1 from '../images/aluk_todolo/2.jpg'
+import aluk2 from '../images/aluk_todolo/3.jpg'
+import aluk3 from '../images/aluk_todolo/4.jpg'
 
-import conan0 from '../images/conan/CONAN-beige.jpg'
-import conan1 from '../images/conan/CONAN-black.jpg'
-import conan2 from '../images/conan/conanWEB.jpg'
-import conan3 from '../images/conan/posterconaninsta.jpg'
-import conan4 from '../images/conan/zoom1.jpg'
-import conan5 from '../images/conan/zoom2.jpg'
-import conan6 from '../images/conan/zoom3.jpg'
+import conan0 from '../images/conan/1.jpg'
+import conan1 from '../images/conan/2.jpg'
+import conan2 from '../images/conan/3.jpg'
+import conan3 from '../images/conan/4.jpg'
+import conan4 from '../images/conan/5.jpg'
+import conan5 from '../images/conan/6.jpg'
 
 import darkspace0 from '../images/darkspace/ZOOM1.jpg'
 import darkspace1 from '../images/darkspace/ZOOM2.jpg'
@@ -29,27 +28,25 @@ import glazart4 from '../images/glazart/76260142_1393723147455904_11548602914989
 import glazart5 from '../images/glazart/71005537_1360286200799599_6365964096218595328_o.jpg'
 
 import goblin0 from '../images/goblin/carré-goblin.jpg'
-import goblin1 from '../images/goblin/55564351_1217577291737158_1155125063347863552_o.jpg'
-import goblin2 from '../images/goblin/49348986_1168860463275508_1235007426374139904_o.jpg'
-import goblin3 from '../images/goblin/55543785_1217577555070465_6872580738894528512_o.jpg'
-import goblin4 from '../images/goblin/55575612_1217577245070496_8637045787622113280_o.jpg'
-import goblin5 from '../images/goblin/55840305_1217577271737160_8730946434276261888_o.jpg'
-import goblin6 from '../images/goblin/banniere-TWITTER.jpg'
-import goblin7 from '../images/goblin/Goblin-flyerFINAL.jpg'
+import goblin1 from '../images/goblin/1.jpg'
+import goblin2 from '../images/goblin/2.jpg'
+import goblin3 from '../images/goblin/3.jpg'
+import goblin4 from '../images/goblin/4.jpg'
+import goblin5 from '../images/goblin/5.jpg'
+import goblin6 from '../images/goblin/6.jpg'
+import goblin7 from '../images/goblin/7.jpg'
 
 import hifi0 from '../images/hifi/hifi-store-opening-bag.jpg'
 import hifi1 from '../images/hifi/couv-event-hifistore.jpg'
 import hifi2 from '../images/hifi/70037928_3011456418867739_7986905747529138176_o.jpg'
 import hifi3 from '../images/hifi/logo hifistore.png'
 
-import king0 from '../images/king_dude/banniere-kingdude-laplage.jpg'
-import king1 from '../images/king_dude/carré-king-dude.jpg'
-import king2 from '../images/king_dude/carré.jpg'
-import king3 from '../images/king_dude/FLYER-LAPLAGE-KD.jpg'
-import king4 from '../images/king_dude/IMG_20170302_235654.jpg'
-import king5 from '../images/king_dude/IMG_20170302_235726-(1).jpg'
-import king6 from '../images/king_dude/IMG_20170302_235726 (1).jpg'
-import king7 from '../images/king_dude/WIP-3.jpg'
+import king0 from '../images/king_dude/carré-king-dude.jpg'
+import king1 from '../images/king_dude/1.jpg'
+import king2 from '../images/king_dude/2.jpg'
+import king3 from '../images/king_dude/3.jpg'
+import king4 from '../images/king_dude/4.jpg'
+import king5 from '../images/king_dude/5.jpg'
 
 import metalorgie0 from '../images/metalorgie/18402139_776506359177589_7360995729966066875_o.jpg'
 import metalorgie1 from '../images/metalorgie/18404012_776506432510915_5317633184242945183_o.jpg'
@@ -119,7 +116,7 @@ export let aluk;
 aluk = [aluk0, aluk1, aluk2, aluk3];
 
 export let conan;
-conan = [conan0, conan1, conan2, conan3, conan4, conan5, conan6];
+conan = [conan0, conan1, conan2, conan3, conan4, conan5];
 
 export let darkspace;
 darkspace = [darkspace0, darkspace1, darkspace2, darkspace3, darkspace4, darkspace5, darkspace6];
@@ -137,7 +134,7 @@ export let hifi;
 hifi = [hifi0, hifi1, hifi2, hifi3];
 
 export let king;
-king = [king0, king1, king2, king3, king4, king5, king6, king7];
+king = [king0, king1, king2, king3, king4, king5];
 
 export let metalorgie;
 metalorgie = [metalorgie0, metalorgie1, metalorgie2, metalorgie3, metalorgie4, metalorgie5, metalorgie6, metalorgie7, metalorgie8];

@@ -1,10 +1,21 @@
 import React from 'react'
+import {MobileView, BrowserView} from "react-device-detect"
 
 const PortfolioItem = props => {
     return(
-        <div className="portfolio-item">
-            <img src={props.img} alt={props.alt}/>
-            <p className="portfolio-item-text">{props.text}</p>
+        <div>
+            <BrowserView>
+                <div className="portfolio-item">
+                    <img className="portfolio-item-image" src={props.img} alt={props.alt}/>
+                    <p className="portfolio-item-text">{props.text}</p>
+                </div>
+            </BrowserView>
+            <MobileView>
+                <div className="portfolio-item">
+                    <img className="portfolio-item-image-mobile" src={props.img} alt={props.alt}/>
+                    <p className="portfolio-item-text">{props.text}</p>
+                </div>
+            </MobileView>
         </div>
     )
 };

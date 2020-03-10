@@ -5,12 +5,12 @@ import {useSpring, animated} from "react-spring";
 import Nav from "../nav/nav";
 import PortfolioItem from "./portfolioItem";
 
-import logos from '../../images/logos/RIB-logo.jpg'
+import logos from '../../images/emgalai-logo-NOIR.png'
 import tshirts from '../../images/tshirts/Emgalai_s-Gatezoom1.jpg'
 import posters from '../../images/posters/carréinsta.jpg'
 
-import aluk from '../../images/aluk_todolo/carrré-instaNoirALUK-toteBag.jpg'
-import conan from '../../images/conan/zoom1.jpg'
+import aluk from '../../images/aluk_todolo/1.jpg'
+import conan from '../../images/conan/1.jpg'
 import darkspace from '../../images/darkspace/ZOOM1.jpg'
 import escarion from '../../images/escarion/Escarion-Envy.jpg'
 import glazart from '../../images/glazart/71005537_1360286200799599_6365964096218595328_o.jpg'

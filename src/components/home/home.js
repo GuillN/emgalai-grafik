@@ -24,13 +24,6 @@ const Home = () => {
         config: {duration: 700}
     });
 
-    const slideUp = useSpring({
-        from: {
-            marginBottom: -5000
-        },
-        marginBottom: 0
-    });
-
     return (
         <div>
             <BrowserView>
