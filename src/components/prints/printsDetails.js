@@ -1,32 +1,15 @@
 import React, {useEffect, useState} from 'react'
-import {logos, posters, aluk, conan, darkspace, escarion, glazart, goblin, hifi, king, metalorgie, mysticum,
-    rio, sunn, ulver} from '../../helpers/images'
+import {tshirts} from '../../helpers/images'
 import Nav from "../nav/nav";
 
-const PortfolioDetails = props => {
+const PrintsDetails = props => {
 
     const [id, setId] = useState(0);
     const [images, setImages] = useState([]);
-    const imports = [logos, posters, aluk, conan, darkspace, escarion, glazart, goblin, hifi, king, metalorgie,
-        mysticum, rio, sunn, ulver];
-    const names = ['Logos', 'Posters', 'Aluk Todolo', 'Conan', 'Darkspace', "Escarion", "Glazart", 'Goblin',
-        "Hifi Store", "King Dude", "Metalorgie Fest", "Mysticum", "RIO", "Sunn O)))", "Ulver"];
+    const imports = [tshirts];
+    const names = ['T-Shirts'];
     const indexes = [
-        [], //logos
-        [], //posters
-        [1, 2], //aluk todolo
-        [2, 3, 4, 5], //conan
-        [], //darkspace
-        [], //escarion
-        [], //glazart
-        [3, 4, 5, 6], //goblin
-        [], //hifi
-        [], //king dude
-        [], //metalorgie
-        [], //mysticum
-        [], //rio
-        [], //sunnO)))
-        [] //ulver
+        [] //tshirts
     ];
 
     useEffect(() => {
@@ -43,7 +26,7 @@ const PortfolioDetails = props => {
             )
         } else {
             return (
-                <div key={index} className={id === '1' || id === '6' ? "portfolio-details-frame" : "portfolio-details-frame-big"}>
+                <div key={index} className="portfolio-details-frame-big">
                     <img alt={index} src={item} className="portfolio-details-image"/>
                 </div>
             )
@@ -54,7 +37,7 @@ const PortfolioDetails = props => {
 
     return(
         <div>
-            <Nav/>
+            <Nav print/>
             <div className="portfolio-details">
                 <h1>{names[id]}</h1>
                 <div className="portfolio-details-grid">
@@ -65,4 +48,4 @@ const PortfolioDetails = props => {
     )
 };
 
-export default PortfolioDetails
+export default PrintsDetails
