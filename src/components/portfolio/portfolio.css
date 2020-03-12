@@ -48,20 +48,21 @@
     justify-content: space-evenly;
     margin-top: 5vh;
     margin-bottom: 5vh;
+    width: 50vw;
 }
 
 .portfolio-details-frame {
-    max-width: 21vw; /*4 per row*/
+    max-width: 12vw; /*4 per row*/
 }
 
 .portfolio-details-frame-med {
-    max-width: 34vw; /*2 per row*/
+    max-width: 20vw; /*2 per row*/
 }
 
 .portfolio-details-frame-big {
-    max-width: 50vw; /*1 per row*/
-    margin-left: 20vw;
-    margin-right: 20vw;
+    width: 25vw; /*1 per row*/
+    margin-left: 12vw;
+    margin-right: 12vw;
 }
 
 .portfolio-details-image {

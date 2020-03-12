@@ -73,7 +73,11 @@ const PortfolioDetails = props => {
                 <h1>{names[id]}</h1>
                 <div className="portfolio-details-grid">
                     {img}
-                    <ReactPlayer className="portfolio-details-video" url={url} controls/>
+                    {
+                        videos[id] == null ?
+                            "" :
+                            <ReactPlayer className="portfolio-details-video" url={url} controls/>
+                    }
                 </div>
             </div>
         </div>

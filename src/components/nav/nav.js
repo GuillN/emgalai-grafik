@@ -72,11 +72,6 @@ const Nav = props => {
                     <animated.div style={fade}>
                         <Link to="/openings" className="nav-link" style={color}>OPENINGS</Link>
                     </animated.div>
-                    <animated.div style={fade}>
-                        {/*<Link to="/shop" className="nav-link" style={color}>SHOP</Link>*/}
-                        <a target="_blank" rel="noopener noreferrer" href="https://emgalaishop.bigcartel.com/"
-                           className="nav-link" style={color}>SHOP</a>
-                    </animated.div>
                 </section>
             </div>
         )
