@@ -1,6 +1,7 @@
-import React, {useState, useEffect} from "react"
+import React, {useState} from "react"
 import {Link} from "react-router-dom";
 import {useSpring, animated} from 'react-spring';
+import {MobileView, BrowserView} from "react-device-detect"
 import './nav.css'
 import {history} from "../../helpers/history";
 import logo1Black from "../../images/logo.svg";
@@ -40,12 +41,20 @@ const Nav = props => {
         setDropShop(false)
     };
 
+    const handleToggleShop = () => {
+        setDropShop(!dropShop)
+    };
+
     const handleHoverWork = () => {
         setDropWork(true)
     };
 
     const handleLeaveWork = () => {
         setDropWork(false)
+    };
+
+    const handleToggleWork = () => {
+        setDropWork(!dropWork)
     };
 
     if (!isPrint) {
@@ -64,31 +73,64 @@ const Nav = props => {
                     <animated.div style={fade}>
                         <Link to="/contact" className="nav-link" style={color}>CONTACT</Link>
                     </animated.div>
-                    <animated.div style={fade} onMouseEnter={handleHoverWork} onMouseLeave={handleLeaveWork}>
-                        <Link to="/portfolio" className="nav-link" style={color}>WORKS</Link>
-                        {
-                            dropWork ?
-                                <animated.div className="sub-links" style={subFadeWork}>
-                                    <Link to="/portfolio/1" className="nav-link sub-link" style={color}>POSTERS</Link>
-                                    <Link to="/portfolio/0" className="nav-link sub-link" style={color}>LOGOS</Link>
-                                </animated.div>
-                                : ""
-                        }
-                    </animated.div>
-                    <animated.div style={fade} onMouseEnter={handleHoverShop} onMouseLeave={handleLeaveShop}>
+                    <BrowserView>
+                        <animated.div style={fade} onMouseEnter={handleHoverWork} onMouseLeave={handleLeaveWork}>
+                            <Link to="/portfolio" className="nav-link" style={color}>WORKS</Link>
+                            {
+                                dropWork ?
+                                    <animated.div className="sub-links" style={subFadeWork}>
+                                        <Link to="/portfolio/1" className="nav-link sub-link" style={color}>POSTERS</Link>
+                                        <Link to="/portfolio/0" className="nav-link sub-link" style={color}>LOGOS</Link>
+                                    </animated.div>
+                                    : ""
+                            }
+                        </animated.div>
+                    </BrowserView>
+                    <MobileView>
+                        <animated.div style={fade} onClick={handleToggleWork}>
+                            {dropWork ? "" : <div className="nav-link">WORKS</div>}
+                            {
+                                dropWork ?
+                                    <animated.div className="sub-links" style={subFadeWork}>
+                                        <Link to="/portfolio" className="nav-link" style={color}>WORKS</Link>
+                                        <Link to="/portfolio/1" className="nav-link sub-link" style={color}>POSTERS</Link>
+                                        <Link to="/portfolio/0" className="nav-link sub-link" style={color}>LOGOS</Link>
+                                    </animated.div>
+                                    : ""
+                            }
+                        </animated.div>
+                    </MobileView>
+                    <BrowserView>
                         {/*<Link to="/shop" className="nav-link" style={color}>SHOP</Link>*/}
-                        <a className="nav-link" style={color}>SHOP</a>
-                        {
-                            dropShop ?
-                                <animated.div className="sub-links" style={subFadeShop}>
-                                    <a target="_blank" rel="noopener noreferrer" href="https://emgalaishop.bigcartel.com/"
-                                       className="nav-link sub-link" style={color}>BIG CARTEL</a>
-                                    <a target="_blank" rel="noopener noreferrer" href="https://shop.e-kunst.com/artist/emgalai"
-                                       className="nav-link sub-link" style={color}>E-KUNST</a>
-                                </animated.div>
-                                : ""
-                        }
-                    </animated.div>
+                        <animated.div style={fade} onMouseEnter={handleHoverShop} onMouseLeave={handleLeaveShop}>
+                            <div className="nav-link" style={color}>SHOP</div>
+                            {
+                                dropShop ?
+                                    <animated.div className="sub-links" style={subFadeShop}>
+                                        <a target="_blank" rel="noopener noreferrer" href="https://emgalaishop.bigcartel.com/"
+                                           className="nav-link sub-link" style={color}>BIG CARTEL</a>
+                                        <a target="_blank" rel="noopener noreferrer" href="https://shop.e-kunst.com/artist/emgalai"
+                                           className="nav-link sub-link" style={color}>E-KUNST</a>
+                                    </animated.div>
+                                    : ""
+                            }
+                        </animated.div>
+                    </BrowserView>
+                    <MobileView>
+                        <animated.div style={fade} onClick={handleToggleShop}>
+                            <div className="nav-link" style={color}>SHOP</div>
+                            {
+                                dropShop ?
+                                    <animated.div className="sub-links" style={subFadeShop}>
+                                        <a target="_blank" rel="noopener noreferrer" href="https://emgalaishop.bigcartel.com/"
+                                           className="nav-link sub-link" style={color}>BIG CARTEL</a>
+                                        <a target="_blank" rel="noopener noreferrer" href="https://shop.e-kunst.com/artist/emgalai"
+                                           className="nav-link sub-link" style={color}>E-KUNST</a>
+                                    </animated.div>
+                                    : ""
+                            }
+                        </animated.div>
+                    </MobileView>
                 </section>
             </div>
         )
