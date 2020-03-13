@@ -66,15 +66,15 @@ const Nav = props => {
                     </Link>
                 </header>
                 <section className="nav">
-                    <animated.div style={fade}>
+                    <animated.div className="nav-link-container" style={fade}>
                         <Link to="/about" style={color} className="nav-link">ABOUT</Link>
                     </animated.div>
 
-                    <animated.div style={fade}>
+                    <animated.div className="nav-link-container" style={fade}>
                         <Link to="/contact" className="nav-link" style={color}>CONTACT</Link>
                     </animated.div>
                     <BrowserView>
-                        <animated.div style={fade} onMouseEnter={handleHoverWork} onMouseLeave={handleLeaveWork}>
+                        <animated.div className="nav-link-container" style={fade} onMouseEnter={handleHoverWork} onMouseLeave={handleLeaveWork}>
                             <Link to="/portfolio" className="nav-link" style={color}>WORKS</Link>
                             {
                                 dropWork ?
@@ -87,8 +87,8 @@ const Nav = props => {
                         </animated.div>
                     </BrowserView>
                     <MobileView>
-                        <animated.div style={fade} onClick={handleToggleWork}>
-                            {dropWork ? "" : <div className="nav-link">WORKS</div>}
+                        <animated.div className="nav-link-container" style={fade} onClick={handleToggleWork}>
+                            {dropWork ? "" : <div style={color} className="nav-link">WORKS</div>}
                             {
                                 dropWork ?
                                     <animated.div className="sub-links" style={subFadeWork}>
@@ -102,13 +102,13 @@ const Nav = props => {
                     </MobileView>
                     <BrowserView>
                         {/*<Link to="/shop" className="nav-link" style={color}>SHOP</Link>*/}
-                        <animated.div style={fade} onMouseEnter={handleHoverShop} onMouseLeave={handleLeaveShop}>
+                        <animated.div className="nav-link-container" style={fade} onMouseEnter={handleHoverShop} onMouseLeave={handleLeaveShop}>
                             <div className="nav-link" style={color}>SHOP</div>
                             {
                                 dropShop ?
                                     <animated.div className="sub-links" style={subFadeShop}>
                                         <a target="_blank" rel="noopener noreferrer" href="https://emgalaishop.bigcartel.com/"
-                                           className="nav-link sub-link" style={color}>BIG CARTEL</a>
+                                           className="nav-link sub-link" style={color}>BIGCARTEL</a>
                                         <a target="_blank" rel="noopener noreferrer" href="https://shop.e-kunst.com/artist/emgalai"
                                            className="nav-link sub-link" style={color}>E-KUNST</a>
                                     </animated.div>
@@ -117,7 +117,7 @@ const Nav = props => {
                         </animated.div>
                     </BrowserView>
                     <MobileView>
-                        <animated.div style={fade} onClick={handleToggleShop}>
+                        <animated.div className="nav-link-container" style={fade} onClick={handleToggleShop}>
                             <div className="nav-link" style={color}>SHOP</div>
                             {
                                 dropShop ?
@@ -143,14 +143,14 @@ const Nav = props => {
                     </Link>
                 </header>
                 <section className="nav">
-                    <animated.div style={fade}>
+                    <animated.div className="nav-link-container" style={fade}>
                         <Link to="/devis" style={color} className="nav-link">DEVIS</Link>
                     </animated.div>
 
-                    <animated.div style={fade}>
+                    <animated.div className="nav-link-container" style={fade}>
                         <Link to="/prints" className="nav-link" style={color}>PRINTS</Link>
                     </animated.div>
-                    <animated.div style={fade}>
+                    <animated.div className="nav-link-container" style={fade}>
                         <Link to="/openings" className="nav-link" style={color}>OPENINGS</Link>
                     </animated.div>
                 </section>
