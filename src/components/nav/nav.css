@@ -13,7 +13,7 @@
 }
 
 .nav {
-    height: 7vh;
+    height: 10vh;
     display: flex;
     justify-content: center;
 }
@@ -52,4 +52,16 @@
     opacity: 1;
     -webkit-transform: scale(1);
     transform: scale(1);
+}
+
+.sub-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sub-link {
+    padding-top: .7vh;
+    padding-right: 0;
+    padding-left: 0;
 }

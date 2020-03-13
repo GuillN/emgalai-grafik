@@ -13,17 +13,39 @@ const Nav = props => {
     const [isWhite] = useState(history.location.pathname === '/emgalai' || history.location.pathname === '/print');
     const [isPrint] = useState(props.print);
     const [logo] = useState(isPrint ? isWhite ? logo2White : logo2Black : isWhite ? logo1White : logo1Black);
-
-    // useEffect(() => {
-    //     console.log(`Nav says ${isPrint ? 'print section' : 'main section'}`)
-    // });
+    const [dropShop, setDropShop] = useState(false);
+    const [dropWork, setDropWork] = useState(false);
 
     const fade = useSpring({
         from: {opacity: 0,}, opacity: 1
     });
 
+    const subFadeShop = useSpring({
+        opacity: dropShop ? 1 : 0
+    });
+
+    const subFadeWork = useSpring({
+        opacity: dropWork ? 1 : 0
+    });
+
     const color = {
         color: isWhite ? 'white' : 'black'
+    };
+
+    const handleHoverShop = () => {
+        setDropShop(true)
+    };
+
+    const handleLeaveShop = () => {
+        setDropShop(false)
+    };
+
+    const handleHoverWork = () => {
+        setDropWork(true)
+    };
+
+    const handleLeaveWork = () => {
+        setDropWork(false)
     };
 
     if (!isPrint) {
@@ -42,13 +64,30 @@ const Nav = props => {
                     <animated.div style={fade}>
                         <Link to="/contact" className="nav-link" style={color}>CONTACT</Link>
                     </animated.div>
-                    <animated.div style={fade}>
+                    <animated.div style={fade} onMouseEnter={handleHoverWork} onMouseLeave={handleLeaveWork}>
                         <Link to="/portfolio" className="nav-link" style={color}>WORKS</Link>
+                        {
+                            dropWork ?
+                                <animated.div className="sub-links" style={subFadeWork}>
+                                    <Link to="/portfolio/1" className="nav-link sub-link" style={color}>POSTERS</Link>
+                                    <Link to="/portfolio/0" className="nav-link sub-link" style={color}>LOGOS</Link>
+                                </animated.div>
+                                : ""
+                        }
                     </animated.div>
-                    <animated.div style={fade}>
+                    <animated.div style={fade} onMouseEnter={handleHoverShop} onMouseLeave={handleLeaveShop}>
                         {/*<Link to="/shop" className="nav-link" style={color}>SHOP</Link>*/}
-                        <a target="_blank" rel="noopener noreferrer" href="https://emgalaishop.bigcartel.com/"
-                           className="nav-link" style={color}>SHOP</a>
+                        <a className="nav-link" style={color}>SHOP</a>
+                        {
+                            dropShop ?
+                                <animated.div className="sub-links" style={subFadeShop}>
+                                    <a target="_blank" rel="noopener noreferrer" href="https://emgalaishop.bigcartel.com/"
+                                       className="nav-link sub-link" style={color}>BIG CARTEL</a>
+                                    <a target="_blank" rel="noopener noreferrer" href="https://shop.e-kunst.com/artist/emgalai"
+                                       className="nav-link sub-link" style={color}>E-KUNST</a>
+                                </animated.div>
+                                : ""
+                        }
                     </animated.div>
                 </section>
             </div>

@@ -51,25 +51,26 @@
     width: 50vw;
 }
 
-.portfolio-details-frame {
-    max-width: 12vw; /*4 per row*/
-}
+@media only screen and (min-width: 1281px) {
+    .portfolio-details-frame {
+        max-width: 12vw; /*4 per row*/
+    }
 
-.portfolio-details-frame-med {
-    max-width: 20vw; /*2 per row*/
-}
+    .portfolio-details-frame-med {
+        max-width: 20vw; /*2 per row*/
+    }
 
-.portfolio-details-frame-big {
-    width: 25vw; /*1 per row*/
-    margin-left: 12vw;
-    margin-right: 12vw;
+    .portfolio-details-frame-big {
+        width: 25vw; /*1 per row*/
+        margin-left: 12vw;
+        margin-right: 12vw;
+    }
+    .portfolio-details-video {
+        width: 50vw !important
+    }
 }
 
 .portfolio-details-image {
     margin-bottom: 1vh;
     width: 100%;
-}
-
-.portfolio-details-video {
-    width: 50vw !important
 }

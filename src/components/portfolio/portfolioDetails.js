@@ -66,7 +66,6 @@ const PortfolioDetails = props => {
     const url = `https://www.facebook.com/emgalai/videos/${videoId}/`;
 
     return(
-
         <div>
             <Nav/>
             <div className="portfolio-details">

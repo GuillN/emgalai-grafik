@@ -5,10 +5,6 @@ import {useSpring, animated} from "react-spring";
 import Nav from "../nav/nav";
 import PortfolioItem from "./portfolioItem";
 
-import logos from '../../images/emgalai-logo-NOIR.png'
-// import tshirts from '../../images/tshirts/Emgalai_s-Gatezoom1.jpg'
-import posters from '../../images/posters/carréinsta.jpg'
-
 import aluk from '../../images/aluk_todolo/1.jpg'
 import conan from '../../images/conan/1.jpg'
 import darkspace from '../../images/darkspace/ZOOM1.jpg'
@@ -34,16 +30,6 @@ const Portfolio = () => {
         <div>
             <Nav/>
             <animated.div style={fade} className="picto-container">
-                <Link to="/portfolio/0">
-                    <PortfolioItem img={logos} alt={'logos_img'} text={'Logos'}/>
-                </Link>
-                {/*<Link to="/portfolio/1">*/}
-                {/*    <PortfolioItem img={tshirts} alt={'tshirts_img'} text={'T-Shirts'}/>*/}
-                {/*</Link>*/}
-                <Link to="/portfolio/1">
-                    <PortfolioItem img={posters} alt={'posters_img'} text={'Posters'}/>
-                </Link>
-
                 <Link to="/portfolio/2">
                     <PortfolioItem img={aluk} alt={'aluk_todolo_img'} text={'Aluk Todolo'}/>
                 </Link>
