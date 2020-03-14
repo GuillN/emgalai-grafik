@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react'
+import { Carousel } from "react-responsive-carousel"
 import {logos, posters, aluk, conan, darkspace, escarion, glazart, goblin, hifi, king, metalorgie, mysticum,
     rio, sunn, ulver} from '../../helpers/images'
 import Nav from "../nav/nav";
@@ -54,7 +55,7 @@ const PortfolioDetails = props => {
             )
         } else {
             return (
-                <div key={index} className={id === '1' || id === '6' ? "portfolio-details-frame" : "portfolio-details-frame-big"}>
+                <div key={index} className={id === '6' ? "portfolio-details-frame" : "portfolio-details-frame-big"}>
                     <img alt={index} src={item} className="portfolio-details-image"/>
                 </div>
             )
@@ -65,22 +66,38 @@ const PortfolioDetails = props => {
     const videoId = videos[id];
     const url = `https://www.facebook.com/emgalai/videos/${videoId}/`;
 
-    return(
-        <div>
-            <Nav/>
-            <div className="portfolio-details">
-                <h1>{names[id]}</h1>
-                <div className="portfolio-details-grid">
-                    {img}
-                    {
-                        videos[id] == null ?
-                            "" :
-                            <ReactPlayer className="portfolio-details-video" url={url} controls/>
-                    }
+    if (id !== '1') {
+        return(
+            <div>
+                <Nav/>
+                <div className="portfolio-details">
+                    <h1>{names[id]}</h1>
+                    <div className="portfolio-details-grid">
+                        {img}
+                        {
+                            videos[id] == null ?
+                                "" :
+                                <ReactPlayer className="portfolio-details-video" url={url} controls/>
+                        }
+                    </div>
                 </div>
             </div>
-        </div>
-    )
+        )
+    } else {
+        return (
+            <div>
+                <Nav/>
+                <div className="portfolio-details">
+                    <h1>{names[id]}</h1>
+                    <div className="portfolio-details-grid">
+                        <Carousel autoPlay infiniteLoop interval={4000} showThumbs={false} className="portfolio-carousel">
+                            {img}
+                        </Carousel>
+                    </div>
+                </div>
+            </div>
+        )
+    }
 };
 
 export default PortfolioDetails

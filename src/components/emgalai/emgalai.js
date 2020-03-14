@@ -16,7 +16,7 @@ class Emgalai extends React.Component {
             <div>
                 <BrowserView>
                     <Nav print={false}/>
-                    <Carousel showThumbs={false} showStatus={false} stopOnHover={false} className="carousel"
+                    <Carousel showThumbs={false} showStatus={false} stopOnHover={false} className="video-carousel"
                               autoPlay infiniteLoop interval={12000} dynamicHeight>
                         <div>
                             <CarouselPane videoId={978901818938041}/>
