@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import { Carousel } from "react-responsive-carousel"
+import {MobileView, BrowserView} from "react-device-detect"
 import {logos, posters, aluk, conan, darkspace, escarion, glazart, goblin, hifi, king, metalorgie, mysticum,
     rio, sunn, ulver} from '../../helpers/images'
 import Nav from "../nav/nav";
@@ -90,9 +91,16 @@ const PortfolioDetails = props => {
                 <div className="portfolio-details">
                     <h1>{names[id]}</h1>
                     <div className="portfolio-details-grid">
-                        <Carousel autoPlay infiniteLoop interval={4000} showThumbs={false} className="portfolio-carousel">
-                            {img}
-                        </Carousel>
+                        <BrowserView>
+                            <Carousel autoPlay infiniteLoop interval={4000} showThumbs={false} className="portfolio-carousel">
+                                {img}
+                            </Carousel>
+                        </BrowserView>
+                        <MobileView>
+                            <Carousel autoPlay infiniteLoop interval={4000} showThumbs={false} className="portfolio-carousel-mobile">
+                                {img}
+                            </Carousel>
+                        </MobileView>
                     </div>
                 </div>
             </div>

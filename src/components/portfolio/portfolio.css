@@ -83,3 +83,7 @@
     width: auto;
     margin: 0;
 }
+
+.portfolio-carousel-mobile > .carousel {
+    width: 60vw !important;
+}
