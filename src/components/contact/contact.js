@@ -1,5 +1,6 @@
 import React from "react"
 import './contact.css'
+import {MobileView, BrowserView} from "react-device-detect"
 
 import phone from '../../images/phone-icon.png'
 import email from '../../images/email-icon.png'
@@ -35,7 +36,9 @@ const Contact = () => {
 
                 <Form/>
             </div>
-            <Footer/>
+            <BrowserView>
+                <Footer/>
+            </BrowserView>
         </div>
     )
 };

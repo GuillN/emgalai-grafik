@@ -11,13 +11,16 @@
 
 .inputs {
     align-items: flex-end;
-    margin-bottom: 10vh;
-    height: 55vh;
+    margin-bottom: 4vh;
 }
 
 .text {
-    margin-top: 2vh;
+    margin-top: 4vh;
     align-items: flex-start;
+}
+
+.line {
+    width: 100%;
 }
 
 .small-container {
@@ -38,8 +41,7 @@
     background-color: grey;
     color: white;
     border: solid grey;
-    font-size: 2vh;
-    height: 4vh;
+    font-size: 3vh;
     transition: .2s ease-out;
 }
 
