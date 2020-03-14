@@ -16,7 +16,6 @@
 }
 
 .text {
-    /*font-family: 'Gondola', sans-serif;*/
     margin-top: 2vh;
     align-items: flex-start;
 }
@@ -34,7 +33,6 @@
 /*Fancy inputs*/
 
 .submit {
-    /*font-family: 'Gondola', sans-serif;*/
     margin-top: 2vh;
     border-radius: 2vh;
     background-color: grey;
@@ -53,7 +51,6 @@
 }
 
 .input {
-    /*font-family: 'Gondola', sans-serif;*/
     position: relative;
     margin: auto;
     width: 60vw;
@@ -127,5 +124,3 @@
 .input > .inp:focus + span + .border {
     transform: scaleX(1)
 }
-
-

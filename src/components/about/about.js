@@ -4,6 +4,7 @@ import logo from '../../images/emgalai-logo-NOIR.png'
 import Footer from "../footer/footer";
 import Nav from "../nav/nav";
 import {useSpring, animated} from "react-spring";
+import {MobileView, BrowserView} from "react-device-detect"
 
 const About = () => {
 
@@ -25,15 +26,29 @@ const About = () => {
     return(
         <div>
             <Nav print={false}/>
-            <div className="about-content">
-                <animated.img style={fade1} src={logo} alt="logo"/>
-                <animated.h1 style={fade2}>ëmgalaï grafik</animated.h1>
-                <animated.p style={fade3}>Ëmgalaï is a graphic designer and illustrator based in Paris</animated.p>
-                <animated.p style={fade3}>Ëmgalaï started in 2015, after joining Glazart and the Stoned Gatherings crew in Paris to work on flyers and gig posters</animated.p>
-                <animated.p style={fade3}>So far he worked with many stoner/doom/drone/metal bands like : Ulver, Venom, Godflesh, King Dude, Magma,</animated.p>
-                <animated.p style={fade3}>Boris, Kvelertak, My Sleeping Karma, Elder, Cough, Acid King...</animated.p>
-            </div>
-            <Footer/>
+            <BrowserView>
+                <div className="about-content">
+                    <animated.img style={fade1} src={logo} alt="logo"/>
+                    <animated.h1 style={fade2}>ëmgalaï grafik</animated.h1>
+                    <animated.p style={fade3}>Ëmgalaï is a graphic designer and illustrator based in Paris</animated.p>
+                    <animated.p style={fade3}>Ëmgalaï started in 2015, after joining Glazart and the Stoned Gatherings crew in Paris to work on flyers and gig posters</animated.p>
+                    <animated.p style={fade3}>So far he worked with many stoner/doom/drone/metal bands like : Ulver, Venom, Godflesh, King Dude, Magma,</animated.p>
+                    <animated.p style={fade3}>Boris, Kvelertak, My Sleeping Karma, Elder, Cough, Acid King...</animated.p>
+                </div>
+                <Footer/>
+            </BrowserView>
+            <MobileView>
+                <div className="about-content-mobile">
+                    <animated.img style={fade1} src={logo} alt="logo"/>
+                    <animated.h1 style={fade2}>ëmgalaï grafik</animated.h1>
+                    <animated.p style={fade3}>Ëmgalaï is a graphic designer and illustrator based in Paris</animated.p>
+                    <animated.p style={fade3}>Ëmgalaï started in 2015, after joining Glazart and the Stoned Gatherings
+                        crew in Paris to work on flyers and gig posters</animated.p>
+                    <animated.p style={fade3}>So far he worked with many stoner/doom/drone/metal bands like : Ulver,
+                        Venom, Godflesh, King Dude, Magma, Boris, Kvelertak, My Sleeping Karma, Elder, Cough,
+                        Acid King...</animated.p>
+                </div>
+            </MobileView>
         </div>
     )
 };
