@@ -39,7 +39,7 @@ const PrintsDetails = props => {
         <div>
             <Nav print/>
             <div className="portfolio-details">
-                <h1>{names[id]}</h1>
+                <h1>{names[id].toUpperCase()}</h1>
                 <div className="portfolio-details-grid">
                     {img}
                 </div>

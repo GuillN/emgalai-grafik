@@ -72,7 +72,7 @@ const PortfolioDetails = props => {
             <div>
                 <Nav/>
                 <div className="portfolio-details">
-                    <h1>{names[id]}</h1>
+                    <h1>{names[id].toUpperCase()}</h1>
                     <div className="portfolio-details-grid">
                         {img}
                         {
@@ -89,7 +89,7 @@ const PortfolioDetails = props => {
             <div>
                 <Nav/>
                 <div className="portfolio-details">
-                    <h1>{names[id]}</h1>
+                    <h1>{names[id].toUpperCase()}</h1>
                     <div className="portfolio-details-grid">
                         <BrowserView>
                             <Carousel autoPlay infiniteLoop interval={4000} showThumbs={false} className="portfolio-carousel">
