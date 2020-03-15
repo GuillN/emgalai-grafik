@@ -46,7 +46,7 @@
     .portfolio-details-grid {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-evenly;
+        justify-content: center;
         margin-top: 5vh;
         margin-bottom: 5vh;
         width: 50vw;
@@ -54,10 +54,12 @@
 
     .portfolio-details-frame {
         max-width: 12vw; /*4 per row*/
+        margin-right: 1vh;
     }
 
     .portfolio-details-frame-med {
         max-width: 20vw; /*2 per row*/
+        margin-right: 1.7vh;
     }
 
     .portfolio-details-frame-big {

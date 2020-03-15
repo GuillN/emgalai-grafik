@@ -56,7 +56,7 @@ import metalorgie6 from '../images/metalorgie/banniereWarmup.jpg'
 import metalorgie7 from '../images/metalorgie/IMG_0264.JPG'
 import metalorgie8 from '../images/metalorgie/logog.jpg'
 
-import mysticum0 from '../images/mysticum/47319781_2200266730229241_8661828040977809408_n.jpg'
+import mysticum0 from '../images/mysticum/47291980_2105719712850602_1667775542369189888_o.jpg'
 import mysticum1 from '../images/mysticum/47396711_2200266723562575_1390971145024438272_n.jpg'
 import mysticum2 from '../images/mysticum/47458388_1144845375677017_3509200426446618624_o.jpg'
 import mysticum3 from '../images/mysticum/carré site.jpg'

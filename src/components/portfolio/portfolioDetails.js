@@ -26,7 +26,7 @@ const PortfolioDetails = props => {
         [], //hifi
         [], //king dude
         [], //metalorgie
-        [], //mysticum
+        [0, 1], //mysticum
         [], //rio
         [], //sunnO)))
         [] //ulver
