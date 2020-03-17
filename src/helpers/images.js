@@ -10,13 +10,23 @@ import conan3 from '../images/conan/4.jpg'
 import conan4 from '../images/conan/5.jpg'
 import conan5 from '../images/conan/6.jpg'
 
-import darkspace0 from '../images/darkspace/ZOOM1.jpg'
-import darkspace1 from '../images/darkspace/ZOOM2.jpg'
-import darkspace2 from '../images/darkspace/ZOOM3.jpg'
-import darkspace3 from '../images/darkspace/darktof.jpg'
+import cult0 from '../images/cult_of_fire/1.jpg'
+import cult1 from '../images/cult_of_fire/2.jpg'
+import cult2 from '../images/cult_of_fire/3.jpg'
+import cult3 from '../images/cult_of_fire/4.jpg'
+import cult4 from '../images/cult_of_fire/5.jpg'
+
+import darkspace0 from '../images/darkspace/darktof.jpg'
+import darkspace1 from '../images/darkspace/ZOOM1.jpg'
+import darkspace2 from '../images/darkspace/ZOOM2.jpg'
+import darkspace3 from '../images/darkspace/ZOOM3.jpg'
 import darkspace4 from '../images/darkspace/IMG_2800.JPG'
 import darkspace5 from '../images/darkspace/IMG_20180505_173015 (1).jpg'
-import darkspace6 from '../images/darkspace/profile-picture.jpg'
+// import darkspace6 from '../images/darkspace/profile-picture.jpg'
+
+import doom0 from '../images/doom/61698623_1260684734093080_8789890969173491712_o.jpg'
+import doom1 from '../images/doom/61171990_1260684680759752_8179678087525433344_o.jpg'
+import doom2 from '../images/doom/61660984_1260684567426430_8776594149857034240_o.jpg'
 
 import escarion0 from '../images/escarion/Escarion-Envy.jpg'
 
@@ -34,6 +44,11 @@ import goblin3 from '../images/goblin/4.jpg'
 import goblin4 from '../images/goblin/5.jpg'
 import goblin5 from '../images/goblin/6.jpg'
 import goblin6 from '../images/goblin/7.jpg'
+
+import godflesh0 from '../images/godflesh/GODFLESH-POSTER-black.jpg'
+import godflesh1 from '../images/godflesh/1.jpg'
+import godflesh2 from '../images/godflesh/2.jpg'
+import godflesh3 from '../images/godflesh/IMG_2797.JPG'
 
 import hifi0 from '../images/hifi/hifi-store-opening-bag.jpg'
 import hifi1 from '../images/hifi/couv-event-hifistore.jpg'
@@ -63,6 +78,9 @@ import mysticum3 from '../images/mysticum/carré site.jpg'
 import mysticum4 from '../images/mysticum/MYSTICUM.jpg'
 import mysticum5 from '../images/mysticum/Shirt-Back.jpg'
 import mysticum6 from '../images/mysticum/Shirt-Front.jpg'
+import mysticum7 from '../images/mysticum/1.jpg'
+import mysticum8 from '../images/mysticum/2.jpg'
+import mysticum9 from '../images/mysticum/3.jpg'
 
 import rio0 from '../images/rio/1.jpg'
 import rio1 from '../images/rio/2.jpg'
@@ -91,6 +109,8 @@ import logo1 from '../images/logos/logo hifistore.png'
 import logo2 from '../images/logos/74933640_1797220587089149_9186832602584055808_n.png'
 import logo3 from '../images/logos/logo-stoned-of-reality.jpg'
 import logo4 from '../images/logos/RIB-logo.jpg'
+import logo5 from '../images/logos/ryte-logo-usé.jpg'
+import logo6 from '../images/logos/Logo-RIO.jpg'
 
 import tshirt0 from '../images/tshirts/67567580_1310293545798865_9137664366735261696_o.jpg'
 import tshirt1 from '../images/tshirts/DARKSPACE-shirt.jpg'
@@ -108,6 +128,18 @@ import poster5 from '../images/posters/bongripper carré.jpg'
 import poster6 from '../images/posters/carré-aluk-poster.jpg'
 import poster7 from '../images/posters/carréinsta.jpg'
 import poster8 from '../images/posters/Untitled-1.jpg'
+import poster9 from '../images/posters/1.jpg'
+
+import vinyl0 from '../images/vinyls/52454249_782766682094103_2915019433648848896_o.jpg'
+import vinyl1 from '../images/vinyls/53050743_782766668760771_8002689503233835008_o.jpg'
+import vinyl2 from '../images/vinyls/52653751_777778752592896_81818048952008704_o.jpg'
+
+import cassette0 from '../images/cassettes/71805203_934774896893280_7544485877947301888_o.jpg'
+import cassette1 from '../images/cassettes/71916057_934774903559946_1219914262755934208_o.jpg'
+import cassette2 from '../images/cassettes/72169566_934774980226605_7998612325139480576_o.jpg'
+import cassette3 from '../images/cassettes/72278993_939565739747529_2610847805341696000_o.jpg'
+import cassette4 from '../images/cassettes/72996266_939565966414173_8140139460412047360_o.jpg'
+
 
 export let aluk;
 aluk = [aluk0, aluk1, aluk2, aluk3];
@@ -115,8 +147,14 @@ aluk = [aluk0, aluk1, aluk2, aluk3];
 export let conan;
 conan = [conan0, conan1, conan2, conan3, conan4, conan5];
 
+export let cult;
+cult = [cult0, cult1, cult2, cult3, cult4];
+
 export let darkspace;
-darkspace = [darkspace0, darkspace1, darkspace2, darkspace3, darkspace4, darkspace5, darkspace6];
+darkspace = [darkspace0, darkspace1, darkspace2, darkspace3, darkspace4, darkspace5];
+
+export let doom;
+doom = [doom0, doom1, doom2];
 
 export let escarion;
 escarion = [escarion0];
@@ -126,6 +164,9 @@ glazart = [glazart0, glazart1, glazart2, glazart3, glazart4, glazart5];
 
 export let goblin;
 goblin = [goblin0, goblin1, goblin2, goblin3, goblin4, goblin5, goblin6];
+
+export let godflesh;
+godflesh = [godflesh0, godflesh1, godflesh2, godflesh3];
 
 export let hifi;
 hifi = [hifi0, hifi1, hifi2, hifi3];
@@ -137,7 +178,7 @@ export let metalorgie;
 metalorgie = [metalorgie0, metalorgie1, metalorgie2, metalorgie3, metalorgie4, metalorgie5, metalorgie6, metalorgie7, metalorgie8];
 
 export let mysticum;
-mysticum = [mysticum0, mysticum1, mysticum2, mysticum3, mysticum4, mysticum5, mysticum6];
+mysticum = [mysticum0, mysticum1, mysticum2, mysticum3, mysticum4, mysticum5, mysticum6, mysticum7, mysticum8, mysticum9];
 
 export let rio;
 rio = [rio0, rio1, rio2, rio3, rio4, rio5, rio6, rio7, rio8];
@@ -149,10 +190,16 @@ export let ulver;
 ulver = [ulver0, ulver1, ulver2, ulver3, ulver4, ulver5];
 
 export let logos;
-logos = [logo0, logo1, logo2, logo3, logo4];
+logos = [logo0, logo1, logo2, logo3, logo4, logo5, logo6];
 
 export let tshirts;
 tshirts = [tshirt0, tshirt1, tshirt2, tshirt3, tshirt4, tshirt5];
 
 export let posters;
 posters = [poster0, poster1, poster2, poster3, poster4, poster5, poster6, poster7, poster8];
+
+export let vinyls;
+vinyls = [vinyl0, vinyl1, vinyl2];
+
+export let cassettes;
+cassettes = [cassette0, cassette1, cassette2, cassette3, cassette4];

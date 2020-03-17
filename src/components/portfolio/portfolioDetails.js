@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import { Carousel } from "react-responsive-carousel"
 import {MobileView, BrowserView} from "react-device-detect"
-import {logos, posters, aluk, conan, darkspace, escarion, glazart, goblin, hifi, king, metalorgie, mysticum,
+import {logos, posters, aluk, conan, cult, darkspace, doom, escarion, glazart, goblin, godflesh, hifi, king, metalorgie, mysticum,
     rio, sunn, ulver} from '../../helpers/images'
 import Nav from "../nav/nav";
 import ReactPlayer from "react-player";
@@ -10,33 +10,37 @@ const PortfolioDetails = props => {
 
     const [id, setId] = useState(0);
     const [images, setImages] = useState([]);
-    const imports = [logos, posters, aluk, conan, darkspace, escarion, glazart, goblin, hifi, king, metalorgie,
+    const imports = [logos, posters, aluk, conan, cult, darkspace, doom, escarion, glazart, goblin, godflesh, hifi, king, metalorgie,
         mysticum, rio, sunn, ulver];
-    const names = ['Logos', 'Posters', 'Aluk Todolo', 'Conan', 'Darkspace', "Escarion", "Glazart", 'Goblin',
-        "Hifi Store", "King Dude", "Metalorgie Fest", "Mysticum", "RIO", "Sunn O)))", "Ulver"];
+    const names = ['Logos', 'Posters', 'Aluk Todolo', 'Conan', 'Cult Of Fire', 'Darkspace', "Doom", "Escarion", "Glazart", 'Goblin',
+        'Godflesh', "Hifi Store", "King Dude", "Metalorgie Fest", "Mysticum", "RIO", "Sunn O)))", "Ulver"];
     const indexes = [
         [], //logos
         [], //posters
         [1, 2], //aluk todolo
         [2, 3, 4, 5], //conan
-        [], //darkspace
+        [1, 2, 3, 4], //cult
+        [1, 2, 3, 4], //darkspace
+        [1, 2], //doom
         [], //escarion
         [], //glazart
         [3, 4, 5, 6], //goblin
+        [1, 2], //godflesh
         [], //hifi
         [], //king dude
-        [], //metalorgie
+        [0, 1], //metalorgie
         [0, 1], //mysticum
         [], //rio
         [], //sunnO)))
         [] //ulver
     ];
     const videos = [
-        null, null, null, null,
+        null, null, null, null, null,
         978901818938041, // darkspace
+        1072535196279459, //doom
         null, null,
         262610617954917, // goblin
-        null,
+        null, null,
         752027961625429, // king dude
         null, null, null, null,
         876609339167290 // ulver
@@ -56,7 +60,7 @@ const PortfolioDetails = props => {
             )
         } else {
             return (
-                <div key={index} className={id === '6' ? "portfolio-details-frame" : "portfolio-details-frame-big"}>
+                <div key={index} className={id === '8' ? "portfolio-details-frame" : "portfolio-details-frame-big"}>
                     <img alt={index} src={item} className="portfolio-details-image"/>
                 </div>
             )

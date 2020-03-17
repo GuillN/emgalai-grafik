@@ -23,21 +23,21 @@ const Emgalai = () =>  {
             <BrowserView>
                 <Nav print={false}/>
                 <Carousel showThumbs={false} showStatus={false} stopOnHover={false} className="video-carousel"
-                          autoPlay infiniteLoop interval={12000} dynamicHeight>
-                    <div>
-                        <CarouselPane videoId={978901818938041}/>
-                    </div>
-                    <div>
-                        <CarouselPane videoId={876609339167290}/>
-                    </div>
+                          autoPlay infiniteLoop interval={14000} dynamicHeight>
                     <div>
                         <CarouselPane videoId={752027961625429}/>
                     </div>
                     <div>
-                        <CarouselPane videoId={262610617954917}/>
+                        <CarouselPane videoId={978901818938041}/>
                     </div>
+                    {/*<div>*/}
+                    {/*    <CarouselPane videoId={876609339167290}/>*/}
+                    {/*</div>*/}
                     <div>
                         <CarouselPane videoId={1072535196279459}/>
+                    </div>
+                    <div>
+                        <CarouselPane videoId={262610617954917}/>
                     </div>
                 </Carousel>
                 <Footer/>
