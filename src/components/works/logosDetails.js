@@ -4,6 +4,8 @@ import Popup from "reactjs-popup";
 
 import {logos} from '../../helpers/images'
 import Nav from "../nav/nav";
+import back from "../../images/back.svg";
+import next from "../../images/next.svg";
 
 const LogosDetails = props => {
     const [images, setImages] = useState([]);
@@ -38,11 +40,11 @@ const LogosDetails = props => {
                 <Popup trigger={<img alt={index} src={item} className="portfolio-details-logo"/>}
                        modal closeOnEscape onOpen={()=>{init(index)}}>
                     <div className="modal-container">
-                        {modalIndex===0 ? <div className="left-placeholder"/> : <div className="left-arrow" onClick={decrement}>PREV</div>}
+                        {modalIndex===0 ? "" : <img src={back} alt="back" className="left-arrow" onClick={decrement}/>}
                         <div className="modal">
                             <img alt={modalIndex} src={images[modalIndex]} className="modal-image"/>
                         </div>
-                        {modalIndex===size-1 ? <div className="right-placeholder"/> : <div className="right-arrow" onClick={increment}>NEXT</div>}
+                        {modalIndex===size-1 ? "" : <img src={next} alt="next" className="right-arrow" onClick={increment}/>}
                     </div>
                 </Popup>
             </animated.div>

@@ -155,13 +155,13 @@
     margin-left: 1vw;
 }
 
-.left-placeholder {
-    margin-left: 1vw;
-}
+/*.left-placeholder {*/
+/*    margin-left: 0vw;*/
+/*}*/
 
-.right-placeholder {
-    margin-right: 1vw;
-}
+/*.right-placeholder {*/
+/*    margin-right: 1vw;*/
+/*}*/
 
 .description {
     font-size: 2vh;

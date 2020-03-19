@@ -2,11 +2,17 @@ import React, {useEffect, useState} from 'react'
 
 import {vinyls, cassettes} from '../../helpers/images'
 import Nav from "../nav/nav";
+import Popup from "reactjs-popup";
+import back from "../../images/back.svg";
+import next from "../../images/next.svg";
+import {animated, useSpring} from "react-spring";
 
 const PrintsDetails = props => {
 
     const [id, setId] = useState(0);
     const [images, setImages] = useState([]);
+    const [modalIndex, setModalIndex] = useState(0);
+
     const imports = [vinyls, cassettes];
     const names = ['Vinyls', 'Cassettes'];
 
@@ -20,29 +26,86 @@ const PrintsDetails = props => {
         [2, 3, 4]
     ];
 
+    const sizes = [
+        3, //vinyls
+        5 //cassettes
+    ];
+
     useEffect(() => {
         setId(props.match.params.id);
         setImages(imports[id]);
     }, [id, imports, props.match.params.id]);
 
+    const fade = useSpring({
+        from: {opacity: 0,}, opacity: 1,
+        config: {duration: 1000}
+    });
+
+    const init = index => {
+        setModalIndex(index)
+    };
+
+    const increment = () => {
+        setModalIndex(modalIndex+1)
+    };
+
+    const decrement = () => {
+        setModalIndex(modalIndex-1)
+    };
+
     const mapper = (item, index) => {
         if (indexes[id].includes(index)) {
             return (
-                <div key={index} className="portfolio-details-frame-med">
-                    <img alt={index} src={item} className="portfolio-details-image"/>
-                </div>
+                <animated.div style={fade} key={index} className="portfolio-details-frame-med">
+                    <Popup trigger={<img alt={index} src={item} className="portfolio-details-image"/>}
+                           modal closeOnEscape onOpen={() => {
+                        init(index)
+                    }}>
+                        <div className="modal-container">
+                            {modalIndex === 0 ? "" :
+                                <img src={back} alt="back" className="left-arrow" onClick={decrement}/>}
+                            <div className="modal">
+                                <img alt={modalIndex} src={images[modalIndex]} className="modal-image"/>
+                            </div>
+                            {modalIndex === sizes[id] - 1 ? "" :
+                                <img src={next} alt="next" className="right-arrow" onClick={increment}/>}
+                        </div>
+                    </Popup>
+                </animated.div>
             )
         } else if (smallIndexes[id].includes(index)) {
             return (
-                <div key={index} className="portfolio-details-frame-small">
-                    <img alt={index} src={item} className="portfolio-details-image"/>
-                </div>
+                <animated.div style={fade} key={index} className="portfolio-details-frame-small">
+                    <Popup trigger={<img alt={index} src={item} className="portfolio-details-image"/>}
+                           modal closeOnEscape onOpen={() => {
+                        init(index)
+                    }}>
+                        <div className="modal-container">
+                            {modalIndex === 0 ? "" :
+                                <img src={back} alt="back" className="left-arrow" onClick={decrement}/>}
+                            <div className="modal">
+                                <img alt={modalIndex} src={images[modalIndex]} className="modal-image"/>
+                            </div>
+                            {modalIndex === sizes[id] - 1 ? "" :
+                                <img src={next} alt="next" className="right-arrow" onClick={increment}/>}
+                        </div>
+                    </Popup>
+                </animated.div>
             )
         } else {
             return (
-                <div key={index} className="portfolio-details-frame-big">
-                    <img alt={index} src={item} className="portfolio-details-image"/>
-                </div>
+                <animated.div style={fade} key={index} className="portfolio-details-frame-big">
+                    <Popup trigger={<img alt={index} src={item} className="portfolio-details-image"/>}
+                           modal closeOnEscape onOpen={()=>{init(index)}}>
+                        <div className="modal-container">
+                            {modalIndex===0 ? "" : <img src={back} alt="back" className="left-arrow" onClick={decrement}/>}
+                            <div className="modal">
+                                <img alt={modalIndex} src={images[modalIndex]} className="modal-image"/>
+                            </div>
+                            {modalIndex===sizes[id]-1 ? "" : <img src={next} alt="next" className="right-arrow" onClick={increment}/>}
+                        </div>
+                    </Popup>
+                </animated.div>
             )
         }
     };

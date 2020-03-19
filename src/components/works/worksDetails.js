@@ -4,6 +4,9 @@ import Popup from "reactjs-popup";
 
 import {aluk, conan, cult, darkspace, doom, escarion, glazart, goblin, godflesh, hifi, king, metalorgie, mysticum,
     rio, sunn, ulver} from '../../helpers/images'
+import next from '../../images/next.svg'
+import back from '../../images/back.svg'
+
 import Nav from "../nav/nav";
 import ReactPlayer from "react-player";
 
@@ -133,13 +136,13 @@ const WorksDetails = props => {
                         init(index)
                     }}>
                         <div className="modal-container">
-                            {modalIndex === 0 ? <div className="left-placeholder"/> :
-                                <div className="left-arrow" onClick={decrement}>PREV</div>}
+                            {modalIndex === 0 ? "" :
+                                <img src={back} alt="back" className="left-arrow" onClick={decrement}/>}
                             <div className="modal">
                                 <img alt={modalIndex} src={images[modalIndex]} className="modal-image"/>
                             </div>
-                            {modalIndex === sizes[id] - 1 ? <div className="right-placeholder"/> :
-                                <div className="right-arrow" onClick={increment}>NEXT</div>}
+                            {modalIndex === sizes[id] - 1 ? "" :
+                                <img src={next} alt="next" className="right-arrow" onClick={increment}/>}
                         </div>
                     </Popup>
                 </animated.div>
@@ -152,28 +155,31 @@ const WorksDetails = props => {
                         init(index)
                     }}>
                         <div className="modal-container">
-                            {modalIndex === 0 ? <div className="left-placeholder"/> :
-                                <div className="left-arrow" onClick={decrement}>PREV</div>}
+                            {modalIndex === 0 ? "" :
+                                <img src={back} alt="back" className="left-arrow" onClick={decrement}/>}
                             <div className="modal">
                                 <img alt={modalIndex} src={images[modalIndex]} className="modal-image"/>
                             </div>
-                            {modalIndex === sizes[id] - 1 ? <div className="right-placeholder"/> :
-                                <div className="right-arrow" onClick={increment}>NEXT</div>}
+                            {modalIndex === sizes[id] - 1 ? "" :
+                                <img src={next} alt="next" className="right-arrow" onClick={increment}/>}
                         </div>
                     </Popup>
                 </animated.div>
             )
         } else {
             return (
-                <animated.div style={fade} key={index} className={id === '6' ? "portfolio-details-frame" : "portfolio-details-frame-big"}>
+                <animated.div style={fade} key={index} className={id === '6' ? "portfolio-details-frame" :
+                    "portfolio-details-frame-big"}>
                     <Popup trigger={<img alt={index} src={item} className="portfolio-details-image"/>}
                            modal closeOnEscape onOpen={()=>{init(index)}}>
                         <div className="modal-container">
-                            {modalIndex===0 ? <div className="left-placeholder"/> : <div className="left-arrow" onClick={decrement}>PREV</div>}
+                            {modalIndex===0 ? "" :
+                                <img src={back} alt="back" className="left-arrow" onClick={decrement}/>}
                             <div className="modal">
                                 <img alt={modalIndex} src={images[modalIndex]} className="modal-image"/>
                             </div>
-                            {modalIndex===sizes[id]-1 ? <div className="right-placeholder"/> : <div className="right-arrow" onClick={increment}>NEXT</div>}
+                            {modalIndex===sizes[id]-1 ? "" :
+                                <img src={next} alt="next" className="right-arrow" onClick={increment}/>}
                         </div>
                     </Popup>
                 </animated.div>
