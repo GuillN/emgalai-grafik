@@ -11,7 +11,7 @@ import logo2White from "../../images/emgalaiprint SIMPLE logoBLANC.png";
 
 
 const Nav = props => {
-    const [isWhite] = useState(history.location.pathname === '/emgalai' || history.location.pathname === '/print');
+    const [isWhite] = useState(history.location.pathname === '/portfolio' || history.location.pathname === '/print');
     const [isPrint] = useState(props.print);
     const [logo] = useState(isPrint ? isWhite ? logo2White : logo2Black : isWhite ? logo1White : logo1Black);
     const [dropShop, setDropShop] = useState(false);

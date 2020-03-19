@@ -9,7 +9,7 @@ import {aluk, conan, cult, darkspace, doom, escarion, glazart, goblin, godflesh,
 import Nav from "../nav/nav";
 import ReactPlayer from "react-player";
 
-const PortfolioDetails = props => {
+const WorksDetails = props => {
 
     const [id, setId] = useState(0);
     const [images, setImages] = useState([]);
@@ -206,4 +206,4 @@ const PortfolioDetails = props => {
     )
 };
 
-export default PortfolioDetails
+export default WorksDetails

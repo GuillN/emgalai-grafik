@@ -21,7 +21,7 @@ const Footer = () => {
 
     useEffect(() => {
         const path = history.location.pathname;
-        setWhite(path === '/emgalai' || path === '/print');
+        setWhite(path === '/portfolio' || path === '/print');
     }, []);
 
     const fade = useSpring({

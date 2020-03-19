@@ -1,89 +1,79 @@
 import React from "react"
 import "./portfolio.css"
-import {Link} from "react-router-dom";
-import {useSpring, animated} from "react-spring";
+import { Carousel } from "react-responsive-carousel"
+import {MobileView, BrowserView} from "react-device-detect"
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import logo from "../../images/logo-whito.svg";
+
+import CarouselPane from "./carouselPane";
 import Nav from "../nav/nav";
-import PortfolioItem from "./portfolioItem";
+import Footer from "../footer/footer";
+import {animated, useSpring} from "react-spring";
+import {Link} from "react-router-dom";
 
-import aluk from '../../images/aluk_todolo/carré-site.jpg'
-import conan from '../../images/conan/3.jpg'
-import cult from '../../images/cult_of_fire/3.jpg'
-import darkspace from '../../images/darkspace/ZOOM3.jpg'
-import doom from '../../images/doom/61171990_1260684680759752_8179678087525433344_o.jpg'
-import escarion from '../../images/escarion/Escarion-Envy.jpg'
-import glazart from '../../images/glazart/glaz-carré.jpg'
-import goblin from '../../images/goblin/6.jpg'
-import godflesh from '../../images/godflesh/1.jpg'
-import hifi from '../../images/hifi/hifi-store-totebag-old.jpg'
-import king from '../../images/king_dude/2.jpg'
-import metalorgie from '../../images/metalorgie/carré.jpg'
-import mysticum from '../../images/mysticum/3.jpg'
-import rio from '../../images/rio/3.jpg'
-import sunn from '../../images/sunn/1 (1).jpg'
-import ulver from '../../images/ulver/zoom-1.jpg'
 
-const Portfolio = () => {
+const Portfolio = () =>  {
 
     const fade = useSpring({
-        from: {opacity: 0},opacity: 1,
-        config: {duration: 500}
+        from: {opacity: 0,}, opacity: 1
     });
 
     return(
         <div>
-            <Nav/>
-            <animated.div style={fade} className="picto-container">
-                <Link to="/works/0">
-                    <PortfolioItem img={aluk} alt={'aluk_todolo_img'} text={'Aluk Todolo'}/>
-                </Link>
-                <Link to="/works/1">
-                    <PortfolioItem img={conan} alt={'conan_img'} text={'Conan'}/>
-                </Link>
-                <Link to="/works/2">
-                    <PortfolioItem img={cult} alt={'cult_img'} text={'Cult Of Fire'}/>
-                </Link>
-                <Link to="/works/3">
-                    <PortfolioItem img={darkspace} alt={'darkspace_img'} text={'Darkspace'}/>
-                </Link>
-                <Link to="/works/4">
-                    <PortfolioItem img={doom} alt={'doom_img'} text={'Doom'}/>
-                </Link>
-                <Link to="/works/5">
-                    <PortfolioItem img={escarion} alt={'escarion_img'} text={'Escarion'}/>
-                </Link>
-                <Link to="/works/6">
-                    <PortfolioItem img={glazart} alt={'glazart_img'} text={'Glazart'}/>
-                </Link>
-                <Link to="/works/7">
-                    <PortfolioItem img={goblin} alt={'goblin_img'} text={'Goblin'}/>
-                </Link>
-                <Link to="/works/8">
-                    <PortfolioItem img={godflesh} alt={'godflesh_img'} text={'Godflesh'}/>
-                </Link>
-                <Link to="/works/9">
-                    <PortfolioItem img={hifi} alt={'hifi_store_img'} text={'Hifi Store'}/>
-                </Link>
-                <Link to="/works/10">
-                    <PortfolioItem img={king} alt={'king_dude_img'} text={'King Dude'}/>
-                </Link>
-                <Link to="/works/11">
-                    <PortfolioItem img={metalorgie} alt={'metalorgie_fest_img'} text={'Metalorgie Fest'}/>
-                </Link>
-                <Link to="/works/12">
-                    <PortfolioItem img={mysticum} alt={'mysticum_img'} text={'Mysticum'}/>
-                </Link>
-                <Link to="/works/13">
-                    <PortfolioItem img={rio} alt={'rio_img'} text={'RIO'}/>
-                </Link>
-                <Link to="/works/14">
-                    <PortfolioItem img={sunn} alt={'sunnO)))_img'} text={'Sunn O)))'}/>
-                </Link>
-                <Link to="/works/15">
-                    <PortfolioItem img={ulver} alt={'ulver_img'} text={'Ulver'}/>
-                </Link>
-            </animated.div>
+            <BrowserView>
+                <Nav print={false}/>
+                <Carousel showThumbs={false} showStatus={false} stopOnHover={false} className="video-carousel"
+                          autoPlay infiniteLoop interval={14000} dynamicHeight>
+                    <div>
+                        <CarouselPane videoId={752027961625429}/>
+                    </div>
+                    <div>
+                        <CarouselPane videoId={978901818938041}/>
+                    </div>
+                    {/*<div>*/}
+                    {/*    <CarouselPane videoId={876609339167290}/>*/}
+                    {/*</div>*/}
+                    <div>
+                        <CarouselPane videoId={1072535196279459}/>
+                    </div>
+                    <div>
+                        <CarouselPane videoId={262610617954917}/>
+                    </div>
+                </Carousel>
+                <Footer/>
+            </BrowserView>
+
+            <MobileView>
+                <div style={{backgroundColor: 'black', height: '100vh'}}>
+                    <animated.header style={fade} className="header">
+                        <Link to="/" className="logo-link">
+                            <img src={logo} className="logo" alt="logo" />
+                        </Link>
+                    </animated.header>
+                    <animated.div style={fade} className="home-link-container">
+
+                        <Link to="/about" className="home-link">ABOUT</Link>
+                        <Link to="/contact" className="home-link">CONTACT</Link>
+
+                        <hr className="line"/>
+
+                        <Link to="/portfolio" className="home-link">WORKS</Link>
+                        <Link to="/portfolio/1" className="home-link">POSTERS</Link>
+                        <Link to="/portfolio/0" className="home-link">LOGOS</Link>
+
+                        <hr className="line"/>
+
+                        <a target="_blank" rel="noopener noreferrer" href="https://emgalaishop.bigcartel.com/"
+                           className="home-link">BIGCARTEL</a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://shop.e-kunst.com/artist/emgalai"
+                           className="home-link">E-KUNST</a>
+                    </animated.div>
+                    <Footer/>
+                </div>
+            </MobileView>
         </div>
     )
+
 };
 
 export default Portfolio;

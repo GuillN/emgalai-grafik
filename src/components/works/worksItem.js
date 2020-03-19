@@ -1,7 +1,7 @@
 import React from 'react'
 import {MobileView, BrowserView} from "react-device-detect"
 
-const PortfolioItem = props => {
+const WorksItem = props => {
     return(
         <div>
             <BrowserView>
@@ -20,4 +20,4 @@ const PortfolioItem = props => {
     )
 };
 
-export default PortfolioItem
+export default WorksItem

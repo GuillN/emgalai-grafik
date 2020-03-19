@@ -7,7 +7,7 @@ import cassettes from "../../images/cassettes/70229637_911070585930378_602641140
 
 import './prints.css'
 import Nav from "../nav/nav";
-import PortfolioItem from "../portfolio/portfolioItem";
+import WorksItem from "../works/worksItem";
 
 const Prints = () => {
 
@@ -16,13 +16,13 @@ const Prints = () => {
             <Nav print/>
             <div className="prints-container">
                 <Link to="/prints/0">
-                    <PortfolioItem img={tshirts} alt={'tshirts_img'} text={'T-Shirts'}/>
+                    <WorksItem img={tshirts} alt={'tshirts_img'} text={'T-Shirts'}/>
                 </Link>
                 <Link to="/prints/1">
-                    <PortfolioItem img={vinyls} alt={'vinyls_img'} text={'Vinyls'}/>
+                    <WorksItem img={vinyls} alt={'vinyls_img'} text={'Vinyls'}/>
                 </Link>
                 <Link to="/prints/2">
-                    <PortfolioItem img={cassettes} alt={'cassette_img'} text={'Cassettes'}/>
+                    <WorksItem img={cassettes} alt={'cassette_img'} text={'Cassettes'}/>
                 </Link>
             </div>
         </div>
