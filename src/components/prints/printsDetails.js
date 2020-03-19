@@ -1,20 +1,21 @@
 import React, {useEffect, useState} from 'react'
-import {tshirts, vinyls, cassettes} from '../../helpers/images'
+
+import {vinyls, cassettes} from '../../helpers/images'
 import Nav from "../nav/nav";
 
 const PrintsDetails = props => {
 
     const [id, setId] = useState(0);
     const [images, setImages] = useState([]);
-    const imports = [tshirts, vinyls, cassettes];
-    const names = ['T-Shirts', 'Vinyls', 'Cassettes'];
+    const imports = [vinyls, cassettes];
+    const names = ['Vinyls', 'Cassettes'];
+
     const indexes = [
-        [1, 2], //tshirts
         [0, 1], //vinyls
         [0, 1] //cassettes
     ];
+
     const smallIndexes = [
-        [3, 4, 5],
         [],
         [2, 3, 4]
     ];

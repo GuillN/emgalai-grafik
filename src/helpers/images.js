@@ -112,13 +112,6 @@ import logo4 from '../images/logos/logo-stoned-of-reality.jpg'
 import logo5 from '../images/logos/RIB-logo.jpg'
 import logo6 from '../images/logos/ryte-logo-usé.jpg'
 
-import tshirt0 from '../images/tshirts/67567580_1310293545798865_9137664366735261696_o.jpg'
-import tshirt1 from '../images/tshirts/DARKSPACE-shirt.jpg'
-import tshirt2 from '../images/tshirts/DARKSPACE-shirtVERSO.jpg'
-import tshirt3 from '../images/tshirts/Emgalai_s-Gate-tish-recto.jpg'
-import tshirt4 from '../images/tshirts/Emgalai_s-Gate-tish-verso.jpg'
-import tshirt5 from '../images/tshirts/Emgalai_s-Gatezoom1.jpg'
-
 import poster0 from '../images/posters/carré-ulver.jpg'
 import poster1 from '../images/posters/carré-king-dude.jpg'
 import poster2 from '../images/posters/darktof.jpg'
@@ -128,7 +121,15 @@ import poster5 from '../images/posters/bongripper carré.jpg'
 import poster6 from '../images/posters/carré-aluk-poster.jpg'
 import poster7 from '../images/posters/carréinsta.jpg'
 import poster8 from '../images/posters/Untitled-1.jpg'
-import poster9 from '../images/posters/1.jpg'
+// import poster9 from '../images/posters/1.jpg'
+
+import tshirtRib0 from '../images/tshirts/rib/67567580_1310293545798865_9137664366735261696_o.jpg'
+
+import tshirtDark0 from '../images/tshirts/darkspace/DARKSPACE-shirt.jpg'
+import tshirtDark1 from '../images/tshirts/darkspace/DARKSPACE-shirtVERSO.jpg'
+
+import tshirtGate0 from '../images/tshirts/gate/Emgalai_s-Gate-tish-recto.jpg'
+import tshirtGate1 from '../images/tshirts/gate/Emgalai_s-Gate-tish-verso.jpg'
 
 import vinyl0 from '../images/vinyls/52454249_782766682094103_2915019433648848896_o.jpg'
 import vinyl1 from '../images/vinyls/53050743_782766668760771_8002689503233835008_o.jpg'
@@ -189,17 +190,23 @@ sunn = [sunn0, sunn1, sunn2, sunn3];
 export let ulver;
 ulver = [ulver0, ulver1, ulver2, ulver3, ulver4, ulver5];
 
-export let logos;
-logos = [logo0, logo1, logo2, logo3, logo4, logo5, logo6];
-
-export let tshirts;
-tshirts = [tshirt0, tshirt1, tshirt2, tshirt3, tshirt4, tshirt5];
-
 export let posters;
 posters = [poster0, poster1, poster2, poster3, poster4, poster5, poster6, poster7, poster8];
+
+export let logos;
+logos = [logo0, logo1, logo2, logo3, logo4, logo5, logo6];
 
 export let vinyls;
 vinyls = [vinyl0, vinyl1, vinyl2];
 
 export let cassettes;
 cassettes = [cassette0, cassette1, cassette2, cassette3, cassette4];
+
+export let tshirtRib;
+tshirtRib = [tshirtRib0];
+
+export let tshirtDark;
+tshirtDark = [tshirtDark0, tshirtDark1];
+
+export let tshirtGate;
+tshirtGate = [tshirtGate0, tshirtGate1];
