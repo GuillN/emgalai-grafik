@@ -33,52 +33,52 @@ const Portfolio = () => {
         <div>
             <Nav/>
             <animated.div style={fade} className="picto-container">
-                <Link to="/portfolio/2">
+                <Link to="/works/0">
                     <PortfolioItem img={aluk} alt={'aluk_todolo_img'} text={'Aluk Todolo'}/>
                 </Link>
-                <Link to="/portfolio/3">
+                <Link to="/works/1">
                     <PortfolioItem img={conan} alt={'conan_img'} text={'Conan'}/>
                 </Link>
-                <Link to="/portfolio/4">
+                <Link to="/works/2">
                     <PortfolioItem img={cult} alt={'cult_img'} text={'Cult Of Fire'}/>
                 </Link>
-                <Link to="/portfolio/5">
+                <Link to="/works/3">
                     <PortfolioItem img={darkspace} alt={'darkspace_img'} text={'Darkspace'}/>
                 </Link>
-                <Link to="/portfolio/6">
+                <Link to="/works/4">
                     <PortfolioItem img={doom} alt={'doom_img'} text={'Doom'}/>
                 </Link>
-                <Link to="/portfolio/7">
+                <Link to="/works/5">
                     <PortfolioItem img={escarion} alt={'escarion_img'} text={'Escarion'}/>
                 </Link>
-                <Link to="/portfolio/8">
+                <Link to="/works/6">
                     <PortfolioItem img={glazart} alt={'glazart_img'} text={'Glazart'}/>
                 </Link>
-                <Link to="/portfolio/9">
+                <Link to="/works/7">
                     <PortfolioItem img={goblin} alt={'goblin_img'} text={'Goblin'}/>
                 </Link>
-                <Link to="/portfolio/10">
+                <Link to="/works/8">
                     <PortfolioItem img={godflesh} alt={'godflesh_img'} text={'Godflesh'}/>
                 </Link>
-                <Link to="/portfolio/11">
+                <Link to="/works/9">
                     <PortfolioItem img={hifi} alt={'hifi_store_img'} text={'Hifi Store'}/>
                 </Link>
-                <Link to="/portfolio/12">
+                <Link to="/works/10">
                     <PortfolioItem img={king} alt={'king_dude_img'} text={'King Dude'}/>
                 </Link>
-                <Link to="/portfolio/13">
+                <Link to="/works/11">
                     <PortfolioItem img={metalorgie} alt={'metalorgie_fest_img'} text={'Metalorgie Fest'}/>
                 </Link>
-                <Link to="/portfolio/14">
+                <Link to="/works/12">
                     <PortfolioItem img={mysticum} alt={'mysticum_img'} text={'Mysticum'}/>
                 </Link>
-                <Link to="/portfolio/15">
+                <Link to="/works/13">
                     <PortfolioItem img={rio} alt={'rio_img'} text={'RIO'}/>
                 </Link>
-                <Link to="/portfolio/16">
+                <Link to="/works/14">
                     <PortfolioItem img={sunn} alt={'sunnO)))_img'} text={'Sunn O)))'}/>
                 </Link>
-                <Link to="/portfolio/17">
+                <Link to="/works/15">
                     <PortfolioItem img={ulver} alt={'ulver_img'} text={'Ulver'}/>
                 </Link>
             </animated.div>

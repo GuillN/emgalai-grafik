@@ -75,12 +75,12 @@ const Nav = props => {
                     </animated.div>
                     <BrowserView>
                         <animated.div className="nav-link-container" style={fade} onMouseEnter={handleHoverWork} onMouseLeave={handleLeaveWork}>
-                            <Link to="/portfolio" className="nav-link" style={color}>WORKS</Link>
+                            <Link to="/works" className="nav-link" style={color}>WORKS</Link>
                             {
                                 dropWork ?
                                     <animated.div className="sub-links" style={subFadeWork}>
-                                        <Link to="/portfolio/1" className="nav-link sub-link" style={color}>POSTERS</Link>
-                                        <Link to="/portfolio/0" className="nav-link sub-link" style={color}>LOGOS</Link>
+                                        <Link to="/posters" className="nav-link sub-link" style={color}>POSTERS</Link>
+                                        <Link to="/logos" className="nav-link sub-link" style={color}>LOGOS</Link>
                                     </animated.div>
                                     : ""
                             }

@@ -12,6 +12,8 @@ import About from './components/about/about'
 import Contact from './components/contact/contact'
 import Portfolio from './components/portfolio/portfolio'
 import PortfolioDetails from "./components/portfolio/portfolioDetails";
+import PostersDetails from "./components/portfolio/postersDetails";
+import LogosDetails from "./components/portfolio/logosDetails";
 import Shop from "./components/shop/shop";
 import Devis from "./components/devis/devis";
 import Prints from "./components/prints/prints";
@@ -30,8 +32,10 @@ const App = () => {
                 <Route path="/print" exact component={Print}/>
                 <Route path="/about" component={About}/>
                 <Route path="/contact" component={Contact}/>
-                <Route path="/portfolio" exact component={Portfolio}/>
-                <Route path="/portfolio/:id" component={PortfolioDetails}/>
+                <Route path="/works" exact component={Portfolio}/>
+                <Route path="/posters" component={PostersDetails}/>
+                <Route path="/logos" component={LogosDetails}/>
+                <Route path="/works/:id" exact component={PortfolioDetails}/>
                 <Route path="/shop" component={Shop}/>
                 <Route path="/devis" component={Devis}/>
                 <Route path="/prints" exact component={Prints}/>
