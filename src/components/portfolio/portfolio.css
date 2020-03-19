@@ -88,6 +88,10 @@
     }
 }
 
+.portfolio-details-logo {
+    margin-bottom: 5vh;
+    width: 100%;
+}
 
 .portfolio-details-image {
     margin-bottom: 1vh;

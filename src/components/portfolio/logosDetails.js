@@ -35,7 +35,7 @@ const LogosDetails = props => {
     const mapper = (item, index) => {
         return (
             <animated.div style={fade} key={index} className="portfolio-details-frame-big">
-                <Popup trigger={<img alt={index} src={item} className="portfolio-details-image"/>}
+                <Popup trigger={<img alt={index} src={item} className="portfolio-details-logo"/>}
                        modal closeOnEscape onOpen={()=>{init(index)}}>
                     <div className="modal-container">
                         {modalIndex===0 ? <div className="left-placeholder"/> : <div className="left-arrow" onClick={decrement}>PREV</div>}
