@@ -22,11 +22,13 @@ const Nav = props => {
     });
 
     const subFadeShop = useSpring({
-        opacity: dropShop ? 1 : 0
+        opacity: dropShop ? 1 : 0,
+        marginTop: dropShop ? 0 : -20
     });
 
     const subFadeWork = useSpring({
-        opacity: dropWork ? 1 : 0
+        opacity: dropWork ? 1 : 0,
+        marginTop: dropWork ? 0 : -20
     });
 
     const color = {
@@ -79,8 +81,8 @@ const Nav = props => {
                             {
                                 dropWork ?
                                     <animated.div className="sub-links" style={subFadeWork}>
-                                        <Link to="/posters" className="nav-link sub-link" style={color}>POSTERS</Link>
-                                        <Link to="/logos" className="nav-link sub-link" style={color}>LOGOS</Link>
+                                        <Link to="/posters" className="sub-link" style={color}>POSTERS</Link>
+                                        <Link to="/logos" className="sub-link" style={color}>LOGOS</Link>
                                     </animated.div>
                                     : ""
                             }
@@ -93,8 +95,8 @@ const Nav = props => {
                                 dropWork ?
                                     <animated.div className="sub-links" style={subFadeWork}>
                                         <Link to="/portfolio" className="nav-link" style={color}>WORKS</Link>
-                                        <Link to="/portfolio/1" className="nav-link sub-link" style={color}>POSTERS</Link>
-                                        <Link to="/portfolio/0" className="nav-link sub-link" style={color}>LOGOS</Link>
+                                        <Link to="/portfolio/1" className="sub-link" style={color}>POSTERS</Link>
+                                        <Link to="/portfolio/0" className="sub-link" style={color}>LOGOS</Link>
                                     </animated.div>
                                     : ""
                             }
@@ -108,9 +110,9 @@ const Nav = props => {
                                 dropShop ?
                                     <animated.div className="sub-links" style={subFadeShop}>
                                         <a target="_blank" rel="noopener noreferrer" href="https://emgalaishop.bigcartel.com/"
-                                           className="nav-link sub-link" style={color}>BIGCARTEL</a>
+                                           className="sub-link" style={color}>BIGCARTEL</a>
                                         <a target="_blank" rel="noopener noreferrer" href="https://shop.e-kunst.com/artist/emgalai"
-                                           className="nav-link sub-link" style={color}>E-KUNST</a>
+                                           className="sub-link" style={color}>E-KUNST</a>
                                     </animated.div>
                                     : ""
                             }
@@ -123,9 +125,9 @@ const Nav = props => {
                                 dropShop ?
                                     <animated.div className="sub-links" style={subFadeShop}>
                                         <a target="_blank" rel="noopener noreferrer" href="https://emgalaishop.bigcartel.com/"
-                                           className="nav-link sub-link" style={color}>BIG CARTEL</a>
+                                           className="sub-link" style={color}>BIG CARTEL</a>
                                         <a target="_blank" rel="noopener noreferrer" href="https://shop.e-kunst.com/artist/emgalai"
-                                           className="nav-link sub-link" style={color}>E-KUNST</a>
+                                           className="sub-link" style={color}>E-KUNST</a>
                                     </animated.div>
                                     : ""
                             }

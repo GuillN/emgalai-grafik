@@ -20,7 +20,7 @@ import metalorgie from '../../images/metalorgie/carré.jpg'
 import mysticum from '../../images/mysticum/3.jpg'
 import rio from '../../images/rio/3.jpg'
 import sunn from '../../images/sunn/1 (1).jpg'
-import ulver from '../../images/ulver/zoom-1.jpg'
+import ulver from '../../images/ulver/zoom-3.jpg'
 
 const Works = () => {
 
