@@ -97,7 +97,7 @@ const ItemDetails = props => {
 
     return(
         <div>
-            <Nav print/>
+            <Nav print={props.print}/>
             <div className="portfolio-details">
                 <h1>{props.names[id].toUpperCase()}</h1>
                 {props.texts[id] == null ? "" : <p className="description">{props.texts[id]}</p>}

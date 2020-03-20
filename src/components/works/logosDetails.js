@@ -25,7 +25,7 @@ const LogosDetails = () => {
 
     return (
         <ItemDetails imports={imports} names={names} indexes={indexes} smallIndexes={smallIndexes} sizes={sizes}
-                     texts={texts} videos={videos} id={0}/>
+                     texts={texts} videos={videos} print={false} id={0}/>
     )
 };
 

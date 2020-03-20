@@ -98,7 +98,7 @@ const WorksDetails = props => {
 
     return (
         <ItemDetails imports={imports} names={names} indexes={indexes} smallIndexes={smallIndexes} sizes={sizes}
-                     texts={texts} videos={videos} id={props.match.params.id}/>
+                     texts={texts} videos={videos} print={false} id={props.match.params.id}/>
     )
 };
 

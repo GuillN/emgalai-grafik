@@ -29,7 +29,7 @@ const PrintsDetails = props => {
 
     return (
         <ItemDetails imports={imports} names={names} indexes={indexes} smallIndexes={smallIndexes} sizes={sizes}
-                     texts={texts} videos={videos} id={props.match.params.id}/>
+                     texts={texts} videos={videos} print id={props.match.params.id}/>
     )
 };
 
