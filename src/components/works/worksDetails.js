@@ -1,20 +1,11 @@
-import React, {useEffect, useState} from 'react'
-import {animated, useSpring} from "react-spring";
-import Popup from "reactjs-popup";
+import React from 'react'
 
 import {aluk, conan, cult, darkspace, doom, escarion, glazart, goblin, godflesh, hifi, king, metalorgie, mysticum,
     rio, sunn, ulver} from '../../helpers/images'
-import next from '../../images/next.svg'
-import back from '../../images/back.svg'
-
-import Nav from "../nav/nav";
-import ReactPlayer from "react-player";
+import ItemDetails from "./itemDetails";
 
 const WorksDetails = props => {
 
-    const [id, setId] = useState(0);
-    const [images, setImages] = useState([]);
-    const [modalIndex, setModalIndex] = useState(0);
     const imports = [aluk, conan, cult, darkspace, doom, escarion, glazart, goblin, godflesh, hifi, king, metalorgie,
         mysticum, rio, sunn, ulver];
     const names = ['Aluk Todolo', 'Conan', 'Cult Of Fire', 'Darkspace', "Doom", "Escarion", "Glazart", 'Goblin',
@@ -105,108 +96,9 @@ const WorksDetails = props => {
         876609339167290 // ulver
     ];
 
-    useEffect(() => {
-        setId(props.match.params.id);
-        setImages(imports[id]);
-    }, [id, imports, props.match.params.id]);
-
-    const fade = useSpring({
-        from: {opacity: 0,}, opacity: 1,
-        config: {duration: 1000}
-    });
-
-    const init = index => {
-        setModalIndex(index)
-    };
-
-    const increment = () => {
-        setModalIndex(modalIndex+1)
-    };
-
-    const decrement = () => {
-        setModalIndex(modalIndex-1)
-    };
-
-    const mapper = (item, index) => {
-        if (indexes[id].includes(index)) {
-            return (
-                <animated.div style={fade} key={index} className="portfolio-details-frame-med">
-                    <Popup trigger={<img alt={index} src={item} className="portfolio-details-image"/>}
-                           modal closeOnEscape onOpen={() => {
-                        init(index)
-                    }}>
-                        <div className="modal-container">
-                            {modalIndex === 0 ? "" :
-                                <img src={back} alt="back" className="left-arrow" onClick={decrement}/>}
-                            <div className="modal">
-                                <img alt={modalIndex} src={images[modalIndex]} className="modal-image"/>
-                            </div>
-                            {modalIndex === sizes[id] - 1 ? "" :
-                                <img src={next} alt="next" className="right-arrow" onClick={increment}/>}
-                        </div>
-                    </Popup>
-                </animated.div>
-            )
-        } else if (smallIndexes[id].includes(index)) {
-            return (
-                <animated.div style={fade} key={index} className="portfolio-details-frame-small">
-                    <Popup trigger={<img alt={index} src={item} className="portfolio-details-image"/>}
-                           modal closeOnEscape onOpen={() => {
-                        init(index)
-                    }}>
-                        <div className="modal-container">
-                            {modalIndex === 0 ? "" :
-                                <img src={back} alt="back" className="left-arrow" onClick={decrement}/>}
-                            <div className="modal">
-                                <img alt={modalIndex} src={images[modalIndex]} className="modal-image"/>
-                            </div>
-                            {modalIndex === sizes[id] - 1 ? "" :
-                                <img src={next} alt="next" className="right-arrow" onClick={increment}/>}
-                        </div>
-                    </Popup>
-                </animated.div>
-            )
-        } else {
-            return (
-                <animated.div style={fade} key={index} className={id === '6' ? "portfolio-details-frame" :
-                    "portfolio-details-frame-big"}>
-                    <Popup trigger={<img alt={index} src={item} className="portfolio-details-image"/>}
-                           modal closeOnEscape onOpen={()=>{init(index)}}>
-                        <div className="modal-container">
-                            {modalIndex===0 ? "" :
-                                <img src={back} alt="back" className="left-arrow" onClick={decrement}/>}
-                            <div className="modal">
-                                <img alt={modalIndex} src={images[modalIndex]} className="modal-image"/>
-                            </div>
-                            {modalIndex===sizes[id]-1 ? "" :
-                                <img src={next} alt="next" className="right-arrow" onClick={increment}/>}
-                        </div>
-                    </Popup>
-                </animated.div>
-            )
-        }
-    };
-
-    let img = images.map(mapper);
-    const videoId = videos[id];
-    const url = `https://www.facebook.com/emgalai/videos/${videoId}/`;
-
     return (
-        <div>
-            <Nav/>
-            <div className="portfolio-details">
-                <h1>{names[id].toUpperCase()}</h1>
-                <p className="description">{texts[id]}</p>
-                <div className="portfolio-details-grid">
-                    {img}
-                    {
-                        videos[id] == null ?
-                            "" :
-                            <ReactPlayer className="portfolio-details-video" url={url} controls/>
-                    }
-                </div>
-            </div>
-        </div>
+        <ItemDetails imports={imports} names={names} indexes={indexes} smallIndexes={smallIndexes} sizes={sizes}
+                     texts={texts} videos={videos} id={props.match.params.id}/>
     )
 };
 

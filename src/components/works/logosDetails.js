@@ -1,68 +1,31 @@
-import React, {useEffect, useState} from 'react'
-import {animated, useSpring} from "react-spring";
-import Popup from "reactjs-popup";
+import React from 'react'
 
 import {logos} from '../../helpers/images'
-import Nav from "../nav/nav";
-import back from "../../images/back.svg";
-import next from "../../images/next.svg";
+import ItemDetails from "./itemDetails";
 
-const LogosDetails = props => {
-    const [images, setImages] = useState([]);
-    const [modalIndex, setModalIndex] = useState(0);
+const LogosDetails = () => {
 
-    useEffect(() => {
-        setImages(logos);
-    }, [], );
+    const imports = [logos];
 
-    const fade = useSpring({
-        from: {opacity: 0,}, opacity: 1,
-        config: {duration: 1000}
-    });
+    const names = ['Logos'];
 
-    const size = 7;
+    const texts = [null];
 
-    const init = index => {
-        setModalIndex(index)
-    };
+    const indexes = [
+        []
+    ];
 
-    const increment = () => {
-        setModalIndex(modalIndex+1)
-    };
+    const smallIndexes = [
+        []
+    ];
 
-    const decrement = () => {
-        setModalIndex(modalIndex-1)
-    };
+    const sizes = [7];
 
-    const mapper = (item, index) => {
-        return (
-            <animated.div style={fade} key={index} className="portfolio-details-frame-big">
-                <Popup trigger={<img alt={index} src={item} className="portfolio-details-logo"/>}
-                       modal closeOnEscape onOpen={()=>{init(index)}}>
-                    <div className="modal-container">
-                        {modalIndex===0 ? "" : <img src={back} alt="back" className="left-arrow" onClick={decrement}/>}
-                        <div className="modal">
-                            <img alt={modalIndex} src={images[modalIndex]} className="modal-image"/>
-                        </div>
-                        {modalIndex===size-1 ? "" : <img src={next} alt="next" className="right-arrow" onClick={increment}/>}
-                    </div>
-                </Popup>
-            </animated.div>
-        )
-    };
-
-    let img = images.map(mapper);
+    const videos = [null];
 
     return (
-        <div>
-            <Nav/>
-            <div className="portfolio-details">
-                <h1>LOGOS</h1>
-                <div className="portfolio-details-grid">
-                    {img}
-                </div>
-            </div>
-        </div>
+        <ItemDetails imports={imports} names={names} indexes={indexes} smallIndexes={smallIndexes} sizes={sizes}
+                     texts={texts} videos={videos} id={0}/>
     )
 };
 
