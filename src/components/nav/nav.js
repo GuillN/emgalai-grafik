@@ -14,6 +14,7 @@ const Nav = props => {
     const [isWhite] = useState(history.location.pathname === '/portfolio' ||
         history.location.pathname === '/print' ||
         history.location.pathname === '/posters');
+    const [isPoster] = useState(history.location.pathname === '/posters');
     const [isPrint] = useState(props.print);
     const [logo] = useState(isPrint ? isWhite ? logo2White : logo2Black : isWhite ? logo1White : logo1Black);
     const [dropShop, setDropShop] = useState(false);
@@ -64,12 +65,12 @@ const Nav = props => {
     if (!isPrint) {
         return(
             <div>
-                <header style={isWhite ? {backgroundColor: 'black'} : {}} className="header">
+                <header style={isPoster ? {backgroundColor: 'black'} : {}} className="header">
                     <Link to="/" className="logo-link">
                         <img src={logo} className="logo" alt="logo" />
                     </Link>
                 </header>
-                <section style={isWhite ? {backgroundColor: 'black'} : {}} className="nav">
+                <section style={isPoster ? {backgroundColor: 'black'} : {}} className="nav">
                     <animated.div className="nav-link-container" style={fade}>
                         <Link to="/about" style={color} className="nav-link">ABOUT</Link>
                     </animated.div>

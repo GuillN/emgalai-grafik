@@ -22,9 +22,7 @@ const PostersDetails = () => {
     const mapper = (item, index) => {
         return (
             <animated.div style={fade} key={index} className="portfolio-details-frame-big">
-                {/*<LazyLoad>*/}
-                    <img alt={index} src={images[index]}/>
-                {/*</LazyLoad>*/}
+                <img alt={index} src={images[index]}/>
             </animated.div>
         )
     };
