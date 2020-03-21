@@ -31,8 +31,8 @@ const PostersDetails = props => {
     return (
         <div>
             <Nav/>
-            <div className="portfolio-details">
-                <h1>POSTERS</h1>
+            <div style={{backgroundColor: 'black'}} className="portfolio-details">
+                <h1 style={{color: 'white'}}>POSTERS</h1>
                 <div className="portfolio-details-grid">
                     <BrowserView>
                         <Carousel autoPlay infiniteLoop interval={4000} showThumbs={false} className="portfolio-carousel">
