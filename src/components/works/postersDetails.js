@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react'
 import {BrowserView, MobileView} from "react-device-detect";
 import {Carousel} from "react-responsive-carousel";
 import {animated, useSpring} from "react-spring";
+import LazyLoad from "react-lazy-load"
 
 import {posters} from '../../helpers/images'
 import Nav from "../nav/nav";
@@ -17,11 +18,13 @@ const PostersDetails = () => {
         from: {opacity: 0,}, opacity: 1,
         config: {duration: 1000}
     });
-    
+
     const mapper = (item, index) => {
         return (
             <animated.div style={fade} key={index} className="portfolio-details-frame-big">
-                <img alt={index} src={images[index]}/>
+                <LazyLoad>
+                    <img alt={index} src={images[index]}/>
+                </LazyLoad>
             </animated.div>
         )
     };
