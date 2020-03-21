@@ -6,7 +6,7 @@ import {animated, useSpring} from "react-spring";
 import {posters} from '../../helpers/images'
 import Nav from "../nav/nav";
 
-const PostersDetails = props => {
+const PostersDetails = () => {
     const [images, setImages] = useState([]);
 
     useEffect(() => {

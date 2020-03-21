@@ -2,6 +2,8 @@ import React, {useEffect, useState} from 'react'
 import {animated, useSpring} from "react-spring";
 import ReactPlayer from "react-player";
 import Popup from "reactjs-popup";
+import LazyLoad from "react-lazy-load"
+
 import back from "../../images/back.svg";
 import next from "../../images/next.svg";
 import Nav from "../nav/nav";
@@ -38,10 +40,11 @@ const ItemDetails = props => {
         if (props.indexes[id].includes(index)) {
             return (
                 <animated.div style={fade} key={index} className="portfolio-details-frame-med">
-                    <Popup trigger={<img alt={index} src={item} className="portfolio-details-image"/>}
-                           modal closeOnEscape onOpen={() => {
-                        init(index)
-                    }}>
+                    <Popup trigger={
+                        <LazyLoad>
+                            <img alt={index} src={item} className="portfolio-details-image"/>
+                        </LazyLoad>
+                    } modal closeOnEscape onOpen={() => {init(index)}}>
                         <div className="modal-container">
                             {modalIndex === 0 ? "" :
                                 <img src={back} alt="back" className="left-arrow" onClick={decrement}/>}
@@ -57,10 +60,11 @@ const ItemDetails = props => {
         } else if (props.smallIndexes[id].includes(index)) {
             return (
                 <animated.div style={fade} key={index} className="portfolio-details-frame-small">
-                    <Popup trigger={<img alt={index} src={item} className="portfolio-details-image"/>}
-                           modal closeOnEscape onOpen={() => {
-                        init(index)
-                    }}>
+                    <Popup trigger={
+                        <LazyLoad>
+                            <img alt={index} src={item} className="portfolio-details-image"/>
+                        </LazyLoad>
+                    } modal closeOnEscape onOpen={() => {init(index)}}>
                         <div className="modal-container">
                             {modalIndex === 0 ? "" :
                                 <img src={back} alt="back" className="left-arrow" onClick={decrement}/>}
@@ -76,8 +80,11 @@ const ItemDetails = props => {
         } else {
             return (
                 <animated.div style={fade} key={index} className="portfolio-details-frame-big">
-                    <Popup trigger={<img alt={index} src={item} className="portfolio-details-image"/>}
-                           modal closeOnEscape onOpen={()=>{init(index)}}>
+                    <Popup trigger={
+                        <LazyLoad>
+                            <img alt={index} src={item} className="portfolio-details-image"/>
+                        </LazyLoad>
+                    } modal closeOnEscape onOpen={()=>{init(index)}}>
                         <div className="modal-container">
                             {modalIndex===0 ? "" : <img src={back} alt="back" className="left-arrow" onClick={decrement}/>}
                             <div className="modal">
