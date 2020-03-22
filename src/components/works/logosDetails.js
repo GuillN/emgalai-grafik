@@ -1,7 +1,7 @@
 import React from 'react'
 
 import {logos} from '../../helpers/images'
-import ItemDetails from "./itemDetails";
+import ItemsDetails from "../items/itemsDetails";
 
 const LogosDetails = () => {
 
@@ -24,8 +24,8 @@ const LogosDetails = () => {
     const videos = [null];
 
     return (
-        <ItemDetails imports={imports} names={names} indexes={indexes} smallIndexes={smallIndexes} sizes={sizes}
-                     texts={texts} videos={videos} print={false} id={0}/>
+        <ItemsDetails imports={imports} names={names} indexes={indexes} smallIndexes={smallIndexes} sizes={sizes}
+                      texts={texts} videos={videos} print={false} id={0}/>
     )
 };
 

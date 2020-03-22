@@ -2,7 +2,6 @@ import React, {useEffect, useState} from 'react'
 import {BrowserView, MobileView} from "react-device-detect";
 import {Carousel} from "react-responsive-carousel";
 import {animated, useSpring} from "react-spring";
-// import LazyLoad from "react-lazy-load"
 
 import {posters} from '../../helpers/images'
 import Nav from "../nav/nav";

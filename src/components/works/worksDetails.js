@@ -2,7 +2,7 @@ import React from 'react'
 
 import {aluk, conan, cult, darkspace, doom, escarion, glazart, goblin, godflesh, hifi, king, metalorgie, mysticum,
     rio, sunn, ulver} from '../../helpers/images'
-import ItemDetails from "./itemDetails";
+import ItemsDetails from "../items/itemsDetails";
 
 const WorksDetails = props => {
 
@@ -97,8 +97,8 @@ const WorksDetails = props => {
     ];
 
     return (
-        <ItemDetails imports={imports} names={names} indexes={indexes} smallIndexes={smallIndexes} sizes={sizes}
-                     texts={texts} videos={videos} print={false} id={props.match.params.id}/>
+        <ItemsDetails imports={imports} names={names} indexes={indexes} smallIndexes={smallIndexes} sizes={sizes}
+                      texts={texts} videos={videos} print={false} id={props.match.params.id}/>
     )
 };
 

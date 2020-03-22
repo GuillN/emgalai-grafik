@@ -3,7 +3,7 @@ import "./works.css"
 import {Link} from "react-router-dom";
 import {useSpring, animated} from "react-spring";
 import Nav from "../nav/nav";
-import WorksItem from "./worksItem";
+import Items from "../items/items";
 
 import aluk from '../../images/aluk_todolo/carré-site.jpg'
 import conan from '../../images/conan/3.jpg'
@@ -34,52 +34,52 @@ const Works = () => {
             <Nav/>
             <animated.div style={fade} className="picto-container">
                 <Link to="/works/0">
-                    <WorksItem img={aluk} alt={'aluk_todolo_img'} text={'Aluk Todolo'}/>
+                    <Items img={aluk} alt={'aluk_todolo_img'} text={'Aluk Todolo'}/>
                 </Link>
                 <Link to="/works/1">
-                    <WorksItem img={conan} alt={'conan_img'} text={'Conan'}/>
+                    <Items img={conan} alt={'conan_img'} text={'Conan'}/>
                 </Link>
                 <Link to="/works/2">
-                    <WorksItem img={cult} alt={'cult_img'} text={'Cult Of Fire'}/>
+                    <Items img={cult} alt={'cult_img'} text={'Cult Of Fire'}/>
                 </Link>
                 <Link to="/works/3">
-                    <WorksItem img={darkspace} alt={'darkspace_img'} text={'Darkspace'}/>
+                    <Items img={darkspace} alt={'darkspace_img'} text={'Darkspace'}/>
                 </Link>
                 <Link to="/works/4">
-                    <WorksItem img={doom} alt={'doom_img'} text={'Doom'}/>
+                    <Items img={doom} alt={'doom_img'} text={'Doom'}/>
                 </Link>
                 <Link to="/works/5">
-                    <WorksItem img={escarion} alt={'escarion_img'} text={'Escarion'}/>
+                    <Items img={escarion} alt={'escarion_img'} text={'Escarion'}/>
                 </Link>
                 <Link to="/works/6">
-                    <WorksItem img={glazart} alt={'glazart_img'} text={'Glazart'}/>
+                    <Items img={glazart} alt={'glazart_img'} text={'Glazart'}/>
                 </Link>
                 <Link to="/works/7">
-                    <WorksItem img={goblin} alt={'goblin_img'} text={'Goblin'}/>
+                    <Items img={goblin} alt={'goblin_img'} text={'Goblin'}/>
                 </Link>
                 <Link to="/works/8">
-                    <WorksItem img={godflesh} alt={'godflesh_img'} text={'Godflesh'}/>
+                    <Items img={godflesh} alt={'godflesh_img'} text={'Godflesh'}/>
                 </Link>
                 <Link to="/works/9">
-                    <WorksItem img={hifi} alt={'hifi_store_img'} text={'Hifi Store'}/>
+                    <Items img={hifi} alt={'hifi_store_img'} text={'Hifi Store'}/>
                 </Link>
                 <Link to="/works/10">
-                    <WorksItem img={king} alt={'king_dude_img'} text={'King Dude'}/>
+                    <Items img={king} alt={'king_dude_img'} text={'King Dude'}/>
                 </Link>
                 <Link to="/works/11">
-                    <WorksItem img={metalorgie} alt={'metalorgie_fest_img'} text={'Metalorgie Fest'}/>
+                    <Items img={metalorgie} alt={'metalorgie_fest_img'} text={'Metalorgie Fest'}/>
                 </Link>
                 <Link to="/works/12">
-                    <WorksItem img={mysticum} alt={'mysticum_img'} text={'Mysticum'}/>
+                    <Items img={mysticum} alt={'mysticum_img'} text={'Mysticum'}/>
                 </Link>
                 <Link to="/works/13">
-                    <WorksItem img={rio} alt={'rio_img'} text={'RIO'}/>
+                    <Items img={rio} alt={'rio_img'} text={'RIO'}/>
                 </Link>
                 <Link to="/works/14">
-                    <WorksItem img={sunn} alt={'sunnO)))_img'} text={'Sunn O)))'}/>
+                    <Items img={sunn} alt={'sunnO)))_img'} text={'Sunn O)))'}/>
                 </Link>
                 <Link to="/works/15">
-                    <WorksItem img={ulver} alt={'ulver_img'} text={'Ulver'}/>
+                    <Items img={ulver} alt={'ulver_img'} text={'Ulver'}/>
                 </Link>
             </animated.div>
         </div>

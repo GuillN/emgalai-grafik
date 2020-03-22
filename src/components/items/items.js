@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import {MobileView, BrowserView} from "react-device-detect"
 import LazyLoad from 'react-lazy-load'
 
-const WorksItem = props => {
+const Items = props => {
     const [load, setLoad] = useState("loading");
 
     const handleLoaded = () => {
@@ -33,4 +33,4 @@ const WorksItem = props => {
     )
 };
 
-export default WorksItem
+export default Items

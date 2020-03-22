@@ -1,7 +1,7 @@
 import React from 'react'
 
 import {vinyls, cassettes} from '../../helpers/images'
-import ItemDetails from "../works/itemDetails";
+import ItemsDetails from "../items/itemsDetails";
 
 const PrintsDetails = props => {
 
@@ -28,8 +28,8 @@ const PrintsDetails = props => {
     const videos = [null, null];
 
     return (
-        <ItemDetails imports={imports} names={names} indexes={indexes} smallIndexes={smallIndexes} sizes={sizes}
-                     texts={texts} videos={videos} print id={props.match.params.id}/>
+        <ItemsDetails imports={imports} names={names} indexes={indexes} smallIndexes={smallIndexes} sizes={sizes}
+                      texts={texts} videos={videos} print id={props.match.params.id}/>
     )
 };
 

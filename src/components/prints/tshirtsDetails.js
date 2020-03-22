@@ -1,7 +1,7 @@
 import React from 'react'
 
 import {tshirtRib, tshirtDark, tshirtGate} from '../../helpers/images'
-import ItemDetails from "../works/itemDetails";
+import ItemsDetails from "../items/itemsDetails";
 
 const TshirtsDetails = props => {
 
@@ -31,8 +31,8 @@ const TshirtsDetails = props => {
     const videos = [null, null, null];
 
     return (
-        <ItemDetails imports={imports} names={names} indexes={indexes} smallIndexes={smallIndexes} sizes={sizes}
-                     texts={texts} videos={videos} print id={props.match.params.id}/>
+        <ItemsDetails imports={imports} names={names} indexes={indexes} smallIndexes={smallIndexes} sizes={sizes}
+                      texts={texts} videos={videos} print id={props.match.params.id}/>
     )
 };
 
