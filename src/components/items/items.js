@@ -1,31 +1,19 @@
-import React, {useState} from 'react'
+import React from 'react'
 import {MobileView, BrowserView} from "react-device-detect"
-import LazyLoad from 'react-lazy-load'
+import Image from "./image";
 
 const Items = props => {
-    const [load, setLoad] = useState("loading");
-
-    const handleLoaded = () => {
-        setLoad("loaded")
-    };
-
     return(
         <div>
             <BrowserView>
                 <div className="portfolio-item">
-                    {load === "loading" ? <div>Loading...</div> : ""}
-                    <LazyLoad>
-                        <img onLoad={handleLoaded} className="portfolio-item-image" src={props.img} alt={props.alt}/>
-                    </LazyLoad>
+                    <Image src={props.img} alt={props.alt} mobile={false} popup={false}/>
                     <p className="portfolio-item-text">{props.text}</p>
                 </div>
             </BrowserView>
             <MobileView>
                 <div className="portfolio-item">
-                    {load === "loading" ? <div>Loading...</div> : ""}
-                    <LazyLoad>
-                        <img onLoad={handleLoaded} className="portfolio-item-image-mobile" src={props.img} alt={props.alt}/>
-                    </LazyLoad>
+                    <Image src={props.img} alt={props.alt} mobile popup={false}/>
                     <p className="portfolio-item-text">{props.text}</p>
                 </div>
             </MobileView>

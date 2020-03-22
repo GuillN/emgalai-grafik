@@ -1,16 +1,11 @@
 import React, {useState} from "react"
-import LazyLoad from "react-lazy-load";
 import back from "../../images/back.svg";
 import next from "../../images/next.svg";
 import Popup from "reactjs-popup";
+import Image from "./image";
 
 const PopupImage = props => {
     const [modalIndex, setModalIndex] = useState(0);
-    const [load, setLoad] = useState("loading");
-
-    const handleLoaded = () => {
-        setLoad("loaded")
-    };
 
     const init = index => {
         setModalIndex(index)
@@ -27,10 +22,7 @@ const PopupImage = props => {
     return (
         <Popup trigger={
             <div>
-                {load === "loading" ? <div>Loading...</div> : ""}
-                <LazyLoad>
-                    <img onLoad={handleLoaded} alt={props.index} src={props.item} className="portfolio-details-image"/>
-                </LazyLoad>
+                <Image alt={props.index} src={props.item} mobile={false} popup/>
             </div>
         } modal closeOnEscape onOpen={() => {init(props.index)}}>
             <div className="modal-container">
