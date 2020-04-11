@@ -10,6 +10,8 @@ import AnimatedLogo from "./animatedLogo/animatedLogo";
 const Home = () => {
     const [isToggledLeft, setToggleLeft] = useState(false);
     const [isToggledRight, setToggleRight] = useState(false);
+    const [hoverLeft, setHoverLeft] = useState(false);
+    const [hoverRight, setHoverRight] = useState(false);
 
     const disappearLeft = useSpring({
         display: isToggledRight ? 'none' : 'inline'
@@ -19,31 +21,54 @@ const Home = () => {
         display: isToggledLeft ? 'none' : 'inline'
     });
 
-    const fade = useSpring({
+    const barFade = useSpring({
         from: {opacity: 0},opacity: 1,
         config: {duration: 700}
     });
+
+    const handleHoverLeft = () => {
+        setHoverLeft(true)
+    };
+
+    const handleLeaveLeft = () => {
+        setHoverLeft(false)
+    };
+
+    const handleHoverRight = () => {
+        setHoverRight(true)
+    };
+
+    const handleLeaveRight = () => {
+        setHoverRight(false)
+    };
 
     return (
         <div>
             <BrowserView>
                 <animated.div className="home-container">
-                    <animated.div onClick={() => setToggleLeft(!isToggledLeft)} style={disappearLeft} className="home-logo-container">
-                        <AnimatedLogo className="animated-logo" logo={logo1} to={"/portfolio"} width={'15vw'} toWidth={'5vw'} margin={'0.5vh'}/>
+                    <animated.div onClick={() => setToggleLeft(!isToggledLeft)}
+                                  style={disappearLeft} className="home-logo-container">
+                        <div className="logo-container" onMouseEnter={handleHoverLeft} onMouseLeave={handleLeaveLeft}>
+                            <AnimatedLogo hover={hoverLeft} logo={logo1} to={"/portfolio"}
+                                          width={'15vw'} toWidth={'5vw'} margin={'0.5vh'}/>
                         <animated.p className="home-text" style={disappearRight}>
                             portfolio
                         </animated.p>
+                        </div>
                     </animated.div>
                     <animated.div style={disappearLeft}>
                         <animated.div style={disappearRight}>
-                            <animated.img style={fade} src={barre} alt="separation" className="barre" />
+                            <animated.img style={barFade} src={barre} alt="separation" className="barre" />
                         </animated.div>
                     </animated.div>
-                    <animated.div onClick={() => setToggleRight(!isToggledRight)} style={disappearRight} className="home-logo-container">
-                        <AnimatedLogo logo={logo2} to={"/print"} width={'17vw'} toWidth={'6vw'} margin={'-1.1vh'}/>
+                    <animated.div onClick={() => setToggleRight(!isToggledRight)}
+                                  style={disappearRight} className="home-logo-container">
+                        <div className="logo-container" onMouseEnter={handleHoverRight} onMouseLeave={handleLeaveRight}>
+                            <AnimatedLogo hover={hoverRight} logo={logo2} to={"/print"} width={'17vw'} toWidth={'6vw'} margin={'-1.1vh'}/>
                         <animated.p className="home-text" style={disappearLeft}>
                             workshop
                         </animated.p>
+                        </div>
                     </animated.div>
                 </animated.div>
             </BrowserView>
@@ -52,7 +77,7 @@ const Home = () => {
                 <animated.div className="home-container">
                     <animated.div onClick={() => setToggleLeft(!isToggledLeft)} style={disappearLeft} className="home-logo-container">
                         <AnimatedLogo className="animated-logo" logo={logo1} to={"/emgalai"} width={'15vw'} toWidth={'5vw'} margin={'0.5vh'}/>
-                        <animated.div style={fade}>
+                        <animated.div style={barFade}>
                             <animated.p className="home-text" style={disappearRight}>
                                 portfolio
                             </animated.p>
@@ -60,12 +85,12 @@ const Home = () => {
                     </animated.div>
                     <animated.div style={disappearLeft}>
                         <animated.div style={disappearRight}>
-                            <animated.img style={fade} src={barre} alt="separation" className="barre" />
+                            <animated.img style={barFade} src={barre} alt="separation" className="barre" />
                         </animated.div>
                     </animated.div>
                     <animated.div onClick={() => setToggleRight(!isToggledRight)} style={disappearRight} className="home-logo-container">
                         <AnimatedLogo logo={logo2} to={"/print"} width={'17vw'} toWidth={'6vw'} margin={'-1.1vh'}/>
-                        <animated.div style={fade}>
+                        <animated.div style={barFade}>
                             <animated.p className="home-text" style={disappearLeft}>
                                 workshop
                             </animated.p>

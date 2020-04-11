@@ -12,18 +12,18 @@
     text-align: center;
 }
 
-.home-logo-container:hover > p {
+.logo-container:hover > p {
     opacity: 1;
+    transition: .3s ease-in;
+}
+
+.logo-container:not(:hover) > p {
+    opacity: 0;
     transition: .3s ease-in;
 }
 
 .big-logo {
     cursor: pointer;
-}
-
-.big-logo:hover {
-    opacity: .1;
-    transition: .3s ease-in;
 }
 
 @media only screen and (min-width: 1025px) { /*For desktop*/

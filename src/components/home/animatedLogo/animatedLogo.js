@@ -6,7 +6,7 @@ const AnimatedLogo = props => {
 
     const [isToggled, setIsToggled] = useState(false);
 
-    const fade = useSpring({
+    const fadeDown = useSpring({
         from: {
             opacity: 0,
             marginTop: -500
@@ -15,18 +15,20 @@ const AnimatedLogo = props => {
         marginTop: 0
     });
 
-    const move = useSpring({
+    const moveAndFade = useSpring({
         width: isToggled ? props.toWidth : props.width,
         marginLeft: isToggled ? '50vw' : '0vw',
         marginRight: isToggled ? '50vw' : '0vw',
-        marginTop: isToggled ? props.margin : '30vh'
+        marginTop: isToggled ? props.margin : '30vh',
+
+        opacity: props.hover ? .1 : 1
     });
 
     return (
         <div>
             <DelayLink to={props.to} delay={700}>
-                <animated.div style={fade}>
-                    <animated.img style={move} className="big-logo" src={props.logo} alt="emgalai_logo"
+                <animated.div style={fadeDown}>
+                    <animated.img style={moveAndFade} className="big-logo" src={props.logo} alt="emgalai_logo"
                                   onClick={() => setIsToggled(!isToggled)}/>
                 </animated.div>
             </DelayLink>

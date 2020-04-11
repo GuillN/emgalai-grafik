@@ -26,12 +26,12 @@ const Nav = props => {
 
     const subFadeShop = useSpring({
         opacity: dropShop ? 1 : 0,
-        marginTop: dropShop ? 0 : -20
+        marginTop: dropShop ? 0 : -10
     });
 
     const subFadeWork = useSpring({
         opacity: dropWork ? 1 : 0,
-        marginTop: dropWork ? 0 : -20
+        marginTop: dropWork ? 0 : -10
     });
 
     const color = {
@@ -79,16 +79,13 @@ const Nav = props => {
                         <Link to="/contact" className="nav-link" style={color}>CONTACT</Link>
                     </animated.div>
                     <BrowserView>
-                        <animated.div className="nav-link-container" style={fade} onMouseEnter={handleHoverWork} onMouseLeave={handleLeaveWork}>
-                            <Link to="/works" className="nav-link" style={color}>WORKS</Link>
-                            {
-                                dropWork ?
-                                    <animated.div className="sub-links" style={subFadeWork}>
-                                        <Link to="/posters" className="sub-link" style={color}>POSTERS</Link>
-                                        <Link to="/logos" className="sub-link" style={color}>LOGOS</Link>
-                                    </animated.div>
-                                    : ""
-                            }
+                        <animated.div className="nav-link-container" style={fade} onMouseLeave={handleLeaveWork}>
+                            <Link to="/works" className="nav-link" style={color} onMouseEnter={handleHoverWork}>WORKS</Link>
+
+                            <animated.div className="sub-links" style={subFadeWork}>
+                                <Link to="/posters" className="sub-link" style={color}>POSTERS</Link>
+                                <Link to="/logos" className="sub-link" style={color}>LOGOS</Link>
+                            </animated.div>
                         </animated.div>
                     </BrowserView>
                     <MobileView>
@@ -107,18 +104,14 @@ const Nav = props => {
                     </MobileView>
                     <BrowserView>
                         {/*<Link to="/shop" className="nav-link" style={color}>SHOP</Link>*/}
-                        <animated.div className="nav-link-container" style={fade} onMouseEnter={handleHoverShop} onMouseLeave={handleLeaveShop}>
-                            <div className="nav-link" style={color}>SHOP</div>
-                            {
-                                dropShop ?
+                        <animated.div className="nav-link-container" style={fade} onMouseLeave={handleLeaveShop}>
+                            <div className="nav-link" style={color} onMouseEnter={handleHoverShop}>SHOP</div>
                                     <animated.div className="sub-links" style={subFadeShop}>
                                         <a target="_blank" rel="noopener noreferrer" href="https://emgalaishop.bigcartel.com/"
                                            className="sub-link" style={color}>BIGCARTEL</a>
                                         <a target="_blank" rel="noopener noreferrer" href="https://shop.e-kunst.com/artist/emgalai"
                                            className="sub-link" style={color}>E-KUNST</a>
                                     </animated.div>
-                                    : ""
-                            }
                         </animated.div>
                     </BrowserView>
                     <MobileView>
