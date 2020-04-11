@@ -51,9 +51,9 @@ const Home = () => {
                         <div className="logo-container" onMouseEnter={handleHoverLeft} onMouseLeave={handleLeaveLeft}>
                             <AnimatedLogo hover={hoverLeft} logo={logo1} to={"/portfolio"}
                                           width={'15vw'} toWidth={'5vw'} margin={'0.5vh'}/>
-                        <animated.p className="home-text" style={disappearRight}>
-                            portfolio
-                        </animated.p>
+                            <animated.p className="home-text" style={disappearRight}>
+                                portfolio
+                            </animated.p>
                         </div>
                     </animated.div>
                     <animated.div style={disappearLeft}>
@@ -65,9 +65,9 @@ const Home = () => {
                                   style={disappearRight} className="home-logo-container">
                         <div className="logo-container" onMouseEnter={handleHoverRight} onMouseLeave={handleLeaveRight}>
                             <AnimatedLogo hover={hoverRight} logo={logo2} to={"/print"} width={'17vw'} toWidth={'6vw'} margin={'-1.1vh'}/>
-                        <animated.p className="home-text" style={disappearLeft}>
-                            workshop
-                        </animated.p>
+                            <animated.p className="home-text" style={disappearLeft}>
+                                workshop
+                            </animated.p>
                         </div>
                     </animated.div>
                 </animated.div>
