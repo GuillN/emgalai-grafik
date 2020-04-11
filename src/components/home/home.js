@@ -76,7 +76,7 @@ const Home = () => {
             <MobileView>
                 <animated.div className="home-container">
                     <animated.div onClick={() => setToggleLeft(!isToggledLeft)} style={disappearLeft} className="home-logo-container">
-                        <AnimatedLogo className="animated-logo" logo={logo1} to={"/emgalai"} width={'15vw'} toWidth={'5vw'} margin={'0.5vh'}/>
+                        <AnimatedLogo className="animated-logo" logo={logo1} to={"/portfolio"} width={'15vw'} toWidth={'5vw'} margin={'0.5vh'}/>
                         <animated.div style={barFade}>
                             <animated.p className="home-text" style={disappearRight}>
                                 portfolio
