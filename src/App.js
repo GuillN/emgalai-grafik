@@ -21,6 +21,7 @@ import PrintsDetails from "./components/prints/printsDetails";
 import Tshirts from "./components/prints/tshirts";
 import TshirtsDetails from "./components/prints/tshirtsDetails";
 import Openings from "./components/openings/openings";
+import Routes from "./Routes";
 
 const App = () => {
     return (
@@ -28,23 +29,23 @@ const App = () => {
             <ReactNotification/>
 
             <Router history={history}>
-
-                <Route path="/" exact component={Home} />
-                <Route path="/portfolio" exact component={Portfolio}/>
-                <Route path="/print" exact component={Print}/>
-                <Route path="/about" component={About}/>
-                <Route path="/contact" component={Contact}/>
-                <Route path="/works" exact component={Works}/>
-                <Route path="/works/:id" component={WorksDetails}/>
-                <Route path="/posters" component={PostersDetails}/>
-                <Route path="/logos" component={LogosDetails}/>
-                <Route path="/shop" component={Shop}/>
-                <Route path="/devis" component={Devis}/>
-                <Route path="/prints" exact component={Prints}/>
-                <Route path="/prints/:id" component={PrintsDetails}/>
-                <Route path="/tshirts" exact component={Tshirts}/>
-                <Route path="/tshirts/:id" component={TshirtsDetails}/>
-                <Route path="/openings" component={Openings}/>
+                <Routes/>
+                {/*<Route path="/" exact component={Home} />*/}
+                {/*<Route path="/portfolio" exact component={Portfolio}/>*/}
+                {/*<Route path="/print" exact component={Print}/>*/}
+                {/*<Route path="/about" component={About}/>*/}
+                {/*<Route path="/contact" component={Contact}/>*/}
+                {/*<Route path="/works" exact component={Works}/>*/}
+                {/*<Route path="/works/:id" component={WorksDetails}/>*/}
+                {/*<Route path="/posters" component={PostersDetails}/>*/}
+                {/*<Route path="/logos" component={LogosDetails}/>*/}
+                {/*<Route path="/shop" component={Shop}/>*/}
+                {/*<Route path="/devis" component={Devis}/>*/}
+                {/*<Route path="/prints" exact component={Prints}/>*/}
+                {/*<Route path="/prints/:id" component={PrintsDetails}/>*/}
+                {/*<Route path="/tshirts" exact component={Tshirts}/>*/}
+                {/*<Route path="/tshirts/:id" component={TshirtsDetails}/>*/}
+                {/*<Route path="/openings" component={Openings}/>*/}
 
             </Router>
 
