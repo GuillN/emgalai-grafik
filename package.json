@@ -4,7 +4,6 @@
   "private": true,
   "dependencies": {
     "animate.css": "^3.7.2",
-    "ejs": "^3.0.2",
     "emailjs-com": "^2.4.1",
     "express": "^4.17.1",
     "history": "^4.9.0",
@@ -32,7 +31,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "babel": "babel src -d views"
   },
   "eslintConfig": {
     "extends": "react-app"
