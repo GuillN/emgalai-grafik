@@ -25,10 +25,11 @@ const renderFullPage = html => {
                 <title>Ëmgalaï Grafik</title>
             </head>
             <body>
-                <div id="app">${html}</div>
+                <div id="root">${html}</div>
             </body>
         </html>
     `
 }
 
 app.listen(port);
+console.log('server started')
