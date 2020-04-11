@@ -10,6 +10,7 @@ const app = express();
 //app.use(express.static(__dirname + "/dist/"));
 
 app.get('*', (req, res) => {
+    console.log(`got url: ${req.url}`)
     const html = ReactDOMServer.renderToString(
         <Root url={req.url}/>
     )
