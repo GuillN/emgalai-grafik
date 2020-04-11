@@ -33,16 +33,20 @@ const Footer = () => {
 
     return(
         <div className="footer">
-            <animated.a style={fade} href="https://twitter.com">
+            <animated.a style={fade} target="_blank" rel="noopener noreferrer"
+                        href="https://twitter.com/EmgalaiGrafik">
                 <img src={twitter} alt="twitter" className="img"/>
             </animated.a>
-            <animated.a style={fade} href="https://facebook.com">
+            <animated.a style={fade} target="_blank" rel="noopener noreferrer"
+                        href="https://www.facebook.com/emgalai/">
                 <img src={facebook} alt="facebook" className="img"/>
             </animated.a>
-            <animated.a style={fade} href="https://instagram.com">
+            <animated.a style={fade} target="_blank" rel="noopener noreferrer"
+                        href="https://www.instagram.com/emgalai.grafik/">
                 <img src={instagram} alt="instagram" className="img"/>
             </animated.a>
-            <animated.a style={fade} href="https://behance.com">
+            <animated.a style={fade} target="_blank" rel="noopener noreferrer"
+                        href="https://www.behance.net/Emgalai?tracking_source=search_projects_recommended%7Cemgalai">
                 <img src={behance} alt="behance" className="img"/>
             </animated.a>
         </div>

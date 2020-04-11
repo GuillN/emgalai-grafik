@@ -1,12 +1,8 @@
 .footer {
     display: flex;
     justify-content: center;
-    /*align-items: center;*/
-    /*left: 50%;*/
     width: 10vw;
     margin-left: 45.5vw;
-    /*margin-bottom: 4vmin;*/
-    /*margin-top: 35vh;*/
     position: fixed;
     bottom: 4vh;
 }
@@ -14,6 +10,10 @@
 .footer a {
     margin-right: 1vw;
     padding-top: 5vmin;
+}
+
+.footer a:focus {
+    outline: none;
 }
 
 .img {
