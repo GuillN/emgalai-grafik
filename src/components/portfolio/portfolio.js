@@ -57,9 +57,9 @@ const Portfolio = () =>  {
 
                         <hr className="line"/>
 
-                        <Link to="/portfolio" className="home-link">WORKS</Link>
-                        <Link to="/portfolio/1" className="home-link">POSTERS</Link>
-                        <Link to="/portfolio/0" className="home-link">LOGOS</Link>
+                        <Link to="/works" className="home-link">WORKS</Link>
+                        <Link to="/posters" className="home-link">POSTERS</Link>
+                        <Link to="/logos" className="home-link">LOGOS</Link>
 
                         <hr className="line"/>
 

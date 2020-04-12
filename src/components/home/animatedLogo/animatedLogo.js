@@ -16,10 +16,10 @@ const AnimatedLogo = props => {
     });
 
     const moveAndFade = useSpring({
-        width: isToggled ? props.toWidth : props.width,
+        height: isToggled ? props.toHeight : props.height,
         marginLeft: isToggled ? '50vw' : '0vw',
         marginRight: isToggled ? '50vw' : '0vw',
-        marginTop: isToggled ? props.margin : '30vh',
+        marginTop: isToggled ? props.margin : '25vh',
 
         opacity: props.hover ? .1 : 1
     });

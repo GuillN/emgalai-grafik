@@ -20,7 +20,7 @@ const PostersDetails = () => {
 
     const mapper = (item, index) => {
         return (
-            <animated.div style={fade} key={index} className="portfolio-details-frame-big">
+            <animated.div style={fade} key={index} className="details-frame-big">
                 <img alt={index} src={images[index]}/>
             </animated.div>
         )
@@ -31,16 +31,16 @@ const PostersDetails = () => {
     return (
         <div>
             <Nav/>
-            <div style={{backgroundColor: 'black'}} className="portfolio-details">
+            <div style={{backgroundColor: 'black'}} className="details-container">
                 <h1 style={{color: 'white'}}>POSTERS</h1>
-                <div className="portfolio-details-grid">
+                <div className="details-grid">
                     <BrowserView>
-                        <Carousel autoPlay infiniteLoop interval={4000} showThumbs={false} className="portfolio-carousel">
+                        <Carousel autoPlay infiniteLoop interval={4000} showThumbs={false} className="works-carousel">
                             {img}
                         </Carousel>
                     </BrowserView>
                     <MobileView>
-                        <Carousel autoPlay infiniteLoop interval={4000} showThumbs={false} className="portfolio-carousel-mobile">
+                        <Carousel autoPlay infiniteLoop interval={4000} showThumbs={false} className="works-carousel-mobile">
                             {img}
                         </Carousel>
                     </MobileView>

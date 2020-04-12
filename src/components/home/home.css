@@ -12,16 +12,6 @@
     text-align: center;
 }
 
-.logo-container:hover > p {
-    opacity: 1;
-    transition: .3s ease-in;
-}
-
-.logo-container:not(:hover) > p {
-    opacity: 0;
-    transition: .3s ease-in;
-}
-
 .logo-container {
     display: flex;
     flex-direction: column;
@@ -31,9 +21,20 @@
 
 .big-logo {
     cursor: pointer;
+    max-width: 20vw;
 }
 
 @media only screen and (min-width: 1025px) { /*For desktop*/
+    .logo-container:hover > p {
+        opacity: 1;
+        transition: .3s ease-in;
+    }
+
+    .logo-container:not(:hover) > p {
+        opacity: 0;
+        transition: .3s ease-in;
+    }
+
     .home-text {
         font-family: 'KAISG', sans-serif;
         font-size: 4vh;
@@ -44,11 +45,14 @@
         pointer-events: none;
     }
 
-    .barre {
-        height: 50vh;
+    .bar-container {
         margin-top: 25vh;
         margin-right: 5vw;
         margin-left: 5vw;
+    }
+
+    .bar {
+        height: 50vh;
     }
 }
 
@@ -58,15 +62,18 @@
         font-size: 6vw;
         color: white;
         position: absolute;
-        top: 40%;
-        left: -15%;
+        margin-top: 50vh;
         pointer-events: none;
+        opacity: 1;
     }
 
-    .barre {
-        height: 25vh;
-        margin-top: 25vh;
+    .bar-container {
+        margin-top: 37.5vh;
         margin-right: 5vw;
         margin-left: 5vw;
+    }
+
+    .bar {
+        height: 25vh;
     }
 }

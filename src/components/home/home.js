@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-import {MobileView, BrowserView} from "react-device-detect"
 import './home.css'
 import logo1 from '../../images/logo-whito.svg'
 import logo2 from '../../images/emgalaiprint SIMPLE BLANClogo.svg'
@@ -12,6 +11,10 @@ const Home = () => {
     const [isToggledRight, setToggleRight] = useState(false);
     const [hoverLeft, setHoverLeft] = useState(false);
     const [hoverRight, setHoverRight] = useState(false);
+
+    const disappear = useSpring({
+        display: isToggledRight || isToggledLeft ? 'none' : 'inline'
+    });
 
     const disappearLeft = useSpring({
         display: isToggledRight ? 'none' : 'inline'
@@ -44,60 +47,30 @@ const Home = () => {
 
     return (
         <div>
-            <BrowserView>
-                <animated.div className="home-container">
-                    <animated.div onClick={() => setToggleLeft(!isToggledLeft)}
-                                  style={disappearLeft} className="home-logo-container">
-                        <div className="logo-container" onMouseEnter={handleHoverLeft} onMouseLeave={handleLeaveLeft}>
-                            <AnimatedLogo hover={hoverLeft} logo={logo1} to={"/portfolio"}
-                                          width={'15vw'} toWidth={'5vw'} margin={'0.5vh'}/>
-                            <animated.p className="home-text" style={disappearRight}>
-                                portfolio
-                            </animated.p>
-                        </div>
-                    </animated.div>
-                    <animated.div style={disappearLeft}>
-                        <animated.div style={disappearRight}>
-                            <animated.img style={barFade} src={barre} alt="separation" className="barre" />
-                        </animated.div>
-                    </animated.div>
-                    <animated.div onClick={() => setToggleRight(!isToggledRight)}
-                                  style={disappearRight} className="home-logo-container">
-                        <div className="logo-container" onMouseEnter={handleHoverRight} onMouseLeave={handleLeaveRight}>
-                            <AnimatedLogo hover={hoverRight} logo={logo2} to={"/print"} width={'17vw'} toWidth={'6vw'} margin={'-1.1vh'}/>
-                            <animated.p className="home-text" style={disappearLeft}>
-                                workshop
-                            </animated.p>
-                        </div>
-                    </animated.div>
+            <animated.div className="home-container">
+                <animated.div onClick={() => setToggleLeft(!isToggledLeft)}
+                              style={disappearLeft} className="home-logo-container">
+                    <div className="logo-container" onMouseEnter={handleHoverLeft} onMouseLeave={handleLeaveLeft}>
+                        <AnimatedLogo hover={hoverLeft} logo={logo1} to={"/portfolio"}
+                                      height={'50vh'} toHeight={'15vh'} margin={'0.5vh'}/>
+                        <animated.p className="home-text" style={disappear}>
+                            portfolio
+                        </animated.p>
+                    </div>
                 </animated.div>
-            </BrowserView>
-
-            <MobileView>
-                <animated.div className="home-container">
-                    <animated.div onClick={() => setToggleLeft(!isToggledLeft)} style={disappearLeft} className="home-logo-container">
-                        <AnimatedLogo className="animated-logo" logo={logo1} to={"/portfolio"} width={'15vw'} toWidth={'5vw'} margin={'0.5vh'}/>
-                        <animated.div style={barFade}>
-                            <animated.p className="home-text" style={disappearRight}>
-                                portfolio
-                            </animated.p>
-                        </animated.div>
-                    </animated.div>
-                    <animated.div style={disappearLeft}>
-                        <animated.div style={disappearRight}>
-                            <animated.img style={barFade} src={barre} alt="separation" className="barre" />
-                        </animated.div>
-                    </animated.div>
-                    <animated.div onClick={() => setToggleRight(!isToggledRight)} style={disappearRight} className="home-logo-container">
-                        <AnimatedLogo logo={logo2} to={"/print"} width={'17vw'} toWidth={'6vw'} margin={'-1.1vh'}/>
-                        <animated.div style={barFade}>
-                            <animated.p className="home-text" style={disappearLeft}>
-                                workshop
-                            </animated.p>
-                        </animated.div>
-                    </animated.div>
+                <animated.div style={disappear} className="bar-container">
+                    <animated.img style={barFade} src={barre} alt="separation" className="bar"/>
                 </animated.div>
-            </MobileView>
+                <animated.div onClick={() => setToggleRight(!isToggledRight)}
+                              style={disappearRight} className="home-logo-container">
+                    <div className="logo-container" onMouseEnter={handleHoverRight} onMouseLeave={handleLeaveRight}>
+                        <AnimatedLogo hover={hoverRight} logo={logo2} to={"/print"} height={'50vh'} toHeight={'15vh'} margin={'-1.1vh'}/>
+                        <animated.p className="home-text" style={disappear}>
+                            workshop
+                        </animated.p>
+                    </div>
+                </animated.div>
+            </animated.div>
         </div>
     )
 };

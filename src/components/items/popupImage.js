@@ -1,4 +1,6 @@
 import React, {useState} from "react"
+import {MobileView, BrowserView} from "react-device-detect"
+
 import back from "../../images/back.svg";
 import next from "../../images/next.svg";
 import Popup from "reactjs-popup";
@@ -20,21 +22,28 @@ const PopupImage = props => {
     };
 
     return (
-        <Popup trigger={
-            <div>
-                <Image alt={props.index} src={props.item} mobile={false} popup/>
-            </div>
-        } modal closeOnEscape onOpen={() => {init(props.index)}}>
-            <div className="modal-container">
-                {modalIndex === 0 ? "" :
-                    <img src={back} alt="back" className="left-arrow" onClick={decrement}/>}
-                <div className="modal">
-                    <img alt={modalIndex} src={props.images[modalIndex]} className="modal-image"/>
-                </div>
-                {modalIndex === props.sizes[props.id] - 1 ? "" :
-                    <img src={next} alt="next" className="right-arrow" onClick={increment}/>}
-            </div>
-        </Popup>
+        <div>
+            <BrowserView>
+                <Popup trigger={
+                    <div>
+                        <Image alt={props.index} src={props.item} mobile={false} popup/>
+                    </div>
+                } modal closeOnEscape onOpen={() => {init(props.index)}}>
+                    <div className="modal-container">
+                        {modalIndex === 0 ? <div className="left-arrow"/> :
+                            <img src={back} alt="back" className="left-arrow" onClick={decrement}/>}
+                        <div className="modal">
+                            <img alt={modalIndex} src={props.images[modalIndex]} className="modal-image"/>
+                        </div>
+                        {modalIndex === props.sizes[props.id] - 1 ? <div className="right-arrow"/> :
+                            <img src={next} alt="next" className="right-arrow" onClick={increment}/>}
+                    </div>
+                </Popup>
+            </BrowserView>
+            <MobileView>
+                <Image src={props.item} alt={props.index} mobile={false} popup/>
+            </MobileView>
+        </div>
     )
 };
 

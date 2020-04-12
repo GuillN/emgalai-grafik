@@ -94,9 +94,9 @@ const Nav = props => {
                             {
                                 dropWork ?
                                     <animated.div className="sub-links" style={subFadeWork}>
-                                        <Link to="/portfolio" className="nav-link" style={color}>WORKS</Link>
-                                        <Link to="/portfolio/1" className="sub-link" style={color}>POSTERS</Link>
-                                        <Link to="/portfolio/0" className="sub-link" style={color}>LOGOS</Link>
+                                        <Link to="/works" className="nav-link" style={color}>WORKS</Link>
+                                        <Link to="/posters" className="sub-link" style={color}>POSTERS</Link>
+                                        <Link to="/logos" className="sub-link" style={color}>LOGOS</Link>
                                     </animated.div>
                                     : ""
                             }

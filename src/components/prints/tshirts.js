@@ -11,7 +11,7 @@ const Tshirts = () => {
     return (
         <div>
             <Nav print/>
-            <div className="prints-container">
+            <div className="works-container">
                 <Link to="/tshirts/0">
                     <Items img={rib} alt={'tshirts_img'} text={'Rock In Bourlon'}/>
                 </Link>

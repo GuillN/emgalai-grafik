@@ -19,7 +19,7 @@ const Image = props => {
             <LazyLoad>
                 <img style={load === "loaded" ? {} : {display: 'none'}} onLoad={handleLoaded} alt={props.alt}
                      src={src}
-                     className={props.mobile ? "portfolio-item-image-mobile" : props.popup ? "portfolio-details-image" : "portfolio-item-image"}/>
+                     className={props.mobile ? "item-image-mobile" : props.popup ? "item-image-popup" : "item-image"}/>
             </LazyLoad>
         </div>
     )

@@ -32,7 +32,7 @@ const Works = () => {
     return(
         <div>
             <Nav/>
-            <animated.div style={fade} className="picto-container">
+            <animated.div style={fade} className="works-container">
                 <Link to="/works/0">
                     <Items img={aluk} alt={'aluk_todolo_img'} text={'Aluk Todolo'}/>
                 </Link>

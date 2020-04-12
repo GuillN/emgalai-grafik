@@ -22,20 +22,20 @@ const ItemsDetails = props => {
     const mapper = (item, index) => {
         if (props.indexes[id].includes(index)) {
             return (
-                <animated.div style={fade} key={index} className="portfolio-details-frame-med">
+                <animated.div style={fade} key={index} className="details-frame-med">
                     <PopupImage index={index} item={item} id={id} images={images} sizes={props.sizes}/>
                 </animated.div>
             )
         } else if (props.smallIndexes[id].includes(index)) {
             return (
-                <animated.div style={fade} key={index} className="portfolio-details-frame-small">
+                <animated.div style={fade} key={index} className="details-frame-small">
                     <PopupImage index={index} item={item} id={id} images={images} sizes={props.sizes}/>
                 </animated.div>
             )
         } else {
             return (
-                <animated.div style={fade} key={index} className={props.id === '6' ? "portfolio-details-frame" :
-                    "portfolio-details-frame-big"}>
+                <animated.div style={fade} key={index} className={props.id === '6' ? "details-frame-tiny" :
+                    "details-frame-big"}>
                     <PopupImage index={index} item={item} id={id} images={images} sizes={props.sizes}/>
                 </animated.div>
             )
@@ -49,12 +49,12 @@ const ItemsDetails = props => {
     return(
         <div>
             <Nav print={props.print}/>
-            <div className="portfolio-details">
+            <div className="details-container">
                 <h1>{props.names[id].toUpperCase()}</h1>
                 {props.texts[id] == null ? "" : <p className="description">{props.texts[id]}</p>}
-                <div className="portfolio-details-grid">
+                <div className="details-grid">
                     {img}
-                    {videoId == null ? "" : <ReactPlayer className="portfolio-details-video" url={url} controls/>}
+                    {videoId == null ? "" : <ReactPlayer className="details-video" url={url} controls/>}
                 </div>
             </div>
         </div>
