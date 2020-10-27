@@ -14,11 +14,11 @@ const PopupImage = props => {
     };
 
     const increment = () => {
-        setModalIndex(modalIndex+1)
+        setModalIndex(modalIndex + 1)
     };
 
     const decrement = () => {
-        setModalIndex(modalIndex-1)
+        setModalIndex(modalIndex - 1)
     };
 
     return (
@@ -28,7 +28,9 @@ const PopupImage = props => {
                     <div>
                         <Image alt={props.index} src={props.item} mobile={false} popup/>
                     </div>
-                } modal closeOnEscape onOpen={() => {init(props.index)}}>
+                } modal closeOnEscape onOpen={() => {
+                    init(props.index)
+                }}>
                     <div className="modal-container">
                         {modalIndex === 0 ? <div className="left-arrow"/> :
                             <img src={back} alt="back" className="left-arrow" onClick={decrement}/>}

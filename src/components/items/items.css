@@ -92,6 +92,8 @@
     height: 90vh !important;
     width: 20vh !important;
     padding: 0 !important;
+    background: none !important;
+    border: none !important;
     display: flex;
     justify-content: center;
 }
