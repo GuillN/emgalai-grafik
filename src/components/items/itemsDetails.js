@@ -3,6 +3,7 @@ import {animated, useSpring} from "react-spring";
 import ReactPlayer from "react-player";
 import Nav from "../nav/nav";
 import PopupImage from "./popupImage";
+import {MobileView, BrowserView} from "react-device-detect"
 
 const ItemsDetails = props => {
 
@@ -42,20 +43,39 @@ const ItemsDetails = props => {
         }
     };
 
+    const mobileMapper = (item, index) => {
+        return (
+            <animated.div>
+                <PopupImage index={index} item={item} id={id} images={images} sizes={props.sizes}/>
+            </animated.div>
+        )
+    }
+
     let img = images.map(mapper);
+    let imgMobile = images.map(mobileMapper);
     const videoId = props.videos[id];
     const url = `https://www.facebook.com/emgalai/videos/${videoId}/`;
 
-    return(
+    return (
         <div>
             <Nav print={props.print}/>
             <div className="details-container">
                 <h1>{props.names[id].toUpperCase()}</h1>
                 {props.texts[id] == null ? "" : <p className="description">{props.texts[id]}</p>}
-                <div className="details-grid">
-                    {img}
-                    {videoId == null ? "" : <ReactPlayer className="details-video" url={url} controls/>}
-                </div>
+                <BrowserView>
+
+                    <div className="details-grid">
+                        {img}
+                        {videoId == null ? "" : <ReactPlayer className="details-video" url={url} controls/>}
+                    </div>
+                </BrowserView>
+
+                <MobileView>
+                    <div className="details-grid-mobile">
+                        {imgMobile}
+                        {videoId == null ? "" : <ReactPlayer className="details-video" url={url} controls/>}
+                    </div>
+                </MobileView>
             </div>
         </div>
     )
