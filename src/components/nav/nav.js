@@ -83,6 +83,7 @@ const Nav = props => {
                             <Link to="/works" className="nav-link" style={color} onMouseEnter={handleHoverWork}>WORKS</Link>
 
                             <animated.div className="sub-links" style={subFadeWork}>
+                                <Link to="/works" className="sub-link" style={color}>ALL</Link>
                                 <Link to="/posters" className="sub-link" style={color}>POSTERS</Link>
                                 <Link to="/logos" className="sub-link" style={color}>LOGOS</Link>
                             </animated.div>
