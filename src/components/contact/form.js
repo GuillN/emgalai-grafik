@@ -34,7 +34,7 @@ const Form = () => {
     });
 
     return (
-        <div>
+        <div className="contact-container">
 
             <animated.form id="contact-form" style={fade2} className="inputs" onSubmit={handleSubmit}>
                 <input type="hidden" name="contact_number"/>
