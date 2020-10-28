@@ -9,11 +9,13 @@ const ItemsDetails = props => {
 
     const [id, setId] = useState(0);
     const [images, setImages] = useState([]);
+    const [client, setClient] = useState({});
 
     useEffect(() => {
         setId(props.id);
-        setImages(props.imports[id]);
-    }, [id, props.id, props.imports]);
+        setClient(props.clients[Object.keys(props.clients)[id]])
+        setImages(props.images[id]);
+    }, [id, props.id, props.clients, props.images]);
 
     const fade = useSpring({
         from: {opacity: 0,}, opacity: 1,
@@ -21,23 +23,23 @@ const ItemsDetails = props => {
     });
 
     const mapper = (item, index) => {
-        if (props.indexes[id].includes(index)) {
+        if (client.medIndex.includes(index)) {
             return (
                 <animated.div style={fade} key={index} className="details-frame-med">
-                    <PopupImage index={index} item={item} id={id} images={images} sizes={props.sizes}/>
+                    <PopupImage index={index} item={item} id={id} images={images} sizes={client.size}/>
                 </animated.div>
             )
-        } else if (props.smallIndexes[id].includes(index)) {
+        } else if (client.smallIndex.includes(index)) {
             return (
                 <animated.div style={fade} key={index} className="details-frame-small">
-                    <PopupImage index={index} item={item} id={id} images={images} sizes={props.sizes}/>
+                    <PopupImage index={index} item={item} id={id} images={images} sizes={client.size}/>
                 </animated.div>
             )
         } else {
             return (
-                <animated.div style={fade} key={index} className={props.id === '6' ? "details-frame-tiny" :
+                <animated.div style={fade} key={index} className={client.title === 'Glazart' ? "details-frame-tiny" :
                     "details-frame-big"}>
-                    <PopupImage index={index} item={item} id={id} images={images} sizes={props.sizes}/>
+                    <PopupImage index={index} item={item} id={id} images={images} sizes={client.size}/>
                 </animated.div>
             )
         }
@@ -46,24 +48,23 @@ const ItemsDetails = props => {
     const mobileMapper = (item, index) => {
         return (
             <animated.div>
-                <PopupImage index={index} item={item} id={id} images={images} sizes={props.sizes}/>
+                <PopupImage index={index} item={item} id={id} images={images} sizes={client.size}/>
             </animated.div>
         )
     }
 
     let img = images.map(mapper);
     let imgMobile = images.map(mobileMapper);
-    const videoId = props.videos[id];
+    const videoId = client.video;
     const url = `https://www.facebook.com/emgalai/videos/${videoId}/`;
 
     return (
         <div>
             <Nav print={props.print}/>
             <div className="details-container">
-                <h1>{props.names[id].toUpperCase()}</h1>
-                {props.texts[id] == null ? "" : <p className="description">{props.texts[id]}</p>}
+                <h1>{client.title}</h1>
+                {client.text == null ? "" : <p className="description">{client.text}</p>}
                 <BrowserView>
-
                     <div className="details-grid">
                         {img}
                         {videoId == null ? "" : <ReactPlayer className="details-video" url={url} controls/>}

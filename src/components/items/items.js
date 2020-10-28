@@ -14,14 +14,14 @@ const Items = props => {
         <div>
             <BrowserView>
                 <animated.div style={fade} className="item-container">
-                    <Image src={props.img} alt={props.alt} mobile={false} popup={false}/>
-                    <p className="item-text">{props.text}</p>
+                    <Image src={props.cover} alt={props.alt} mobile={false} popup={false}/>
+                    <p className="item-text">{props.title}</p>
                 </animated.div>
             </BrowserView>
             <MobileView>
                 <div className="item-container">
-                    <Image src={props.img} alt={props.alt} mobile popup={false}/>
-                    <p className="item-text">{props.text}</p>
+                    <Image src={props.cover} alt={props.alt} mobile popup={false}/>
+                    <p className="item-text">{props.title}</p>
                 </div>
             </MobileView>
         </div>
