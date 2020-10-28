@@ -1,7 +1,6 @@
 import React from "react"
 import "./works.css"
 import {Link} from "react-router-dom";
-import {useSpring, animated} from "react-spring";
 import Nav from "../nav/nav";
 import Items from "../items/items";
 
@@ -24,15 +23,10 @@ import ulver from '../../images/ulver/zoom-3.jpg'
 
 const Works = () => {
 
-    const fade = useSpring({
-        from: {opacity: 0},opacity: 1,
-        config: {duration: 500}
-    });
-
-    return(
+    return (
         <div>
             <Nav/>
-            <animated.div style={fade} className="works-container">
+            <div className="works-container">
                 <Link to="/works/0">
                     <Items img={aluk} alt={'aluk_todolo_img'} text={'Aluk Todolo'}/>
                 </Link>
@@ -81,7 +75,7 @@ const Works = () => {
                 <Link to="/works/15">
                     <Items img={ulver} alt={'ulver_img'} text={'Ulver'}/>
                 </Link>
-            </animated.div>
+            </div>
         </div>
     )
 };
