@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react"
-import LazyLoad from "react-lazy-load";
+import LazyLoad from "react-lazyload";
 import placeholder from '../../images/placeholder.png'
 
 const Image = props => {
@@ -8,7 +8,7 @@ const Image = props => {
 
     useEffect(() => {
         load === "loading" ? setSrc(placeholder) : setSrc(props.src);
-    }, [load, props.src], );
+    }, [load, props.src]);
     
     const handleLoaded = () => {
         setLoad("loaded")
@@ -16,7 +16,7 @@ const Image = props => {
 
     return (
         <div>
-            <LazyLoad>
+            <LazyLoad once>
                 <img style={load === "loaded" ? {} : {display: 'none'}} onLoad={handleLoaded} alt={props.alt}
                      src={src}
                      className={props.mobile ? "item-image-mobile" : props.popup ? "item-image-popup" : "item-image"}/>

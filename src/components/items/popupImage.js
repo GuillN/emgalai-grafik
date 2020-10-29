@@ -37,7 +37,7 @@ const PopupImage = props => {
                         <div className="modal">
                             <img alt={modalIndex} src={props.images[modalIndex]} className="modal-image"/>
                         </div>
-                        {modalIndex === props.sizes[props.id] - 1 ? <div className="right-arrow"/> :
+                        {modalIndex === props.sizes - 1 ? <div className="right-arrow"/> :
                             <img src={next} alt="next" className="right-arrow" onClick={increment}/>}
                     </div>
                 </Popup>
