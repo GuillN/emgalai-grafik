@@ -9,20 +9,18 @@ const Image = props => {
     useEffect(() => {
         load === "loading" ? setSrc(placeholder) : setSrc(props.src);
     }, [load, props.src]);
-    
+
     const handleLoaded = () => {
         setLoad("loaded")
     };
 
-    return (
-        <div>
-            <LazyLoad once>
-                <img style={load === "loaded" ? {} : {display: 'none'}} onLoad={handleLoaded} alt={props.alt}
-                     src={src}
-                     className={props.mobile ? "item-image-mobile" : props.popup ? "item-image-popup" : "item-image"}/>
-            </LazyLoad>
-        </div>
-    )
+    return <div>
+        <LazyLoad once>
+            <img style={load === "loaded" ? {} : {display: 'none'}} onLoad={handleLoaded} alt={props.alt}
+                 src={src}
+                 className={props.mobile ? "item-image-mobile" : props.popup ? "item-image-popup" : "item-image"}/>
+        </LazyLoad>
+    </div>
 };
 
 export default Image

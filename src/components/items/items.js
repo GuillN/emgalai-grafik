@@ -4,14 +4,14 @@ import Image from "./image";
 import './items.css'
 import {animated, useSpring} from "react-spring";
 
+// This component displays preview images from an image array
 const Items = props => {
     const fade = useSpring({
         from: {opacity: 0,}, opacity: 1,
         config: {duration: 1000}
     });
 
-    return(
-        <div>
+    return <div>
             <BrowserView>
                 <animated.div style={fade} className="item-container">
                     <Image src={props.cover} alt={props.alt} mobile={false} popup={false}/>
@@ -25,7 +25,6 @@ const Items = props => {
                 </div>
             </MobileView>
         </div>
-    )
 };
 
 export default Items

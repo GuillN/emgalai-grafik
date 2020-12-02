@@ -1,13 +1,10 @@
 import React from 'react'
-import {clients} from "../../helpers/clients"
-import {images} from '../../helpers/clients'
+import {workArray} from "../../helpers/imageArrays"
 import ItemsDetails from "../items/itemsDetails"
 
+// Displays popup images of the works category
 const WorksDetails = props => {
-
-    return (
-        <ItemsDetails images={images} clients={clients} print={false} id={props.match.params.id}/>
-    )
-};
+    return <ItemsDetails array={workArray} id={props.match.params.id} print={false}/>
+}
 
 export default WorksDetails
