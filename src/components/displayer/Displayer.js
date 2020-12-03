@@ -2,33 +2,57 @@ import React, {useEffect, useState} from 'react'
 import {animated, useSpring} from "react-spring";
 import ReactPlayer from "react-player";
 import Nav from "../nav/nav";
-import PopupImage from "./popupImage";
+import PopupImage from "../items/popupImage";
 import {MobileView, BrowserView} from "react-device-detect"
+import {logoArray, tshirtArray, workArray, workshopArray} from "../../helpers/imageArrays";
+import {history} from "../../helpers/history";
+import './Displayer.css'
 
 // This component displays formatted popup images from an image array
-const ItemsDetails = props => {
+const Displayer = props => {
 
-    const [id, setId] = useState(0);
-    const [client, setClient] = useState({});
-    const [images, setImages] = useState([]);
+    const [id] = useState(props.match.params.id)
+    const [pathName] = useState(history.location.pathname.split('/')[1])
+    const [client, setClient] = useState({})
+    const [images, setImages] = useState([])
+    const [isPrint, setIsPrint] = useState(false)
 
     useEffect(() => {
-        setId(props.id);
-        setClient(props.array[Object.keys(props.array)[id]])
-        setImages(props.array[Object.keys(props.array)[id]].images);
-    }, [id, props.array, props.id]);
+        switch (pathName) {
+            case 'works':
+                setClient(workArray[id])
+                setImages(workArray[id].images)
+                break
+            case 'logos':
+                setClient(logoArray)
+                setImages(logoArray.images)
+                break
+            case 'prints':
+                setClient(workshopArray[id])
+                setImages(workshopArray[id].images)
+                setIsPrint(true)
+                break
+            case 'tshirts':
+                setClient(tshirtArray[id])
+                setImages(tshirtArray[id].images)
+                setIsPrint(true)
+                break
+            default:
+                break
+        }
+    }, [id, pathName])
 
     const fade = useSpring({
         from: {opacity: 0,}, opacity: 1,
         config: {duration: 1000}
-    });
+    })
 
     const mapper = (item, index) => {
         if (client.medIndex.includes(index)) {
             return <animated.div style={fade} key={index} className="details-frame-med">
                 <PopupImage index={index} item={item} id={id} images={images} sizes={client.images.length}/>
             </animated.div>
-    } else if (client.smallIndex.includes(index)) {
+        } else if (client.smallIndex.includes(index)) {
             return <animated.div style={fade} key={index} className="details-frame-small">
                 <PopupImage index={index} item={item} id={id} images={images} sizes={client.images.length}/>
             </animated.div>
@@ -38,7 +62,7 @@ const ItemsDetails = props => {
                 <PopupImage index={index} item={item} id={id} images={images} sizes={client.images.length}/>
             </animated.div>
         }
-    };
+    }
 
     const mobileMapper = (item, index) => {
         return <animated.div>
@@ -46,13 +70,13 @@ const ItemsDetails = props => {
         </animated.div>
     }
 
-    let img = images.map(mapper);
-    let imgMobile = images.map(mobileMapper);
-    const videoId = client.video;
-    const url = `https://www.facebook.com/emgalai/videos/${videoId}/`;
+    let img = images.map(mapper)
+    let imgMobile = images.map(mobileMapper)
+    const videoId = client.video
+    const url = `https://www.facebook.com/emgalai/videos/${videoId}/`
 
     return <div>
-        <Nav print={props.print}/>
+        <Nav print={isPrint}/>
         <div className="details-container">
             <h1>{client.title}</h1>
             {client.text == null ? "" : <p className="description">{client.text}</p>}
@@ -71,6 +95,6 @@ const ItemsDetails = props => {
             </MobileView>
         </div>
     </div>
-};
+}
 
-export default ItemsDetails
+export default Displayer

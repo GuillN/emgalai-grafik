@@ -8,16 +8,12 @@ import './App.css';
 import Routes from "./Routes";
 
 const App = () => {
-    return (
-        <div className="App">
-            <ReactNotification/>
-
-            <Router history={history}>
-                <Routes/>
-            </Router>
-
-        </div>
-    );
-};
+    return <div className="App">
+        <ReactNotification/>
+        <Router history={history}>
+            <Routes/>
+        </Router>
+    </div>
+}
 
 export default App;

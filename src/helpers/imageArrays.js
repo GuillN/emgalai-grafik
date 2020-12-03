@@ -17,6 +17,11 @@ import mysticum_cover from '../images/mysticum/3.jpg'
 import rio_cover from '../images/rio/3.jpg'
 import sunn_cover from '../images/sunn/1 (1).jpg'
 import ulver_cover from '../images/ulver/zoom-3.jpg'
+
+import tshirts_cover from "../images/tshirts/gate/Emgalai_s-Gatezoom1.jpg";
+import vinyls_cover from "../images/vinyls/carré-en-fait-.jpg"
+import cassettes_cover from "../images/cassettes/70229637_911070585930378_6026411403500322816_n.jpg"
+
 import {
     aluk, conan, cult, darkspace, doom, escarion, glazart, goblin, godflesh, hifi, king, metalorgie, mysticum,
     rio, sunn, ulver
@@ -29,16 +34,14 @@ import {vinyls} from "./images";
 import {cassettes} from "./images";
 
 export const logoArray = {
-    'logos': {
-        images: logos,
-        medIndex: [],
-        smallIndex: [],
-        video: null
-    }
+    images: logos,
+    medIndex: [],
+    smallIndex: [],
+    video: null
 }
 
-export const tshirtArray = {
-    'tshirtDark': {
+export const tshirtArray = [
+    {
         images: tshirtDark,
         cover: dark_tshirt_cover,
         title: 'Darkspace',
@@ -46,7 +49,7 @@ export const tshirtArray = {
         smallIndex: [],
         video: null
     },
-    'tshirtGate': {
+    {
         images: tshirtGate,
         cover: gate_tshirt_cover,
         title: 'Ëmgalaï\'s Gate',
@@ -54,7 +57,7 @@ export const tshirtArray = {
         smallIndex: [],
         video: null
     },
-    'tshirtRib': {
+    {
         images: tshirtRib,
         cover: rib_tshirt_cover,
         title: 'Rock In Bourlon',
@@ -62,27 +65,34 @@ export const tshirtArray = {
         smallIndex: [],
         video: null
     }
-}
+]
 
-export const printArray = {
-    'vinyls': {
+export const workshopArray = [
+    {
+        images: [],
+        cover: tshirts_cover,
+        title: 'T-Shirts'
+    },
+    {
         images: vinyls,
+        cover: vinyls_cover,
         title: 'Vinyls',
         medIndex: [0, 1],
         smallIndex: [],
         video: null
     },
-    'cassettes': {
+    {
         images: cassettes,
+        cover: cassettes_cover,
         title: 'Cassettes',
         medIndex: [0, 1],
         smallIndex: [2, 3, 4],
         video: null
     }
-}
+]
 
-export const workArray = {
-    'aluk': {
+export const workArray = [
+    {
         images: aluk,
         cover: aluk_cover,
         title: 'Aluk Todolo',
@@ -91,7 +101,7 @@ export const workArray = {
         smallIndex: [],
         video: null
     },
-    'conan': {
+    {
         images: conan,
         cover: conan_cover,
         title: 'Conan',
@@ -100,7 +110,7 @@ export const workArray = {
         smallIndex: [],
         video: null
     },
-    'cult': {
+    {
         images: cult,
         cover: cult_cover,
         title: 'Cult Of Fire',
@@ -109,7 +119,7 @@ export const workArray = {
         smallIndex: [],
         video: null
     },
-    'darkspace': {
+    {
         images: darkspace,
         cover: darkspace_cover,
         title: 'Darkspace',
@@ -118,7 +128,7 @@ export const workArray = {
         smallIndex: [],
         video: 978901818938041
     },
-    'doom': {
+    {
         images: doom,
         cover: doom_cover,
         title: 'Doom',
@@ -127,7 +137,7 @@ export const workArray = {
         smallIndex: [],
         video: 1072535196279459
     },
-    'escarion': {
+    {
         images: escarion,
         cover: escarion_cover,
         title: 'Escarion',
@@ -136,7 +146,7 @@ export const workArray = {
         smallIndex: [],
         video: null
     },
-    'glazart': {
+    {
         images: glazart,
         cover: glazart_cover,
         title: 'Glazart',
@@ -145,7 +155,7 @@ export const workArray = {
         smallIndex: [],
         video: null
     },
-    'goblin': {
+    {
         images: goblin,
         cover: goblin_cover,
         title: 'Goblin',
@@ -154,7 +164,7 @@ export const workArray = {
         smallIndex: [],
         video: 262610617954917
     },
-    'godflesh': {
+    {
         images: godflesh,
         cover: godflesh_cover,
         title: 'Godflesh',
@@ -163,7 +173,7 @@ export const workArray = {
         smallIndex: [],
         video: null
     },
-    'hifi': {
+    {
         images: hifi,
         cover: hifi_cover,
         title: 'Hifi Store',
@@ -172,7 +182,7 @@ export const workArray = {
         smallIndex: [],
         video: null
     },
-    'king': {
+    {
         images: king,
         cover: king_cover,
         title: 'King Dude',
@@ -181,7 +191,7 @@ export const workArray = {
         smallIndex: [],
         video: 752027961625429
     },
-    'metalorgie': {
+    {
         images: metalorgie,
         cover: metalorgie_cover,
         title: 'Metalorgie Fest',
@@ -190,7 +200,7 @@ export const workArray = {
         smallIndex: [],
         video: null
     },
-    'mysticum': {
+    {
         images: mysticum,
         cover: mysticum_cover,
         title: 'Mysticum',
@@ -199,7 +209,7 @@ export const workArray = {
         smallIndex: [],
         video: null
     },
-    'rio': {
+    {
         images: rio,
         cover: rio_cover,
         title: 'RIO',
@@ -208,7 +218,7 @@ export const workArray = {
         smallIndex: [],
         video: null
     },
-    'sunn': {
+    {
         images: sunn,
         cover: sunn_cover,
         title: 'Sunn O)))',
@@ -217,7 +227,7 @@ export const workArray = {
         smallIndex: [1, 2, 3],
         video: null
     },
-    'ulver': {
+    {
         images: ulver,
         cover: ulver_cover,
         title: 'Ulver',
@@ -226,4 +236,4 @@ export const workArray = {
         smallIndex: [],
         video: 876609339167290
     }
-}
+]

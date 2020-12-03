@@ -20,69 +20,6 @@
     height: 45vw
 }
 
-.details-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.details-container > h1 {
-    font-size: 5vh;
-}
-
-.description {
-    font-size: 2vh;
-    white-space: pre-line;
-    text-align: center;
-}
-
-/*@media only screen and (min-width: 1281px) { !* For Desktop *!*/
-    .details-grid {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-top: 5vh;
-        margin-bottom: 5vh;
-        width: 50vw;
-    }
-
-    .details-frame-tiny {
-        max-width: 12vw; /*4 per row*/
-        margin-right: 1vh;
-    }
-
-    .details-frame-small {
-        max-width: 13.1vw; /*3 per row*/
-        margin-right: 1.7vh;
-    }
-
-    .details-frame-med {
-        max-width: 20vw; /*2 per row*/
-        margin-right: 1.7vh;
-    }
-
-    .details-frame-big {
-        width: 25vw; /*1 per row*/
-        margin-left: 12vw;
-        margin-right: 12vw;
-    }
-
-    .details-video {
-        width: 50vw !important
-    }
-/*}*/
-
-/*@media only screen and (max-width: 1280px) { !* For Mobile *!*/
-    .details-grid-mobile {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        margin-top: 5vh;
-        margin-bottom: 5vh;
-        width: 90vw;
-    }
-/*}*/
-
 .item-image-popup {
     margin-bottom: 1vh;
     width: 100%;
@@ -123,4 +60,29 @@
 .right-arrow {
     margin-left: 2vw;
     width: 15vh;
+}
+
+.works-container {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.works-container > a {
+    text-decoration: none;
+}
+
+.works-carousel > .carousel{
+    width: 35vw !important;
+}
+
+.slide > div {
+    width: auto;
+    margin: 0;
+}
+
+.works-carousel-mobile > .carousel {
+    width: 90vw !important;
 }

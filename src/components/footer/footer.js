@@ -22,17 +22,16 @@ const Footer = () => {
     useEffect(() => {
         const path = history.location.pathname;
         setWhite(path === '/portfolio' || path === '/print');
-    }, []);
+    }, [])
 
     const fade = useSpring({
         from: {
             opacity: 0
         },
         opacity: 1
-    });
+    })
 
-    return(
-        <div className="footer">
+    return <div className="footer">
             <animated.a style={fade} target="_blank" rel="noopener noreferrer"
                         href="https://twitter.com/EmgalaiGrafik">
                 <img src={twitter} alt="twitter" className="img"/>
@@ -50,7 +49,6 @@ const Footer = () => {
                 <img src={behance} alt="behance" className="img"/>
             </animated.a>
         </div>
-    )
-};
+}
 
 export default Footer;
