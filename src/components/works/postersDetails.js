@@ -3,8 +3,9 @@ import {BrowserView, MobileView} from "react-device-detect"
 import {Carousel} from "react-responsive-carousel"
 import {animated, useSpring} from "react-spring"
 import {posters} from '../../helpers/images'
-import Nav from "../nav/nav"
+import Nav from "../nav/Nav";
 
+// TODO carousel component
 const PostersDetails = () => {
     const [images, setImages] = useState([])
 

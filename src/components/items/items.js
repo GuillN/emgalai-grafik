@@ -1,15 +1,15 @@
 import React from 'react'
 import {MobileView, BrowserView} from "react-device-detect"
-import Image from "./image";
+import Image from "./image"
 import './items.css'
-import {animated, useSpring} from "react-spring";
+import {animated, useSpring} from "react-spring"
 
 // This component displays preview images from an image array
 const Items = props => {
     const fade = useSpring({
         from: {opacity: 0,}, opacity: 1,
         config: {duration: 1000}
-    });
+    })
 
     return <div>
             <BrowserView>
@@ -25,6 +25,6 @@ const Items = props => {
                 </div>
             </MobileView>
         </div>
-};
+}
 
 export default Items

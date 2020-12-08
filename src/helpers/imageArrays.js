@@ -1,6 +1,6 @@
-import dark_tshirt_cover from "../images/tshirts/darkspace/dark_tish_carré.jpg";
-import gate_tshirt_cover from "../images/tshirts/gate/Emgalai_s-Gatezoom1.jpg";
-import rib_tshirt_cover from "../images/tshirts/rib/67567580_1310293545798865_9137664366735261696_o.jpg";
+import dark_tshirt_cover from "../images/tshirts/darkspace/dark_tish_carré.jpg"
+import gate_tshirt_cover from "../images/tshirts/gate/Emgalai_s-Gatezoom1.jpg"
+import rib_tshirt_cover from "../images/tshirts/rib/67567580_1310293545798865_9137664366735261696_o.jpg"
 import aluk_cover from '../images/aluk_todolo/carré-site.jpg'
 import conan_cover from '../images/conan/3.jpg'
 import cult_cover from '../images/cult_of_fire/3.jpg'
@@ -18,7 +18,7 @@ import rio_cover from '../images/rio/3.jpg'
 import sunn_cover from '../images/sunn/1 (1).jpg'
 import ulver_cover from '../images/ulver/zoom-3.jpg'
 
-import tshirts_cover from "../images/tshirts/gate/Emgalai_s-Gatezoom1.jpg";
+import tshirts_cover from "../images/tshirts/gate/Emgalai_s-Gatezoom1.jpg"
 import vinyls_cover from "../images/vinyls/carré-en-fait-.jpg"
 import cassettes_cover from "../images/cassettes/70229637_911070585930378_6026411403500322816_n.jpg"
 
@@ -27,11 +27,11 @@ import {
     rio, sunn, ulver
 } from './images'
 import {logos} from './images'
-import {tshirtDark} from "./images";
-import {tshirtGate} from "./images";
-import {tshirtRib} from "./images";
-import {vinyls} from "./images";
-import {cassettes} from "./images";
+import {tshirtDark} from "./images"
+import {tshirtGate} from "./images"
+import {tshirtRib} from "./images"
+import {vinyls} from "./images"
+import {cassettes} from "./images"
 
 export const logoArray = {
     images: logos,

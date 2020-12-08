@@ -1,11 +1,12 @@
 import React, {useEffect, useState} from "react"
 import {Link} from "react-router-dom";
 import {tshirtArray, workArray, workshopArray} from "../../helpers/imageArrays"
-import Nav from "../nav/nav";
 import Items from "../items/items";
 import {history} from "../../helpers/history";
 import './Previewer.css'
+import Nav from "../nav/Nav";
 
+// TODO refactor css
 // Displays previews
 const Previewer = () => {
 
@@ -19,21 +20,22 @@ const Previewer = () => {
             case '/works':
                 setUrl('works')
                 setArray(workArray)
+                setIsPrint(false)
                 break
             case '/prints':
+                console.log('Previewer - Prints')
                 setUrl('prints')
                 setArray(workshopArray)
                 setIsPrint(true)
+                console.log(`State: url: ${url}, array: ${array}, isPrint: ${isPrint}`)
                 break
             case '/tshirts':
                 setUrl('tshirts')
                 setArray(tshirtArray)
                 setIsPrint(true)
                 break
-            default:
-                break
         }
-    }, [])
+    }, [array, isPrint, url])
 
     const previews = Object.keys(array).map((previewKey, index) => {
         let destination
@@ -47,6 +49,7 @@ const Previewer = () => {
     })
 
     return <div>
+        {console.log('Previewer rendering')}
         <Nav print={isPrint}/>
         <div className="preview-container">
             {previews}

@@ -13,15 +13,15 @@ import instagramWhite from '../../images/instagram-whito.svg'
 import behanceWhite from '../../images/behance-whito.svg'
 
 const Footer = () => {
-    const [isWhite, setWhite] = useState(true);
-    let twitter = isWhite ? twitterWhite : twitterBlack;
-    let facebook = isWhite ? facebookWhite : facebookBlack;
-    let instagram = isWhite ? instagramWhite : instagramBlack;
-    let behance = isWhite ? behanceWhite : behanceBlack;
+    const [isWhite, setWhite] = useState(true)
+    let twitter = isWhite ? twitterWhite : twitterBlack
+    let facebook = isWhite ? facebookWhite : facebookBlack
+    let instagram = isWhite ? instagramWhite : instagramBlack
+    let behance = isWhite ? behanceWhite : behanceBlack
 
     useEffect(() => {
-        const path = history.location.pathname;
-        setWhite(path === '/portfolio' || path === '/print');
+        const path = history.location.pathname
+        setWhite(path === '/portfolio' || path === '/print')
     }, [])
 
     const fade = useSpring({
@@ -51,4 +51,4 @@ const Footer = () => {
         </div>
 }
 
-export default Footer;
+export default Footer

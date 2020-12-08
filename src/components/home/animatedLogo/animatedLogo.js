@@ -1,10 +1,10 @@
 import React, {useState} from 'react'
-import {animated, useSpring} from "react-spring";
-import DelayLink from 'react-delay-link';
+import {animated, useSpring} from "react-spring"
+import DelayLink from 'react-delay-link'
 
 const AnimatedLogo = props => {
 
-    const [isToggled, setIsToggled] = useState(false);
+    const [isToggled, setIsToggled] = useState(false)
 
     const fadeDown = useSpring({
         from: {
@@ -13,7 +13,7 @@ const AnimatedLogo = props => {
         },
         opacity: 1,
         marginTop: 0
-    });
+    })
 
     const moveAndFade = useSpring({
         height: isToggled ? props.toHeight : props.height,
@@ -22,18 +22,16 @@ const AnimatedLogo = props => {
         marginTop: isToggled ? props.margin : '25vh',
 
         opacity: props.hover ? .1 : 1
-    });
+    })
 
-    return (
-        <div>
-            <DelayLink to={props.to} delay={700}>
-                <animated.div style={fadeDown}>
-                    <animated.img style={moveAndFade} className="big-logo" src={props.logo} alt="emgalai_logo"
-                                  onClick={() => setIsToggled(!isToggled)}/>
-                </animated.div>
-            </DelayLink>
-        </div>
-    )
-};
+    return <div>
+        <DelayLink to={props.to} delay={700}>
+            <animated.div style={fadeDown}>
+                <animated.img style={moveAndFade} className="big-logo" src={props.logo} alt="emgalai_logo"
+                              onClick={() => setIsToggled(!isToggled)}/>
+            </animated.div>
+        </DelayLink>
+    </div>
+}
 
 export default AnimatedLogo

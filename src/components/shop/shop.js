@@ -3,7 +3,7 @@ import ProductPreview from "./productPreview";
 import "./shop.css"
 import Godflesh from "../../images/godflesh.jpg"
 import Doomer from "../../images/doomer.jpg"
-import Nav from "../nav/nav";
+import Nav from "../nav/Nav";
 import Footer from "../footer/footer";
 
 class Shop extends React.Component {

@@ -1,16 +1,16 @@
+import React from "react";
 import {Route} from "react-router-dom";
 import Home from "./components/home/home";
 import Portfolio from "./components/portfolio/portfolio";
 import Print from "./components/print/print";
 import About from "./components/about/about";
 import Contact from "./components/contact/contact";
+import Previewer from "./components/previewer/Previewer";
+import Displayer from "./components/displayer/Displayer";
 import PostersDetails from "./components/works/postersDetails";
 import Shop from "./components/shop/shop";
 import Devis from "./components/devis/devis";
 import Openings from "./components/openings/openings";
-import React from "react";
-import Previewer from "./components/previewer/Previewer";
-import Displayer from "./components/displayer/Displayer";
 
 export default () => {
     return <div>

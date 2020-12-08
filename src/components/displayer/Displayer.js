@@ -1,13 +1,14 @@
 import React, {useEffect, useState} from 'react'
 import {animated, useSpring} from "react-spring";
 import ReactPlayer from "react-player";
-import Nav from "../nav/nav";
 import PopupImage from "../items/popupImage";
 import {MobileView, BrowserView} from "react-device-detect"
 import {logoArray, tshirtArray, workArray, workshopArray} from "../../helpers/imageArrays";
 import {history} from "../../helpers/history";
 import './Displayer.css'
+import Nav from "../nav/Nav";
 
+// TODO refactor css
 // This component displays formatted popup images from an image array
 const Displayer = props => {
 

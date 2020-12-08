@@ -142,71 +142,71 @@ import cassette3 from '../images/cassettes/72278993_939565739747529_261084780534
 import cassette4 from '../images/cassettes/72996266_939565966414173_8140139460412047360_o.jpg'
 
 
-export let aluk;
-aluk = [aluk0, aluk1, aluk2, aluk3];
+export let aluk
+aluk = [aluk0, aluk1, aluk2, aluk3]
 
-export let conan;
-conan = [conan0, conan1, conan2, conan3, conan4, conan5];
+export let conan
+conan = [conan0, conan1, conan2, conan3, conan4, conan5]
 
-export let cult;
-cult = [cult0, cult1, cult2, cult3, cult4];
+export let cult
+cult = [cult0, cult1, cult2, cult3, cult4]
 
-export let darkspace;
-darkspace = [darkspace0, darkspace1, darkspace2, darkspace3, darkspace4, darkspace5];
+export let darkspace
+darkspace = [darkspace0, darkspace1, darkspace2, darkspace3, darkspace4, darkspace5]
 
-export let doom;
-doom = [doom0, doom1, doom2];
+export let doom
+doom = [doom0, doom1, doom2]
 
-export let escarion;
-escarion = [escarion0];
+export let escarion
+escarion = [escarion0]
 
-export let glazart;
-glazart = [glazart0, glazart1, glazart2, glazart3, glazart4, glazart5];
+export let glazart
+glazart = [glazart0, glazart1, glazart2, glazart3, glazart4, glazart5]
 
-export let goblin;
-goblin = [goblin0, goblin1, goblin2, goblin3, goblin4, goblin5, goblin6];
+export let goblin
+goblin = [goblin0, goblin1, goblin2, goblin3, goblin4, goblin5, goblin6]
 
-export let godflesh;
-godflesh = [godflesh0, godflesh1, godflesh2, godflesh3];
+export let godflesh
+godflesh = [godflesh0, godflesh1, godflesh2, godflesh3]
 
-export let hifi;
-hifi = [hifi0, hifi1, hifi2, hifi3];
+export let hifi
+hifi = [hifi0, hifi1, hifi2, hifi3]
 
-export let king;
-king = [king0, king1, king2, king3, king4];
+export let king
+king = [king0, king1, king2, king3, king4]
 
-export let metalorgie;
-metalorgie = [metalorgie0, metalorgie1, metalorgie2, metalorgie3, metalorgie4, metalorgie5, metalorgie6, metalorgie7, metalorgie8];
+export let metalorgie
+metalorgie = [metalorgie0, metalorgie1, metalorgie2, metalorgie3, metalorgie4, metalorgie5, metalorgie6, metalorgie7, metalorgie8]
 
-export let mysticum;
-mysticum = [mysticum0, mysticum1, mysticum2, mysticum3, mysticum4, mysticum5, mysticum6, mysticum7, mysticum8, mysticum9];
+export let mysticum
+mysticum = [mysticum0, mysticum1, mysticum2, mysticum3, mysticum4, mysticum5, mysticum6, mysticum7, mysticum8, mysticum9]
 
-export let rio;
-rio = [rio0, rio1, rio2, rio3, rio4, rio5, rio6, rio7, rio8];
+export let rio
+rio = [rio0, rio1, rio2, rio3, rio4, rio5, rio6, rio7, rio8]
 
-export let sunn;
-sunn = [sunn0, sunn1, sunn2, sunn3];
+export let sunn
+sunn = [sunn0, sunn1, sunn2, sunn3]
 
-export let ulver;
-ulver = [ulver0, ulver1, ulver2, ulver3, ulver4, ulver5];
+export let ulver
+ulver = [ulver0, ulver1, ulver2, ulver3, ulver4, ulver5]
 
-export let posters;
-posters = [poster0, poster1, poster2, poster3, poster4, poster5, poster6, poster7, poster8];
+export let posters
+posters = [poster0, poster1, poster2, poster3, poster4, poster5, poster6, poster7, poster8]
 
-export let logos;
-logos = [logo0, logo1, logo2, logo3, logo4, logo5, logo6];
+export let logos
+logos = [logo0, logo1, logo2, logo3, logo4, logo5, logo6]
 
-export let vinyls;
-vinyls = [vinyl0, vinyl1, vinyl2];
+export let vinyls
+vinyls = [vinyl0, vinyl1, vinyl2]
 
-export let cassettes;
-cassettes = [cassette0, cassette1, cassette2, cassette3, cassette4];
+export let cassettes
+cassettes = [cassette0, cassette1, cassette2, cassette3, cassette4]
 
-export let tshirtRib;
-tshirtRib = [tshirtRib0];
+export let tshirtRib
+tshirtRib = [tshirtRib0]
 
-export let tshirtDark;
-tshirtDark = [tshirtDark0, tshirtDark1];
+export let tshirtDark
+tshirtDark = [tshirtDark0, tshirtDark1]
 
-export let tshirtGate;
-tshirtGate = [tshirtGate0, tshirtGate1];
+export let tshirtGate
+tshirtGate = [tshirtGate0, tshirtGate1]

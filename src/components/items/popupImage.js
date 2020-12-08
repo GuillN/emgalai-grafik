@@ -1,13 +1,13 @@
 import React, {useState} from "react"
 import {MobileView, BrowserView} from "react-device-detect"
 
-import back from "../../images/back.svg";
-import next from "../../images/next.svg";
-import Popup from "reactjs-popup";
-import Image from "./image";
+import back from "../../images/back.svg"
+import next from "../../images/next.svg"
+import Popup from "reactjs-popup"
+import Image from "./image"
 
 const PopupImage = props => {
-    const [modalIndex, setModalIndex] = useState(0);
+    const [modalIndex, setModalIndex] = useState(0)
 
     const init = index => setModalIndex(index)
 
@@ -37,6 +37,6 @@ const PopupImage = props => {
             <Image src={props.item} alt={props.index} mobile={false} popup/>
         </MobileView>
     </div>
-};
+}
 
 export default PopupImage
