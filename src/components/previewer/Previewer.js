@@ -34,6 +34,8 @@ const Previewer = () => {
                 setArray(tshirtArray)
                 setIsPrint(true)
                 break
+            default:
+                break
         }
     }, [array, isPrint, url])
 
