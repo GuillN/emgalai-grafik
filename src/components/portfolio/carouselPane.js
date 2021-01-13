@@ -18,7 +18,7 @@ class CarouselPane extends React.Component {
     render() {
         const url = `https://www.facebook.com/emgalai/videos/${this.props.videoId}/`
         return <div className="carousel-pane">
-            <ReactPlayer ref={this.ref} url={url} playing muted onProgress={this.handleProgress}/>
+            <ReactPlayer ref={this.ref} url={url} volume={0} playing onProgress={this.handleProgress}/>
         </div>
     }
 }
