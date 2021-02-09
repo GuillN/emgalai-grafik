@@ -39,17 +39,17 @@ const Form = () => {
         <animated.form id="contact-form" style={fade2} className="inputs" onSubmit={handleSubmit}>
             <input type="hidden" name="contact_number"/>
             <label className="input">
-                <input type="text" name="from_name" placeholder="&nbsp" className="inp"/>
+                <input type="text" name="from_name" placeholder="" className="inp"/>
                 <span className="label">Name *</span>
                 <span className="border"/>
             </label>
             <label className="input">
-                <input type="text" name="from_email" placeholder="&nbsp" className="inp"/>
+                <input type="text" name="from_email" placeholder="" className="inp"/>
                 <span className="label">Email *</span>
                 <span className="border"/>
             </label>
             <label className="input">
-                <textarea name="message" placeholder="&nbsp" className="inp ta"/>
+                <textarea name="message" placeholder="" className="inp ta"/>
                 <span className="label">Message</span>
                 <span className="border"/>
             </label>
