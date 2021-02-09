@@ -1,5 +1,5 @@
 import React from "react";
-import {Route} from "react-router-dom";
+import {Switch, Route} from "react-router-dom";
 import Home from "./components/home/home";
 import Portfolio from "./components/portfolio/portfolio";
 import Print from "./components/print/print";
@@ -14,7 +14,7 @@ import Openings from "./components/openings/openings";
 
 export default () => {
     return <div>
-        <div>
+        <Switch>
             <Route path="/" exact component={Home}/>
             <Route path="/portfolio" exact component={Portfolio}/>
             <Route path="/print" exact component={Print}/>
@@ -31,6 +31,6 @@ export default () => {
             <Route path="/tshirts" exact component={Previewer}/>
             <Route path="/tshirts/:id" component={Displayer}/>
             <Route path="/openings" component={Openings}/>
-        </div>
+        </Switch>
     </div>
 }
