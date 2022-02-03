@@ -36,17 +36,17 @@ const Nav = () => {
         {/*LINKS*/}
         <BrowserView>
             <section style={isPoster ? {backgroundColor: 'black'} : {}} className="nav">
-                {!isPrint && <NavLink isWhite={isWhite} text={'about'}/>}
+                <NavLink isWhite={isWhite} text={'about'}/>
 
                 <NavLink isWhite={isWhite} text={isPrint ? 'devis' : 'contact'}/>
 
                 {isPrint ?
-                    <NavLink isWhite={isWhite} text={'prints'}/> :
+                    <NavDropLink isWhite={isWhite} text={'prints'}/> :
                     <NavDropLink isWhite={isWhite} text={'works'}/>
                 }
 
                 {isPrint ?
-                    <NavLink isWhite={isWhite} text={'openings'}/> :
+                    <></> :
                     <NavDropLink isWhite={isWhite} text={'shop'}/>
                 }
             </section>

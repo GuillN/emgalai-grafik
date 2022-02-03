@@ -3,7 +3,7 @@ import {animated, useSpring} from "react-spring";
 import ReactPlayer from "react-player";
 import PopupImage from "../items/popupImage";
 import {MobileView, BrowserView} from "react-device-detect"
-import {logoArray, tshirtArray, workArray, workshopArray} from "../../helpers/imageArrays";
+import {logoArray, tshirtArray, workArray, cassetteArray, vinylArray, cdArray, nespressoArray} from "../../helpers/imageArrays";
 import {history} from "../../helpers/history";
 import './Displayer.css'
 import Nav from "../nav/Nav";
@@ -24,20 +24,46 @@ const Displayer = props => {
                 setClient(workArray[id])
                 setImages(workArray[id].images)
                 break
+            // todo
+            // case 'music':
+            //     setClient(musicArray[id])
+            //     setImages(musicArray[id].images)
+            //     break
             case 'logos':
                 setClient(logoArray)
                 setImages(logoArray.images)
                 break
-            case 'prints':
-                setClient(workshopArray[id])
-                setImages(workshopArray[id].images)
-                setIsPrint(true)
-                break
+            // case 'prints':
+            //     setClient(workshopArray[id])
+            //     setImages(workshopArray[id].images)
+            //     setIsPrint(true)
+            //     break
             case 'tshirts':
                 setClient(tshirtArray[id])
                 setImages(tshirtArray[id].images)
                 setIsPrint(true)
                 break
+          case 'vinyls':
+              setClient(vinylArray[id])
+              setImages(vinylArray[id].images)
+              break
+          case 'cd':
+              setClient(cdArray[id])
+              setImages(cdArray[id].images)
+              break
+          case 'cassettes':
+              setClient(cassetteArray[id])
+              setImages(cassetteArray[id].images)
+              break
+            //todo
+          // case 'posters':
+          //     setClient(posterArray[id])
+          //     setImages(posterArray[id].images)
+          //     break
+            case 'nespresso':
+                setClient(nespressoArray)
+                setImages(nespressoArray.images)
+                setIsPrint(true)
             default:
                 break
         }
@@ -49,6 +75,11 @@ const Displayer = props => {
     })
 
     const mapper = (item, index) => {
+        if (client.videoIndex !== undefined && client.videoIndex.includes(index)) {
+            return <animated.div style={fade} kay={index} className="details-frame-big">
+                <ReactPlayer key={index} url={`https://www.youtube.com/watch?v=${item}`}/>
+            </animated.div>
+        }
         if (client.medIndex.includes(index)) {
             return <animated.div style={fade} key={index} className="details-frame-med">
                 <PopupImage index={index} item={item} id={id} images={images} sizes={client.images.length}/>

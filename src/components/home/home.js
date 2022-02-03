@@ -2,9 +2,11 @@ import React, {useState} from 'react'
 import './home.css'
 import logo1 from '../../images/logo-whito.svg'
 import logo2 from '../../images/emgalaiprint SIMPLE BLANClogo.svg'
+import video from '../../images/Animated Emgalai print logo.mp4'
 import barre from '../../images/barre centrale(1).png'
 import {useSpring, animated} from 'react-spring'
 import AnimatedLogo from "./animatedLogo/animatedLogo"
+import ReactPlayer from "react-player";
 
 // TODO refactor handlers
 const Home = () => {
@@ -51,6 +53,7 @@ const Home = () => {
             <animated.div onClick={() => setToggleLeft(!isToggledLeft)}
                           style={disappearLeft} className="home-logo-container">
                 <div className="logo-container" onMouseEnter={handleHoverLeft} onMouseLeave={handleLeaveLeft}>
+                    {/*<ReactPlayer url={`https://www.youtube.com/watch?v=Pf_184uUPdg`}/>*/}
                     <AnimatedLogo hover={hoverLeft} logo={logo1} to={"/portfolio"}
                                   height={'50vh'} toHeight={'15vh'} margin={'0.5vh'}/>
                     <animated.p className="home-text" style={disappear}>

@@ -10,7 +10,6 @@ import Displayer from "./components/displayer/Displayer";
 import PostersDetails from "./components/works/postersDetails";
 import Shop from "./components/shop/shop";
 import Devis from "./components/devis/devis";
-import Openings from "./components/openings/openings";
 
 export default () => {
     return <div>
@@ -22,15 +21,22 @@ export default () => {
             <Route path="/contact" component={Contact}/>
             <Route path="/works" exact component={Previewer}/>
             <Route path="/works/:id" component={Displayer}/>
-            <Route path="/posters" component={PostersDetails}/>
+            <Route path="/posters" exact component={PostersDetails}/>
             <Route path="/logos" component={Displayer}/>
             <Route path="/shop" component={Shop}/>
             <Route path="/devis" component={Devis}/>
-            <Route path="/prints" exact component={Previewer}/>
-            <Route path="/prints/:id" component={Displayer}/>
-            <Route path="/tshirts" exact component={Previewer}/>
+            <Route key="tsh" path="/tshirts" exact component={Previewer}/>
             <Route path="/tshirts/:id" component={Displayer}/>
-            <Route path="/openings" component={Openings}/>
+            <Route key="vyl" path="/vinyls" exact component={Previewer}/>
+            <Route path="/vinyls/:id" component={Displayer}/>
+            <Route key="cd" path="/cd" exact component={Previewer}/>
+            <Route path="/cd/:id" component={Displayer}/>
+            <Route key="k7" path="/cassettes" exact component={Previewer}/>
+            <Route path="/cassettes/:id" component={Displayer}/>
+            <Route key="pst" path="/postersprint" exact component={Previewer}/>
+            <Route path="/postersprint/:id" component={Displayer}/>
+            <Route key="misc" path="/divers" component={Previewer}/>
+            <Route path="/nespresso" component={Displayer}/>
         </Switch>
     </div>
 }
