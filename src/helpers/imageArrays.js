@@ -16,7 +16,7 @@ import king_cover from '../images/king_dude/2.jpg'
 import metalorgie_cover from '../images/metalorgie/carré.jpg'
 import mongolito_cover from '../images/cd/mongolito/carré-en-fait-.jpg'
 import mysticum_cover from '../images/mysticum/3.jpg'
-import nespresso_cover from '../images/nespresso/NESPRESSO312.jpg'
+import nespresso_cover from '../images/nespresso/08_DSC_8518.jpg'
 import rio_cover from '../images/rio/3.jpg'
 import rocketgum_cover from '../images/cd/rocket_gum/43436560_1830087720379682_7671300873330360320_o.jpg'
 import sunn_cover from '../images/sunn/1 (1).jpg'
@@ -153,7 +153,7 @@ export const cassetteArray = [
 //     video: null
 // }
 
-export const nespressoArray = [
+export const othersArray = [
     {
         images: nespresso,
         cover: nespresso_cover,
@@ -182,7 +182,7 @@ export const workArray = [
         text: "'Guardians of Heaviness' merch for the UK caveman doom band Conan\n\nLimited 3 colors screenprinted poster for the french shows\nLimited to 50 copies",
         medIndex: [2, 4, 5, 6],
         smallIndex: [],
-        videoIndex: [3],
+        // videoIndex: [3],
         video: null
     },
     {

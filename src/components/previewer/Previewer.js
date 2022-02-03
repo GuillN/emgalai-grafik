@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react"
 import {Link} from "react-router-dom";
-import {tshirtArray, workArray, cassetteArray, vinylArray, cdArray} from "../../helpers/imageArrays"
+import {tshirtArray, workArray, cassetteArray, vinylArray, cdArray, othersArray} from "../../helpers/imageArrays"
 import Items from "../items/items";
 import {history} from "../../helpers/history";
 import './Previewer.css'
@@ -47,6 +47,11 @@ const Previewer = props => {
             case '/cassettes':
                 setUrl('cassettes')
                 setArray(cassetteArray)
+                setIsPrint(true)
+                break
+            case '/divers':
+                setUrl('divers')
+                setArray(othersArray)
                 setIsPrint(true)
                 break
             // todo

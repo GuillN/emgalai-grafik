@@ -3,7 +3,16 @@ import {animated, useSpring} from "react-spring";
 import ReactPlayer from "react-player";
 import PopupImage from "../items/popupImage";
 import {MobileView, BrowserView} from "react-device-detect"
-import {logoArray, tshirtArray, workArray, cassetteArray, vinylArray, cdArray, nespressoArray} from "../../helpers/imageArrays";
+import {
+    logoArray,
+    tshirtArray,
+    workArray,
+    cassetteArray,
+    vinylArray,
+    cdArray,
+    nespressoArray,
+    othersArray
+} from "../../helpers/imageArrays";
 import {history} from "../../helpers/history";
 import './Displayer.css'
 import Nav from "../nav/Nav";
@@ -60,9 +69,9 @@ const Displayer = props => {
           //     setClient(posterArray[id])
           //     setImages(posterArray[id].images)
           //     break
-            case 'nespresso':
-                setClient(nespressoArray)
-                setImages(nespressoArray.images)
+            case 'divers':
+                setClient(othersArray[id])
+                setImages(othersArray[id].images)
                 setIsPrint(true)
             default:
                 break

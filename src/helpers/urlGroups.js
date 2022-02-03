@@ -12,8 +12,8 @@ export const printUrls = [
     "vinyls",
     "cd",
     "cassettes",
-    "posters/print",
-    "openings"
+    "postersprint",
+    "divers"
 ]
 
 export const dropUrls = [
@@ -79,7 +79,7 @@ export const dropUrls = [
                 mobileText: 'CASSETTES'
             },
             {
-                url: '/posters/print',
+                url: '/postersprint',
                 text: 'POSTERS',
                 mobileText: 'POSTERS'
             },

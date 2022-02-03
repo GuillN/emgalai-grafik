@@ -176,7 +176,7 @@ export let aluk
 aluk = [aluk0, aluk1, aluk2, aluk3]
 
 export let conan
-conan = [conan0, conan1, conan2, 'y1wnPCVWXYI', conan3, conan4, conan5]
+conan = [conan0, conan1, conan2, conan3, conan4, conan5]
 
 export let cult
 cult = [cult0, cult1, cult2, cult3, cult4]

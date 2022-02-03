@@ -35,7 +35,8 @@ export default () => {
             <Route path="/cassettes/:id" component={Displayer}/>
             <Route key="pst" path="/postersprint" exact component={Previewer}/>
             <Route path="/postersprint/:id" component={Displayer}/>
-            <Route key="misc" path="/divers" component={Previewer}/>
+            <Route key="misc" path="/divers" exact component={Previewer}/>
+            <Route key="misc" path="/divers/:id" component={Displayer}/>
             <Route path="/nespresso" component={Displayer}/>
         </Switch>
     </div>
