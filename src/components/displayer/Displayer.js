@@ -114,7 +114,7 @@ const Displayer = props => {
     let img = images.map(mapper)
     let imgMobile = images.map(mobileMapper)
     const videoId = client.video
-    const url = `https://www.facebook.com/emgalai/videos/${videoId}/`
+    const url = `https://www.youtube.com/watch?v=${videoId}/`
 
     return <div>
         <Nav print={isPrint}/>

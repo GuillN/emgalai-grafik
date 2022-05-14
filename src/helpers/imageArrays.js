@@ -309,7 +309,7 @@ export const workArray = [
         text: "Limited screenprinted poster for 'The Assassination of Julius Caesar' tour of the Norwegian band Ulver\nLimited to 80 copies and incrusted with real bay leaves\n\nProcess on the video by Guillaume Quincy",
         medIndex: [1, 2, 3, 4],
         smallIndex: [],
-        video: 876609339167290
+        video: 'HrqhgHYFM8k'
     },
     {
         images: urbanfest,
