@@ -1,5 +1,6 @@
 import af_cover from '../images/cassettes/acces_de_faiblesse/70229637_911070585930378_6026411403500322816_n.jpg'
 import aguire_cover from '../images/aguire/1.jpg'
+import cortoni_cover from '../images/cortoni/CORELIAN.jpg'
 import dark_tshirt_cover from "../images/tshirts/darkspace/dark_tish_carré.jpg"
 import gate_tshirt_cover from "../images/tshirts/gate/Emgalai_s-Gatezoom1.jpg"
 import rib_tshirt_cover from "../images/tshirts/rib/67567580_1310293545798865_9137664366735261696_o.jpg"
@@ -19,8 +20,10 @@ import metalorgie_cover from '../images/metalorgie/carré.jpg'
 import mongolito_cover from '../images/cd/mongolito/carré-en-fait-.jpg'
 import mysticum_cover from '../images/mysticum/3.jpg'
 import nespresso_cover from '../images/nespresso/08_DSC_8518.jpg'
+import penn_cover from '../images/penn_men/cover.jpg'
 import rio_cover from '../images/rio/3.jpg'
 import rocketgum_cover from '../images/cd/rocket_gum/43436560_1830087720379682_7671300873330360320_o.jpg'
+import structure_cover from '../images/structure/5.jpg'
 import sunn_cover from '../images/sunn/1 (1).jpg'
 import ulver_cover from '../images/ulver/zoom-3.jpg'
 import urbanfest_cover from '../images/urban_fest/12898318_576300052531555_183095972173381426_o.jpg'
@@ -37,6 +40,7 @@ import {
     aguire,
     chaos,
     conan,
+    cortoni,
     cult,
     darkspace,
     doom,
@@ -50,8 +54,10 @@ import {
     mongolito,
     mysticum,
     nespresso,
+    penn,
     rio,
     rocketgum,
+    structure,
     sunn,
     ulver,
     vaurien,
@@ -78,7 +84,15 @@ export const musicArray = [
       medIndex: [1,2,3,4],
       smallIndex: [],
       video: null
-    }
+    },
+    {
+       images: cortoni,
+       cover: cortoni_cover,
+       title: 'Cortoni',
+       medIndex: [],
+       smallIndex: [],
+       video: null
+     }
 ]
 
 export const logoArray = {
@@ -198,6 +212,22 @@ export const visuIdArray = [
       medIndex: [],
       smallIndex: [],
       video: null
+  },
+  {
+    images: penn,
+    cover: penn_cover,
+    title: 'Penn Men',
+    medIndex: [2,3,4,5],
+    smallIndex: [],
+    video: null
+  },
+  {
+    images: structure,
+    cover: structure_cover,
+    title: 'Structure',
+    medIndex: [0,1],
+    smallIndex: [2,3,4],
+    video: null
   }
 ]
 

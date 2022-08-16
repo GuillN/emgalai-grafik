@@ -32,6 +32,9 @@ import conan3 from '../images/conan/4.jpg'
 import conan4 from '../images/conan/5.jpg'
 import conan5 from '../images/conan/6.jpg'
 
+import cortoni0 from '../images/cortoni/CORELIAN.jpg'
+import cortoni1 from '../images/cortoni/LogoVectorCortoniTRIPLE.jpg'
+
 import cult0 from '../images/cult_of_fire/1.jpg'
 import cult1 from '../images/cult_of_fire/2.jpg'
 import cult2 from '../images/cult_of_fire/3.jpg'
@@ -116,6 +119,13 @@ import nespresso2 from '../images/nespresso/08_DSC_8518.jpg'
 import nespresso3 from '../images/nespresso/IMG_8677.jpg'
 import nespresso4 from '../images/nespresso/unnamed.jpg'
 
+import penn0 from '../images/penn_men/PENN-MEN.jpg'
+import penn1 from '../images/penn_men/tshirt-penn-menJuste-recto.jpg'
+import penn2 from '../images/penn_men/3.png'
+import penn3 from '../images/penn_men/4.png'
+import penn4 from '../images/penn_men/5.png'
+import penn5 from '../images/penn_men/6.png'
+
 import rio0 from '../images/rio/1.jpg'
 import rio1 from '../images/rio/2.jpg'
 import rio2 from '../images/rio/3.jpg'
@@ -129,6 +139,13 @@ import rio8 from '../images/rio/febb3132222117.5674350323a70.jpg'
 import rocket0 from '../images/cd/rocket_gum/43398238_1830088690379585_4025258317772226560_o.jpg'
 import rocket1 from '../images/cd/rocket_gum/43422552_1830088477046273_4342243946647257088_o.jpg'
 import rocket2 from '../images/cd/rocket_gum/43436560_1830087720379682_7671300873330360320_o.jpg'
+
+import structure0 from '../images/structure/0.jpg'
+import structure1 from '../images/structure/1.jpg'
+import structure2 from '../images/structure/2.jpg'
+import structure3 from '../images/structure/3.jpg'
+import structure4 from '../images/structure/4.jpg'
+import structure5 from '../images/structure/5.jpg'
 
 import sunn0 from '../images/sunn/0.jpg'
 import sunn1 from '../images/sunn/1 (1).jpg'
@@ -200,6 +217,9 @@ chaos = [chaos0, chaos1, chaos2, chaos3, chaos4, chaos5, chaos6, chaos7, chaos8]
 export let conan
 conan = [conan0, conan1, conan2, conan3, conan4, conan5]
 
+export let cortoni
+cortoni = [cortoni0, cortoni1]
+
 export let cult
 cult = [cult0, cult1, cult2, cult3, cult4]
 
@@ -242,11 +262,17 @@ mysticum = [mysticum0, mysticum1, mysticum2, mysticum3, mysticum4, mysticum5, my
 export let nespresso
 nespresso = [nespresso0, nespresso1, nespresso2, nespresso3, nespresso4]
 
+export let penn
+penn = [penn0, penn1, penn2, penn3, penn4, penn5]
+
 export let rio
 rio = [rio0, rio1, rio2, rio3, rio4, rio5, rio6, rio7, rio8]
 
 export let rocketgum
 rocketgum = [rocket0, rocket1, rocket2]
+
+export let structure
+structure = [structure0, structure1, structure2, structure3, structure4, structure5]
 
 export let sunn
 sunn = [sunn0, sunn1, sunn2, sunn3]
