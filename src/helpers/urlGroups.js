@@ -24,7 +24,7 @@ export const dropUrls = [
                 mobileText: 'POSTERS'
             },
             {
-                url: '/logos',
+                url: '/logos/all',
                 text: 'LOGOS',
                 mobileText: 'LOGOS'
             }

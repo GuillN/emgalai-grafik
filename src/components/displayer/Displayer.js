@@ -4,13 +4,14 @@ import ReactPlayer from "react-player";
 import PopupImage from "../items/popupImage";
 import {MobileView, BrowserView} from "react-device-detect"
 import {
+    visuIdArray,
     logoArray,
     tshirtArray,
+    musicArray,
     workArray,
     cassetteArray,
     vinylArray,
     cdArray,
-    nespressoArray,
     othersArray
 } from "../../helpers/imageArrays";
 import {history} from "../../helpers/history";
@@ -29,15 +30,19 @@ const Displayer = props => {
 
     useEffect(() => {
         switch (pathName) {
+          case 'visual-identity':
+            setClient(visuIdArray[id])
+            setImages(visuIdArray[id].images)
+            break
             case 'works':
                 setClient(workArray[id])
                 setImages(workArray[id].images)
                 break
             // todo
-            // case 'music':
-            //     setClient(musicArray[id])
-            //     setImages(musicArray[id].images)
-            //     break
+            case 'music':
+                setClient(musicArray[id])
+                setImages(musicArray[id].images)
+                break
             case 'logos':
                 setClient(logoArray)
                 setImages(logoArray.images)
@@ -114,7 +119,7 @@ const Displayer = props => {
     let img = images.map(mapper)
     let imgMobile = images.map(mobileMapper)
     const videoId = client.video
-    const url = `https://www.facebook.com/emgalai/videos/${videoId}/`
+    const url = `https://www.youtube.com/watch?v=${videoId}/`
 
     return <div>
         <Nav print={isPrint}/>

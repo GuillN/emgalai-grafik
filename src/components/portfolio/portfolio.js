@@ -60,10 +60,11 @@ const Portfolio = () => {
 
                     <hr className="line"/>
 
+                    <Link to="/visual-identity" className="home-link">IDENTITÉ VISUELLE</Link>
                     <Link to="/works" className="home-link">WORKS</Link>
                     <Link to="/music" className="home-link">MUSIC</Link>
                     <Link to="/posters" className="home-link">POSTERS</Link>
-                    <Link to="/logos" className="home-link">LOGOS</Link>
+                    <Link to="/logos/all" className="home-link">LOGOS</Link>
 
                     <hr className="line"/>
 

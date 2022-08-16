@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react"
 import {Link} from "react-router-dom";
-import {tshirtArray, workArray, cassetteArray, vinylArray, cdArray, othersArray} from "../../helpers/imageArrays"
+import {visuIdArray, tshirtArray, workArray, musicArray, cassetteArray, vinylArray, cdArray, othersArray} from "../../helpers/imageArrays"
 import Items from "../items/items";
 import {history} from "../../helpers/history";
 import './Previewer.css'
@@ -17,9 +17,19 @@ const Previewer = props => {
     useEffect(() => {
         const path = history.location.pathname;
         switch (path) {
+          case '/visual-identity':
+            setUrl('visual-identity')
+            setArray(visuIdArray)
+            setIsPrint(false)
+            break
             case '/works':
                 setUrl('works')
                 setArray(workArray)
+                setIsPrint(false)
+                break
+              case '/music':
+                setUrl('music')
+                setArray(musicArray)
                 setIsPrint(false)
                 break
             // case '/prints':

@@ -4,10 +4,26 @@ import af2 from '../images/cassettes/acces_de_faiblesse/72169566_934774980226605
 import af3 from '../images/cassettes/acces_de_faiblesse/72278993_939565739747529_2610847805341696000_o.jpg'
 import af4 from '../images/cassettes/acces_de_faiblesse/72996266_939565966414173_8140139460412047360_o.jpg'
 
+import aguire0 from '../images/aguire/artwork .jpg'
+import aguire1 from '../images/aguire/1.jpg'
+import aguire2 from '../images/aguire/2.jpg'
+import aguire3 from '../images/aguire/3.jpg'
+import aguire4 from '../images/aguire/4.jpg'
+
 import aluk0 from '../images/aluk_todolo/1.jpg'
 import aluk1 from '../images/aluk_todolo/2.jpg'
 import aluk2 from '../images/aluk_todolo/3.jpg'
 import aluk3 from '../images/aluk_todolo/4.jpg'
+
+import chaos0 from '../images/chaos/artwork-entier.jpg'
+import chaos1 from '../images/chaos/inside.jpg'
+import chaos2 from '../images/chaos/Capture d’écran 2022-08-16 à 17.05.39.png'
+import chaos3 from '../images/chaos/Capture d’écran 2022-08-16 à 17.02.51.png'
+import chaos4 from '../images/chaos/Capture d’écran 2022-08-16 à 17.07.02.png'
+import chaos5 from '../images/chaos/Capture d’écran 2022-08-16 à 17.06.37.png'
+import chaos6 from '../images/chaos/Capture d’écran 2022-08-16 à 17.08.32.png'
+import chaos7 from '../images/chaos/Capture d’écran 2022-08-16 à 17.08.48.png'
+import chaos8 from '../images/chaos/Chaos-LS-mockup.jpg'
 
 import conan0 from '../images/conan/1.jpg'
 import conan1 from '../images/conan/2.jpg'
@@ -172,8 +188,14 @@ import tshirtGate1 from '../images/tshirts/gate/Emgalai_s-Gate-tish-verso.jpg'
 export let af
 af = [af0, af1, af2, af3, af4]
 
+export let aguire
+aguire = [aguire0, aguire1, aguire2, aguire3, aguire4]
+
 export let aluk
 aluk = [aluk0, aluk1, aluk2, aluk3]
+
+export let chaos
+chaos = [chaos0, chaos1, chaos2, chaos3, chaos4, chaos5, chaos6, chaos7, chaos8]
 
 export let conan
 conan = [conan0, conan1, conan2, conan3, conan4, conan5]

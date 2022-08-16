@@ -1,8 +1,10 @@
 import af_cover from '../images/cassettes/acces_de_faiblesse/70229637_911070585930378_6026411403500322816_n.jpg'
+import aguire_cover from '../images/aguire/1.jpg'
 import dark_tshirt_cover from "../images/tshirts/darkspace/dark_tish_carré.jpg"
 import gate_tshirt_cover from "../images/tshirts/gate/Emgalai_s-Gatezoom1.jpg"
 import rib_tshirt_cover from "../images/tshirts/rib/67567580_1310293545798865_9137664366735261696_o.jpg"
 import aluk_cover from '../images/aluk_todolo/carré-site.jpg'
+import chaos_cover from '../images/chaos/Capture d’écran 2022-08-16 à 17.07.02.png'
 import conan_cover from '../images/conan/3.jpg'
 import cult_cover from '../images/cult_of_fire/3.jpg'
 import darkspace_cover from '../images/darkspace/ZOOM3.jpg'
@@ -32,6 +34,8 @@ import vaurien_cover from '../images/cassettes/vaurien/1.jpg'
 import {
     af,
     aluk,
+    aguire,
+    chaos,
     conan,
     cult,
     darkspace,
@@ -58,13 +62,24 @@ import {
 } from './images'
 import {logos} from './images'
 
-// todo
-// export const musicArray = {
-//     images: music,
-//     medIndex: [],
-//     smallIndex: [],
-//     video: null
-// }
+export const musicArray = [
+  {
+     images: chaos,
+     cover: chaos_cover,
+     title: 'Chaos E.T. Sexual',
+     medIndex: [2,3,4,5,6,7],
+     smallIndex: [],
+     video: '8_AlRJW3SRs'
+   },
+   {
+      images: aguire,
+      cover: aguire_cover,
+      title: 'Aguire',
+      medIndex: [1,2,3,4],
+      smallIndex: [],
+      video: null
+    }
+]
 
 export const logoArray = {
     images: logos,
@@ -165,6 +180,27 @@ export const othersArray = [
     }
 ]
 
+export const visuIdArray = [
+  {
+      images: hifi,
+      cover: hifi_cover,
+      title: 'Hifi Store',
+      text: "Graphics for the Hifi store - Paris\n",
+      medIndex: [],
+      smallIndex: [],
+      video: null
+  },
+  {
+      images: rio,
+      cover: rio_cover,
+      title: 'RIO',
+      text: "This was my last year project of my graphic design studies at LISAA\nI redesigned all the graphics of the Rock in Opposition Festival taking place at Albi on an old industrial land\nThis is an underground festival about RIO music / progressive rock / Canterbury scene",
+      medIndex: [],
+      smallIndex: [],
+      video: null
+  }
+]
+
 export const workArray = [
     {
         images: aluk,
@@ -180,7 +216,7 @@ export const workArray = [
         cover: conan_cover,
         title: 'Conan',
         text: "'Guardians of Heaviness' merch for the UK caveman doom band Conan\n\nLimited 3 colors screenprinted poster for the french shows\nLimited to 50 copies",
-        medIndex: [2, 4, 5, 6],
+        medIndex: [2, 3, 4, 5],
         smallIndex: [],
         // videoIndex: [3],
         video: null
@@ -249,15 +285,6 @@ export const workArray = [
         video: null
     },
     {
-        images: hifi,
-        cover: hifi_cover,
-        title: 'Hifi Store',
-        text: "Graphics for the Hifi store - Paris\n",
-        medIndex: [],
-        smallIndex: [],
-        video: null
-    },
-    {
         images: king,
         cover: king_cover,
         title: 'King Dude',
@@ -281,15 +308,6 @@ export const workArray = [
         title: 'Mysticum',
         text: "Designs for the show of the Norwegian industrial black metal pioneers Mysticum playing at Le Flow - Paris\nFlyers / exclusive t-shirt / screenprinted poster limited to 30 copies\n\nDesign used for Headbang Brewery who made a beer especially for the show",
         medIndex: [0, 1],
-        smallIndex: [],
-        video: null
-    },
-    {
-        images: rio,
-        cover: rio_cover,
-        title: 'RIO',
-        text: "This was my last year project of my graphic design studies at LISAA\nI redesigned all the graphics of the Rock in Opposition Festival taking place at Albi on an old industrial land\nThis is an underground festival about RIO music / progressive rock / Canterbury scene",
-        medIndex: [],
         smallIndex: [],
         video: null
     },

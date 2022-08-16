@@ -1,11 +1,11 @@
 .details-frame-big {
-    width: 25vw; /*1 per row*/
-    margin-left: 12vw;
-    margin-right: 12vw;
+    width: 50vw; /*1 per row*/
+    margin-left: 0vw;
+    margin-right: 0vw;
 }
 
 .details-frame-med {
-    max-width: 20vw; /*2 per row*/
+    max-width: 24vw; /*2 per row*/
     margin-right: 1.7vh;
 }
 
@@ -33,6 +33,8 @@
     font-size: 2vh;
     white-space: pre-line;
     text-align: center;
+    padding-left: 1vw;
+    padding-right: 1vw;
 }
 
 .details-grid {

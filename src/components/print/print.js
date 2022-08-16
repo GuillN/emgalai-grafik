@@ -29,8 +29,8 @@ const Print = () => {
                 </animated.header>
                 <animated.div style={fade} className="home-link-container">
 
-                    <Link to="/about" className="home-link">ABOUT</Link>
-                    <Link to="/devis" className="home-link">DEVIS</Link>
+                    <Link to="/print/about" className="home-link">ABOUT</Link>
+                    <Link to="/print/devis" className="home-link">DEVIS</Link>
 
                     <hr className="line"/>
 
