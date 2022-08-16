@@ -4,7 +4,7 @@ import af2 from '../images/cassettes/acces_de_faiblesse/72169566_934774980226605
 import af3 from '../images/cassettes/acces_de_faiblesse/72278993_939565739747529_2610847805341696000_o.jpg'
 import af4 from '../images/cassettes/acces_de_faiblesse/72996266_939565966414173_8140139460412047360_o.jpg'
 
-import aguire0 from '../images/aguire/artwork .jpg'
+import aguire0 from '../images/aguire/artwork.jpg'
 import aguire1 from '../images/aguire/1.jpg'
 import aguire2 from '../images/aguire/2.jpg'
 import aguire3 from '../images/aguire/3.jpg'
