@@ -9,6 +9,8 @@ import Footer from "../footer/footer"
 import {animated, useSpring} from "react-spring"
 import {Link} from "react-router-dom"
 import Nav from "../nav/Nav";
+import {posters} from "../../helpers/images"
+import Image from "../items/image"
 
 
 const Portfolio = () => {
@@ -32,10 +34,13 @@ const Portfolio = () => {
                 {/*    <CarouselPane videoId={876609339167290}/>*/}
                 {/*</div>*/}
                 <div>
-                    <CarouselPane videoId={1072535196279459}/>
+                    <img src={posters[0]}/>
                 </div>
                 <div>
-                    <CarouselPane videoId={262610617954917}/>
+                    <img src={posters[1]}/>
+                </div>
+                <div>
+                    <img src={posters[2]}/>
                 </div>
             </Carousel>
             <Footer/>
@@ -56,6 +61,7 @@ const Portfolio = () => {
                     <hr className="line"/>
 
                     <Link to="/works" className="home-link">WORKS</Link>
+                    <Link to="/music" className="home-link">MUSIC</Link>
                     <Link to="/posters" className="home-link">POSTERS</Link>
                     <Link to="/logos" className="home-link">LOGOS</Link>
 

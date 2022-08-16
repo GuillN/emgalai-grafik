@@ -14,7 +14,8 @@ import NavDropLinkMobile from "./NavDropLinkMobile";
 
 const Nav = () => {
     const [isWhite] = useState(whiteUrls.includes(history.location.pathname))
-    const [isPrint] = useState(printUrls.includes(history.location.pathname.split('/')[1]))
+    //const [isPrint] = useState(printUrls.includes(history.location.pathname.split('/')[1]))
+    const [isPrint] = useState(history.location.pathname.split('/')[1].includes("print"))
 
     const [logo, setLogo] = useState()
 
@@ -36,9 +37,15 @@ const Nav = () => {
         {/*LINKS*/}
         <BrowserView>
             <section style={isPoster ? {backgroundColor: 'black'} : {}} className="nav">
-                <NavLink isWhite={isWhite} text={'about'}/>
+                {isPrint ?
+                  <NavLink isWhite={isWhite} text={'about'} url={'/print/about'}/> :
+                  <NavLink isWhite={isWhite} text={'about'} url={'/about'}/>
+                }
 
-                <NavLink isWhite={isWhite} text={isPrint ? 'devis' : 'contact'}/>
+                {isPrint ?
+                  <NavLink isWhite={isWhite} text={'devis'} url={'/print/devis'}/> :
+                  <NavLink isWhite={isWhite} text={'contact'} url={'/contact'}/>
+                }
 
                 {isPrint ?
                     <NavDropLink isWhite={isWhite} text={'prints'}/> :
@@ -53,17 +60,23 @@ const Nav = () => {
         </BrowserView>
         <MobileView>
             <section style={isPoster ? {backgroundColor: 'black'} : {}} className="nav">
-                {!isPrint && <NavLink isWhite={isWhite} text={'about'}/>}
+            {isPrint ?
+              <NavLink isWhite={isWhite} text={'about'} url={'/print/about'}/> :
+              <NavLink isWhite={isWhite} text={'about'} url={'/about'}/>
+            }
 
-                <NavLink isWhite={isWhite} text={isPrint ? 'devis' : 'contact'}/>
+            {isPrint ?
+              <NavLink isWhite={isWhite} text={'devis'} url={'/print/devis'}/> :
+              <NavLink isWhite={isWhite} text={'contact'} url={'/contact'}/>
+            }
 
                 {isPrint ?
-                    <NavLink isWhite={isWhite} text={'prints'}/> :
+                    <NavDropLinkMobile isWhite={isWhite} text={'prints'}/> :
                     <NavDropLinkMobile isWhite={isWhite} text={'works'}/>
                 }
 
                 {isPrint ?
-                    <NavLink isWhite={isWhite} text={'openings'}/> :
+                    <></> :
                     <NavDropLinkMobile isWhite={isWhite} text={'shop'}/>
                 }
             </section>

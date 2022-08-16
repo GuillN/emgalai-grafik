@@ -6,6 +6,7 @@ import {useSpring, animated} from 'react-spring';
 const NavLink = props => {
     const [isWhite] = useState(props.isWhite)
     const [text] = useState(props.text)
+    const [url] = useState(props.url)
 
     const color = {
         color: isWhite ? 'white' : 'black'
@@ -16,7 +17,7 @@ const NavLink = props => {
     })
 
     return <animated.div className="nav-link-container" style={fade}>
-        <Link to={`/${text}`} style={color} className="nav-link">{text.toUpperCase()}</Link>
+        <Link to={`${url}`} style={color} className="nav-link">{text.toUpperCase()}</Link>
     </animated.div>
 }
 

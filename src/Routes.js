@@ -18,26 +18,26 @@ export default () => {
             <Route path="/portfolio" exact component={Portfolio}/>
             <Route path="/print" exact component={Print}/>
             <Route path="/about" component={About}/>
+            <Route path="/print/about" component={About}/>
             <Route path="/contact" component={Contact}/>
             <Route path="/works" exact component={Previewer}/>
             <Route path="/works/:id" component={Displayer}/>
             <Route path="/posters" exact component={PostersDetails}/>
             <Route path="/logos" component={Displayer}/>
             <Route path="/shop" component={Shop}/>
-            <Route path="/devis" component={Devis}/>
-            <Route key="tsh" path="/tshirts" exact component={Previewer}/>
-            <Route path="/tshirts/:id" component={Displayer}/>
-            <Route key="vyl" path="/vinyls" exact component={Previewer}/>
-            <Route path="/vinyls/:id" component={Displayer}/>
-            <Route key="cd" path="/cd" exact component={Previewer}/>
-            <Route path="/cd/:id" component={Displayer}/>
-            <Route key="k7" path="/cassettes" exact component={Previewer}/>
-            <Route path="/cassettes/:id" component={Displayer}/>
-            <Route key="pst" path="/postersprint" exact component={Previewer}/>
-            <Route path="/postersprint/:id" component={Displayer}/>
-            <Route key="misc" path="/divers" exact component={Previewer}/>
-            <Route key="misc" path="/divers/:id" component={Displayer}/>
-            <Route path="/nespresso" component={Displayer}/>
+            <Route path="/print/devis" component={Devis}/>
+            <Route key="tsh" path="/print/tshirts" exact component={Previewer}/>
+            <Route path="/print/tshirts/:id" component={Displayer}/>
+            <Route key="vyl" path="/print/vinyls" exact component={Previewer}/>
+            <Route path="/print/vinyls/:id" component={Displayer}/>
+            <Route key="cd" path="/print/cd" exact component={Previewer}/>
+            <Route path="/print/cd/:id" component={Displayer}/>
+            <Route key="k7" path="/print/cassettes" exact component={Previewer}/>
+            <Route path="/print/cassettes/:id" component={Displayer}/>
+            <Route key="pst" path="/print/posters" exact component={Previewer}/>
+            <Route path="/print/posters/:id" component={Displayer}/>
+            <Route key="misc" path="/print/divers" exact component={Previewer}/>
+            <Route key="misc" path="/print/divers/:id" component={Displayer}/>
         </Switch>
     </div>
 }

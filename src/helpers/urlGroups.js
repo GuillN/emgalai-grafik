@@ -4,18 +4,6 @@ export const whiteUrls = [
     "/posters"
 ]
 
-export const printUrls = [
-    "about",
-    "print",
-    "devis",
-    "tshirts",
-    "vinyls",
-    "cd",
-    "cassettes",
-    "postersprint",
-    "divers"
-]
-
 export const dropUrls = [
     {
         title: 'works',
@@ -59,32 +47,32 @@ export const dropUrls = [
         title: 'prints',
         links: [
             {
-                url: '/tshirts',
+                url: '/print/tshirts',
                 text: 'TSHIRTS',
                 mobileText: 'TSHIRTS'
             },
             {
-                url: '/vinyls',
+                url: '/print/vinyls',
                 text: 'VINYLS',
                 mobileText: 'VINYLS'
             },
             {
-                url: '/cd',
+                url: '/print/cd',
                 text: 'CD',
                 mobileText: 'CD'
             },
             {
-                url: '/cassettes',
+                url: '/print/cassettes',
                 text: 'CASSETTES',
                 mobileText: 'CASSETTES'
             },
             {
-                url: '/postersprint',
+                url: '/print/posters',
                 text: 'POSTERS',
                 mobileText: 'POSTERS'
             },
             {
-                url: '/divers',
+                url: '/print/divers',
                 text: 'DIVERS',
                 mobileText: 'DIVERS'
             }
