@@ -22,7 +22,7 @@ import Nav from "../nav/Nav";
 const Displayer = props => {
 
     const [id] = useState(props.match.params.id)
-    const [pathName] = useState(history.location.pathname.split('/')[1])
+    const [pathName] = useState(history.location.pathname.split('/')[history.location.pathname.split('/').length - 2])
     const [client, setClient] = useState({})
     const [images, setImages] = useState([])
     const [isPrint, setIsPrint] = useState(false)
@@ -114,7 +114,7 @@ const Displayer = props => {
     let img = images.map(mapper)
     let imgMobile = images.map(mobileMapper)
     const videoId = client.video
-    const url = `https://www.youtube.com/watch?v=${videoId}/`
+    const url = `https://www.facebook.com/emgalai/videos/${videoId}/`
 
     return <div>
         <Nav print={isPrint}/>

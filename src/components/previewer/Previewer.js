@@ -29,28 +29,28 @@ const Previewer = props => {
             //     setIsPrint(true)
             //     console.log(`State: url: ${url}, array: ${array}, isPrint: ${isPrint}`)
             //     break
-            case '/tshirts':
-                setUrl('tshirts')
+            case '/print/tshirts':
+                setUrl('print/tshirts')
                 setArray(tshirtArray)
                 setIsPrint(true)
                 break
-            case '/vinyls':
-                setUrl('vinyls')
+            case '/print/vinyls':
+                setUrl('print/vinyls')
                 setArray(vinylArray)
                 setIsPrint(true)
                 break
-            case '/cd':
-                setUrl('cd')
+            case '/print/cd':
+                setUrl('print/cd')
                 setArray(cdArray)
                 setIsPrint(true)
                 break
-            case '/cassettes':
-                setUrl('cassettes')
+            case '/print/cassettes':
+                setUrl('print/cassettes')
                 setArray(cassetteArray)
                 setIsPrint(true)
                 break
-            case '/divers':
-                setUrl('divers')
+            case '/print/divers':
+                setUrl('print/divers')
                 setArray(othersArray)
                 setIsPrint(true)
                 break

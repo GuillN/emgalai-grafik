@@ -21,15 +21,11 @@ const NavDropLinkMobile = props => {
     })
 
     const sublinks = links.map(link => {
-        if (text === 'works') {
+        
             return <Link to={link.url} className="sub-link" style={color}>
                 {link.mobileText}
             </Link>
-        } else {
-            return <a target="_blank" rel="noopener noreferrer" href={link.url} className="sub-link" style={color}>
-                {link.text}
-            </a>
-        }
+
     })
 
     return <animated.div className="nav-link-container" style={fade}>
