@@ -71,35 +71,53 @@ import {logos} from './images'
 export const musicArray = [
   {
      images: chaos,
+     videos: ['8_AlRJW3SRs'],
      cover: chaos_cover,
      title: 'Chaos E.T. Sexual',
-     medIndex: [2,3,4,5,6,7],
+     imageIndex: [0,1,2,3,4,5,6,7,8],
+     videoIndex: [9],
+     medIndex: [],
+     squareIndex: [2,3,4,5,6,7],
      smallIndex: [],
-     video: '8_AlRJW3SRs'
+     tinyIndex: []
    },
    {
       images: aguire,
       cover: aguire_cover,
-      title: 'Aguire',
-      medIndex: [1,2,3,4],
+      title: 'Aguirre',
+      videos: [],
+      imageIndex: [0,1,2,3,4],
+      videoIndex: [],
+      medIndex: [],
+      squareIndex: [1,2,3,4],
       smallIndex: [],
-      video: null
+      tinyIndex: []
     },
     {
        images: cortoni,
        cover: cortoni_cover,
        title: 'Cortoni',
+       videos: [],
+       imageIndex: [0,1],
+       videoIndex: [],
        medIndex: [],
+       squareIndex: [],
        smallIndex: [],
-       video: null
+       tinyIndex: []
      }
 ]
 
 export const logoArray = {
     images: logos,
+    imageIndex: [0,1,2,3,4,5,6,7],
     medIndex: [],
     smallIndex: [],
-    video: null
+    videoIndex: [],
+    medIndex: [],
+    squareIndex: [],
+    smallIndex: [],
+    tinyIndex: [],
+    videos: []
 }
 
 export const tshirtArray = [
@@ -109,7 +127,11 @@ export const tshirtArray = [
         title: 'Darkspace',
         medIndex: [],
         smallIndex: [],
-        video: null
+        videos: [],
+        imageIndex: [0,1],
+        videoIndex: [],
+        squareIndex: [],
+        tinyIndex: []
     },
     {
         images: tshirtGate,
@@ -117,7 +139,11 @@ export const tshirtArray = [
         title: 'Ëmgalaï\'s Gate',
         medIndex: [],
         smallIndex: [],
-        video: null
+        videos: [],
+        imageIndex: [0,1],
+        videoIndex: [],
+        squareIndex: [],
+        tinyIndex: []
     },
     {
         images: tshirtRib,
@@ -125,7 +151,11 @@ export const tshirtArray = [
         title: 'Rock In Bourlon',
         medIndex: [],
         smallIndex: [],
-        video: null
+        videos: [],
+        imageIndex: [0],
+        videoIndex: [],
+        squareIndex: [],
+        tinyIndex: []
     }
 ]
 
@@ -135,9 +165,13 @@ export const vinylArray = [
         cover: mongolito_cover,
         title: 'Mongolito',
         text: "",
-        medIndex: [0, 1],
+        medIndex: [],
         smallIndex: [],
-        video: null
+        videos: [],
+        imageIndex: [0,1,2],
+        videoIndex: [],
+        squareIndex: [0,1],
+        tinyIndex: []
     }
 ]
 
@@ -149,7 +183,11 @@ export const cdArray = [
         text: "",
         medIndex: [],
         smallIndex: [],
-        video: null
+        videos: [],
+        imageIndex: [0,1,2],
+        videoIndex: [],
+        squareIndex: [],
+        tinyIndex: []
     }
 ]
 
@@ -159,9 +197,13 @@ export const cassetteArray = [
         cover: af_cover,
         title: 'Accès de Faiblesse',
         text: "",
-        medIndex: [0, 1],
+        medIndex: [],
         smallIndex: [2, 3, 4],
-        video: null
+        videos: [],
+        imageIndex: [0,1,2,3,4],
+        videoIndex: [],
+        squareIndex: [0,1],
+        tinyIndex: []
     },
     {
         images: vaurien,
@@ -170,7 +212,11 @@ export const cassetteArray = [
         text: "",
         medIndex: [],
         smallIndex: [],
-        video: null
+        videos: [],
+        imageIndex: [0,1,2,3,4,5,6],
+        videoIndex: [],
+        squareIndex: [],
+        tinyIndex: []
     }
 ]
 
@@ -190,44 +236,64 @@ export const othersArray = [
         text: "",
         medIndex: [],
         smallIndex: [],
-        video: null
+        videos: [],
+        imageIndex: [0,1,2,3,4],
+        videoIndex: [],
+        squareIndex: [],
+        tinyIndex: []
     }
 ]
 
 export const visuIdArray = [
   {
       images: hifi,
+      videos: [],
       cover: hifi_cover,
       title: 'Hifi Store',
       text: "Graphics for the Hifi store - Paris\n",
+      imageIndex: [0,1,2,3,4,5],
+      videoIndex: [],
       medIndex: [],
+      squareIndex: [],
       smallIndex: [],
-      video: null
+      tinyIndex: []
   },
   {
       images: rio,
+      videos: [],
       cover: rio_cover,
       title: 'RIO',
       text: "This was my last year project of my graphic design studies at LISAA\nI redesigned all the graphics of the Rock in Opposition Festival taking place at Albi on an old industrial land\nThis is an underground festival about RIO music / progressive rock / Canterbury scene",
+      imageIndex: [0,1,2,3,4,5,6,7,8],
+      videoIndex: [],
       medIndex: [],
+      squareIndex: [],
       smallIndex: [],
-      video: null
+      tinyIndex: []
   },
   {
     images: penn,
+    videos: [],
     cover: penn_cover,
     title: 'Penn Men',
-    medIndex: [2,3,4,5],
+    imageIndex: [0,1,2,3,4,5],
+    videoIndex: [],
+    medIndex: [1],
+    squareIndex: [2,3,4,5],
     smallIndex: [],
-    video: null
+    tinyIndex: []
   },
   {
     images: structure,
+    videos: [],
     cover: structure_cover,
     title: 'Structure',
-    medIndex: [0,1],
+    imageIndex: [0,1,2,3,4,5],
+    videoIndex: [],
+    medIndex: [],
+    squareIndex: [],
     smallIndex: [2,3,4],
-    video: null
+    tinyIndex: []
   }
 ]
 
@@ -237,46 +303,65 @@ export const workArray = [
         cover: aluk_cover,
         title: 'Aluk Todolo',
         text: "Poster / T-Shirt / Tote bag for the french blackened kraut rock band Aluk Todolo\n\nLimited screenprinted poster for the Lille show\nLimited to 25 copies",
-        medIndex: [1, 2],
+        imageIndex: [0,1,2,3],
+        videoIndex: [],
+        medIndex: [],
+        squareIndex: [1,2],
         smallIndex: [],
-        video: null
+        tinyIndex: [],
+        videos: []
     },
     {
         images: conan,
         cover: conan_cover,
         title: 'Conan',
         text: "'Guardians of Heaviness' merch for the UK caveman doom band Conan\n\nLimited 3 colors screenprinted poster for the french shows\nLimited to 50 copies",
-        medIndex: [2, 3, 4, 5],
+        medIndex: [],
+        videos: [],
+        imageIndex: [0,1,2,3,4,5,6],
+        videoIndex: [],
+        squareIndex: [2,3,4,5],
         smallIndex: [],
-        // videoIndex: [3],
-        video: null
+        tinyIndex: []
     },
     {
         images: cult,
         cover: cult_cover,
         title: 'Cult Of Fire',
         text: "Limited screenprinted poster for the black metal band Cult of Fire playing at 'Feux de Beltane' festival\nInk made with pigments from indian traditional holi ceremony and spices\nPigments are mixed with water from Gange river\nHomemade paper made by hand in Nepal\n\nThanks to Capitaine Max for those ingredients",
-        medIndex: [1, 2, 3, 4],
+        medIndex: [],
         smallIndex: [],
-        video: null
+        videos: [],
+        imageIndex: [0,1,2,3,4],
+        videoIndex: [],
+        squareIndex: [1,2,3,4],
+        tinyIndex: []
     },
     {
         images: darkspace,
         cover: darkspace_cover,
         title: 'Darkspace',
         text: "Limited screenprinted poster for the industrial black metal band Darkspace playing at 'Feux de Beltane' festival\nPoster incrusted with meteorite powder\nProcess on the video\nLimited to 40 copies",
-        medIndex: [1, 2, 3, 4],
+        medIndex: [],
         smallIndex: [],
-        video: 978901818938041
+        videos: ['BTH4pOOHyug'],
+        imageIndex: [0,1,2,3,4,5],
+        videoIndex: [6],
+        squareIndex: [1,2,3,4],
+        tinyIndex: []
     },
     {
         images: doom,
         cover: doom_cover,
         title: 'Doom',
         text: "Screenprinted poster for the UK crust legends Doom\nSpecial ink mixed with ashes of a tear gas grenade puck, found during a 'gilet jaune' protest.\nProcess on the video\nLimited to 50 copies\nAnarchy, Equality and fuck police brutality and Macron fuckin' corrupted system",
-        medIndex: [1, 2],
+        medIndex: [],
         smallIndex: [],
-        video: 1072535196279459
+        videos: [],
+        imageIndex: [0,1,2],
+        videoIndex: [],
+        squareIndex: [1,2],
+        tinyIndex: []
     },
     {
         images: escarion,
@@ -285,7 +370,11 @@ export const workArray = [
         text: "Cover design made for the Australian death metal band Escarion",
         medIndex: [],
         smallIndex: [],
-        video: null
+        videos: [],
+        imageIndex: [0],
+        videoIndex: [],
+        squareIndex: [],
+        tinyIndex: []
     },
     {
         images: glazart,
@@ -294,25 +383,37 @@ export const workArray = [
         text: "Artworks for the night club Glazart, porte de la Villette - Paris",
         medIndex: [],
         smallIndex: [],
-        video: null
+        videos: [],
+        imageIndex: [0,1,2,3,4,5],
+        videoIndex: [],
+        squareIndex: [],
+        tinyIndex: [0,1,2,3,4,5]
     },
     {
         images: goblin,
         cover: goblin_cover,
         title: 'Goblin',
         text: "Graphics for the special show of legendary italian progressive rock band Goblin, playing at Le Flow - Paris\nFlyer / collector tickets / coasters and limited gatefold screenprinted poster\nProcess on the video made by Guillaume Quincy",
-        medIndex: [3, 4, 5, 6],
+        medIndex: [],
         smallIndex: [],
-        video: 262610617954917
+        videos: [],
+        imageIndex: [0,1,2,3,4,5,6],
+        videoIndex: [],
+        squareIndex: [3,4,5,6],
+        tinyIndex: []
     },
     {
         images: godflesh,
         cover: godflesh_cover,
         title: 'Godflesh',
         text: "Limited screenprinted poster for the UK industrial gods Godflesh playing at Roadburn festival in 2018\nPoster laminated with aluminum paper\n Limited to 55 copies",
-        medIndex: [1, 2],
+        medIndex: [],
         smallIndex: [],
-        video: null
+        videos: [],
+        imageIndex: [0,1,2,3],
+        videoIndex: [],
+        squareIndex: [1,2],
+        tinyIndex: []
     },
     {
         images: king,
@@ -321,25 +422,37 @@ export const workArray = [
         text: "Limited screenprinted poster for the US dark folk band King Dude\nPoster laminated with real snake skin\nDesign reused for the french show at 'La Plage de Glazart'\nProcess on the video made by Guillaume Quincy\nLimited to 50 copies",
         medIndex: [],
         smallIndex: [],
-        video: 752027961625429
+        videos: [],
+        imageIndex: [0,1,2,3,4],
+        videoIndex: [],
+        squareIndex: [],
+        tinyIndex: []
     },
     {
         images: metalorgie,
         cover: metalorgie_cover,
         title: 'Metalorgie Fest',
         text: "Designs for the French webzine Metalorgie's Festival\nLogo / flyers / ads / limited screenprinted poster\nLimited to 30 copies",
-        medIndex: [0, 1],
+        medIndex: [],
         smallIndex: [],
-        video: null
+        videos: [],
+        imageIndex: [0,1,2,3,4,5,6,7,8],
+        videoIndex: [],
+        squareIndex: [0,1],
+        tinyIndex: []
     },
     {
         images: mysticum,
         cover: mysticum_cover,
         title: 'Mysticum',
         text: "Designs for the show of the Norwegian industrial black metal pioneers Mysticum playing at Le Flow - Paris\nFlyers / exclusive t-shirt / screenprinted poster limited to 30 copies\n\nDesign used for Headbang Brewery who made a beer especially for the show",
-        medIndex: [0, 1],
+        medIndex: [],
         smallIndex: [],
-        video: null
+        videos: [],
+        imageIndex: [0,1,2,3,4,5,6,7,8,9],
+        videoIndex: [],
+        squareIndex: [0,1],
+        tinyIndex: []
     },
     {
         images: sunn,
@@ -348,16 +461,24 @@ export const workArray = [
         text: "Limited screenprinted poster for US drone metal pioneers SunnO))) playing at Paradiso - Amsterdam\nLimited to 50 copies, mirror paper pasted on the poster",
         medIndex: [],
         smallIndex: [1, 2, 3],
-        video: null
+        videos: [],
+        imageIndex: [0],
+        videoIndex: [],
+        squareIndex: [],
+        tinyIndex: []
     },
     {
         images: ulver,
         cover: ulver_cover,
         title: 'Ulver',
         text: "Limited screenprinted poster for 'The Assassination of Julius Caesar' tour of the Norwegian band Ulver\nLimited to 80 copies and incrusted with real bay leaves\n\nProcess on the video by Guillaume Quincy",
-        medIndex: [1, 2, 3, 4],
+        medIndex: [],
         smallIndex: [],
-        video: 'HrqhgHYFM8k'
+        videos: ['HrqhgHYFM8k'],
+        imageIndex: [0,1,2,3,4,5],
+        videoIndex: [6],
+        squareIndex: [1,2,3,4],
+        tinyIndex: []
     },
     {
         images: urbanfest,
@@ -366,6 +487,10 @@ export const workArray = [
         text: "",
         medIndex: [],
         smallIndex: [],
-        video: null
+        videos: [],
+        imageIndex: [0,1,2,3,4,5],
+        videoIndex: [],
+        squareIndex: [],
+        tinyIndex: []
     }
 ]

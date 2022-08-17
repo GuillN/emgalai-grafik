@@ -5,6 +5,10 @@
 }
 
 .details-frame-med {
+  max-width: 33vw
+}
+
+.details-frame-square {
     max-width: 24vw; /*2 per row*/
     margin-right: 1.7vh;
 }
