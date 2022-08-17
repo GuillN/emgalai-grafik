@@ -21,8 +21,9 @@ const Portfolio = () => {
 
     return <div>
         <BrowserView>
+        <div style={{backgroundColor: 'black', height: '100vh'}}>
             <Nav print={false}/>
-            <Carousel showThumbs={false} showStatus={false} stopOnHover={false} className="video-carousel"
+            {/*<Carousel showThumbs={false} showStatus={false} stopOnHover={false} className="video-carousel"
                       autoPlay infiniteLoop interval={14000} dynamicHeight>
                 {/*<div>*/}
                 {/*    <CarouselPane videoId={752027961625429}/>*/}
@@ -33,7 +34,7 @@ const Portfolio = () => {
                 {/*<div>*/}
                 {/*    <CarouselPane videoId={876609339167290}/>*/}
                 {/*</div>*/}
-                <div>
+                {/*<div>
                     <img src={posters[0]}/>
                 </div>
                 <div>
@@ -42,8 +43,9 @@ const Portfolio = () => {
                 <div>
                     <img src={posters[2]}/>
                 </div>
-            </Carousel>
+            </Carousel>*/}
             <Footer/>
+            </div>
         </BrowserView>
 
         <MobileView>

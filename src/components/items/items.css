@@ -48,17 +48,17 @@
 
 .modal-image {
     height: 100%;
-    max-width: 90vh;
+    max-width: 85vw;
     border: black solid 1vh;
 }
 
 .left-arrow {
-    margin-right: 2vw;
+    margin-right: 18vw;
     width: 15vh;
 }
 
 .right-arrow {
-    margin-left: 2vw;
+    margin-left: 18vw;
     width: 15vh;
 }
 
